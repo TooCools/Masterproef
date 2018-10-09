@@ -36,7 +36,7 @@ def g(angle):
     :param angle: An angle in radians
     :return: een waarde voor het fietserskoppel
     '''
-    return t_dc * (1 + sin(2 * angle - pi))
+    return t_dc * (1 + sin(2 * angle - (pi / 6)))
 
 
 for h in range(1, 10000):  # 1000s, 10 keer per seconde

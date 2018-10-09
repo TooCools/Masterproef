@@ -9,5 +9,3 @@ rw = 0.3231  # Straal van voor- en achterwiel
 total_mass = 100  # gewicht fietser + fiets in kg
 timestep = .1  # tijdsverschil tussen 2 berekeningen in seconde
 support_level = 2  # Ondersteuningsniveau
-
-phi = pi / 6
