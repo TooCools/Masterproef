@@ -1,0 +1,4 @@
+Met keras:
+Als ge u model wilt optimalizeren voor u data, kunt ge tensorboard gebruiken om de resultaten te visualiseren.
+https://www.youtube.com/watch?v=lV09_8432VA
+
