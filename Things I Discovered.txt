@@ -1,4 +1,24 @@
-Met keras:
+Preprocessing:
+
+zorg ervoor dat er een gelijke hoeveelheid aan data is voor elke klasse
+
+Sequential data moeten we opsplitsen in "sequences" van bijvoorbeeld telkens 50 rijen data (mbv from collections import deque)
+window=deque(maxlen=50)
+for row in rows
+	window.append(row)
+	if(len(window))==50):
+		create new sequence
+shuffle sequence
+
+
+
+Fitting:
+
+Met keras (analyse):
 Als ge u model wilt optimalizeren voor u data, kunt ge tensorboard gebruiken om de resultaten te visualiseren.
 https://www.youtube.com/watch?v=lV09_8432VA
+Met tensorboard kun je ook modelcheckpoints gebruiken. Wanneer bijvoorbeeld de acc een nieuw record breekt, slaag die epoch op ipv alle epochs of om de x
 
+
+LSTM (Long short term memory) voor sequential data (bij cpu versie duurt het leren precies wat lang)
+GRU (Gated recurring? unit) voor sequential data
