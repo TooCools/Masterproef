@@ -6,7 +6,8 @@ from params import *
 from route_slot import Slot
 import matplotlib.pyplot as plt
 
-theta_crank = [0.0]  # Hoek van van de trapas
+theta_crank_rad = [0.0]  # Hoek van van de trapas
+theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
 omega_crank = [0.0]  # rpm van de trapas
 v_fiets = [0.0]  # snelheid in m/s
 t_cy = [0.0]
@@ -15,6 +16,7 @@ t_mg2 = [0.0]
 o_mg1 = [0.0]
 o_mg2 = [0.0]
 t_dc_array = [0.0]
+t_cyclist_no_noise = [0.0]
 slope_array = [0.0]
 f_grav_array = [0.0]
 f_fric_array = [0.0]
@@ -35,9 +37,9 @@ Een fietser trapt ongeveer 100W als hij stevig rechtdoor fietst, 150W als hij be
 
 def cadence_for_speed(v):
     """
-    Berekent de cadans in rpm aan de hand van de snelheid
-    :param v: snelheid in km/h
-    :return: cadans in rpm
+    Calculates the cadence for a given speed when accelerating, otherwise based on torque
+    :param v: speed in km/h
+    :return: cadence in rpm
     """
     if start:
         if v <= 15:
@@ -74,20 +76,16 @@ def cadence_for_speed(v):
 
 def fietsers_koppel(angle):
     '''
-
     :param angle: An angle in radians
-    :return: een waarde voor het fietserskoppel
+    :return: returns a simulated value of the cyclers torque
     '''
     gaussian_random = np.random.normal(0, 0.5)
     t_dc_noise = t_dc + gaussian_random
     if t_dc_noise < 0:
         t_dc_noise = 0
     t_dc_array.append(t_dc_noise)
+    t_cyclist_no_noise.append(t_dc * (1 + sin(2 * angle - (pi / 6))))
     return t_dc_noise * (1 + sin(2 * angle - (pi / 6)))
-
-
-def get_tdc_from_rpm(rpm, watt):
-    return watt / (rpm * 0.10467)
 
 
 def init():
@@ -136,7 +134,7 @@ def simulate():
             v_fiets_previous_kmh)  # min(omega_opt_rpm, cadence_for_speed(v_fiets_previous_kmh)) + rpm_offset
         omega_crank_current_rads = omega_crank_current_rpm * 0.10467
 
-        theta_crank_current_rad = theta_crank[h - 1] + omega_crank_current_rads * timestep
+        theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
 
         # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
         t_cyclist = fietsers_koppel(theta_crank_current_rad)
@@ -157,7 +155,8 @@ def simulate():
         omega_mg2 = v_fiets_current_ms / rw
         omega_mg1 = (1 / ks_mg1) * ((1 + (nr / ns)) * omega_mg2 - ((nr / ns) * (omega_crank_current_rads / kcr_r)))
 
-        theta_crank.append(theta_crank_current_rad)
+        theta_crank_rad.append(theta_crank_current_rad)
+        theta_crank_rad2.append(theta_crank_current_rad % (2 * pi))
         omega_crank.append(omega_crank_current_rpm)
         v_fiets.append(v_fiets_current_ms * 3.6)
         t_cy.append(t_cyclist)
@@ -175,13 +174,15 @@ init()
 simulate()
 data = {'speed (km/h)': v_fiets,
         'rpm': omega_crank,
-        'crank angle': theta_crank,
+        'crank_angle': theta_crank_rad,
+        'crank_angle_%2PI': theta_crank_rad2,
+        't_dc': t_dc_array,
         't_cyclist': t_cy,
+        't_cyclist_no_noise': t_cyclist_no_noise,
         't_mg1': t_mg1,
         't_mg2': t_mg2,
         'o_mg1': o_mg1,
         'o_mg2': o_mg2,
-        't_dc': t_dc_array,
         'slope °': slope_array,
         'force gravity': f_grav_array,
         'force friction': f_fric_array,
@@ -190,28 +191,27 @@ data = {'speed (km/h)': v_fiets,
 
 save(data)
 
-
-def fourier():
-    size = 100
-    start_index = 2000
-    x = theta_crank[start_index:start_index + size]
-    y = t_cy[start_index:start_index + size]
-    plt.figure(1)
-    plt.title("Original function")
-    plt.plot(x, y)
-    freqs = fftfreq(size, 0.115)
-    fft_vals = fft(y)
-    fft_theo = 2 * np.abs(fft_vals / size)
-    mask = freqs > 0
-    actual_freqs = freqs[mask]
-    actual_fft = fft_theo[mask]
-    plt.figure(2)
-    plt.plot(actual_freqs, actual_fft)
-    plt.show()
-    print('peek', actual_fft[np.argmax(actual_fft)])
-    t_dc_sub = t_dc_array[start_index:start_index + size]
-    print('average t_dc', np.average(t_dc_sub))
-
-
+# def fourier():
+#     size = 100
+#     start_index = 2000
+#     x = theta_crank_rad[start_index:start_index + size]
+#     y = t_cy[start_index:start_index + size]
+#     plt.figure(1)
+#     plt.title("Original function")
+#     plt.plot(x, y)
+#     freqs = fftfreq(size, 0.115)
+#     fft_vals = fft(y)
+#     fft_theo = 2 * np.abs(fft_vals / size)
+#     mask = freqs > 0
+#     actual_freqs = freqs[mask]
+#     actual_fft = fft_theo[mask]
+#     plt.figure(2)
+#     plt.plot(actual_freqs, actual_fft)
+#     plt.show()
+#     print('peek', actual_fft[np.argmax(actual_fft)])
+#     t_dc_sub = t_dc_array[start_index:start_index + size]
+#     print('average t_dc', np.average(t_dc_sub))
+#
+#
 # fourier()
 print("Finished")
