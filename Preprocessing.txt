@@ -1,0 +1,10 @@
+cos + sin van crank angle
+fourrier + omegekeerde fourrier om ruis uit crank torque te halen (deze normalizeren in geval van NN)
+helling normalizeren (max 10°, min 10°)
+
+
+
+voor het leren: 
+de data opsplitsen in groupen van X opeenvolgende datapunten, 
+ervoor zorgen dat er een gelijke verdeling is van data (niet teveel data van bijvoorbeeld 70rpm)
+deze data shuffelen en dan leren
