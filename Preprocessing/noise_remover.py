@@ -34,7 +34,7 @@ start_index = 2000
 
 def fourier(noisy, actual):
     y = noisy[start_index:start_index + size]
-    freqs = fftfreq(size, 0.115)
+    freqs = fftfreq(size, 0.1)
     fft_vals = fft(y)
     plt.figure(1)
     plt.title = 'Noisy'
@@ -51,16 +51,16 @@ def fourier(noisy, actual):
     filtered = ifft(fft_vals)
     plt.figure(3)
     plt.title = 'Filtered vs actual'
-    plt.plot(range(0, 100), filtered, label="filtered")
+    plt.plot(range(0, size), filtered, label="filtered")
     plt.legend()
     a = actual[start_index:start_index + size]
-    plt.plot(range(0, 100), a, label="actual (no noise)")
+    plt.plot(range(0, size), a, label="actual (no noise)")
     plt.legend()
     plt.figure(4)
     plt.title = 'Filtered vs noisy'
-    plt.plot(range(0, 100), filtered, label="filtered")
+    plt.plot(range(0, size), filtered, label="filtered")
     plt.legend()
     b = noisy[start_index:start_index + size]
-    plt.plot(range(0, 100), b, label="actual (noisy)")
+    plt.plot(range(0, size), b, label="actual (noisy)")
     plt.legend()
     plt.show()
