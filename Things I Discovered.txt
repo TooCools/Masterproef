@@ -10,7 +10,9 @@ for row in rows
 		create new sequence
 shuffle sequence
 
-
+ftp://ftp.sas.com/pub/neural/FAQ2.html#A_std_target
+Output data moet niet persé gestandardiseerd worden. Als er maar 1 output variabele is is dit zeker niet nodig. Als het meerdere outputs heeft, dan kan het wel nuttig zijn
+in geval dat je als loss mean squared error neemt en 1 vd outputs veel groter is dan de andere
 
 Fitting:
 

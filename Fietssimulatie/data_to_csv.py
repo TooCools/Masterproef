@@ -1,9 +1,10 @@
 import pandas as pd
 
 
-def save(data):
+def save(data, filename="data"):
+    print("Saving Data")
     df = pd.DataFrame(data,
                       columns=data.keys())
-    writer = pd.ExcelWriter('data.xlsx')
+    writer = pd.ExcelWriter(filename + ".xlsx")
     df.to_excel(writer, "Bicycle data", index=False)
     writer.save()

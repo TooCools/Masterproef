@@ -1,0 +1,7 @@
+tensorflow
+scikit-learn
+numpy
+pandas
+xlrd
+matplotlib
+protobuf==3.6
