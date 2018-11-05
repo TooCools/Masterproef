@@ -2,12 +2,14 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LSTM, CuDNNLSTM, BatchNormalization
 from tensorflow.keras import metrics
-
 from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
 import time
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
+import pickle
 
 
-def learn_nn(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
+def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
     config = tf.ConfigProto(device_count={'GPU': 1, 'CPU': 4})
     sess = tf.Session(config=config)
     tf.keras.backend.set_session(sess)
@@ -64,5 +66,21 @@ def learn_nn(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
     return model
 
 
-def learn_lstm():
-    print("lstm")
+def learn_regtree(name, train_x, train_y, depth=50):
+    tree = DecisionTreeRegressor(max_depth=depth)
+    nsamples, nx, ny = train_x.shape
+    d2_train_dataset = train_x.reshape((nsamples, nx * ny))
+    tree.fit(d2_train_dataset, train_y)
+    name = "tree"
+    pickle.dump(tree, open("models/{}.sav".format(name), "wb"))
+    return tree
+
+
+def learn_randomforest(name, train_x, train_y, estimators=10, depth=50):
+    forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
+    nsamples, nx, ny = train_x.shape
+    d2_train_dataset = train_x.reshape((nsamples, nx * ny))
+    forest.fit(d2_train_dataset, train_y)
+    name = "forest"
+    pickle.dump(forest, open("models/{}.sav".format(name), "wb"))
+    return forest
