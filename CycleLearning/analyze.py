@@ -13,10 +13,9 @@ df_crank_angle_rad = 'crank_angle_%2PI'
 df_rpm = 'rpm'
 df_val = get_data("data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 
-val_x, val_y = preprocess(df_val, SEQ_LEN_TREE, normalize=False, shuffle=False)
 # val_x, val_y = preprocess(df_val, SEQ_LEN_NN, normalize=True, shuffle=False)
 
-# model=tensorflow.keras.models.load_model("models/RNN_Final-02-66.951.model")
+# model=tensorflow.keras.models.load_model("models/RNN_Final-10-49.963.model")
 # predictions = model.predict(val_x)
 # size = 300
 # val_y_s = val_y[:size]
@@ -26,6 +25,7 @@ val_x, val_y = preprocess(df_val, SEQ_LEN_TREE, normalize=False, shuffle=False)
 # plt.plot(range(0, len(predictions_s)), predictions_s, 'ro', markersize=1)#todo check dit is (hoe een groot verschil er zit)
 # plt.show()
 
+val_x, val_y = preprocess(df_val, SEQ_LEN_TREE, normalize=False, shuffle=False)
 
 model = pickle.load(open("models/forest.sav", "rb"))
 nsamples, nx, ny = val_x.shape

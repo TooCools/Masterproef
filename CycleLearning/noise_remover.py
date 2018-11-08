@@ -1,8 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.fft import fft, fftfreq, ifft
+from mpl_toolkits.mplot3d import Axes3D
+from excel_to_data import get_data
+from params import *
 
-size = 100
+size = 50
 
 
 def fourier_visualisation(noisy, start_index):
@@ -10,7 +13,7 @@ def fourier_visualisation(noisy, start_index):
     ax = fig.add_subplot(111, projection='3d')
     fig2 = plt.figure()
     ax2 = fig2.add_subplot(111, projection='3d')
-    for i in range(start_index, start_index + size):
+    for i in range(start_index, start_index + 5):
         y = noisy[i:i + size]
         freqs = fftfreq(size, 0.1)
         fft_vals = fft(y)
@@ -29,7 +32,12 @@ def fourier_visualisation(noisy, start_index):
     ax2.set_ylabel('Y')
     ax2.set_zlabel('Z')
     ax2.set_zlim(-1000, 1000)
-    angle = 90
-    ax.view_init(0, angle)
-    ax2.view_init(0, angle)
+    angle = 45
+    ax.view_init(20, angle)
+    ax2.view_init(20, angle)
     plt.show()
+
+
+df = get_data("..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
+t_cyclist = df[" Crank_torque_Nm_filt"]
+fourier_visualisation(t_cyclist, 9500)

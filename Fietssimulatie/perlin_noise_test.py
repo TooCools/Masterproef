@@ -5,6 +5,8 @@ test = []
 xoff = -8
 from numpy import interp
 size=10000
+#-8 voor val
+#19 voor data
 
 for i in range(size):
     n = noise.pnoise1(xoff, 6, 0.1, 3, 1024)
