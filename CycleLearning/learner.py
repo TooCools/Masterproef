@@ -66,21 +66,21 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
     return model
 
 
-def learn_regtree(name, train_x, train_y, depth=50):
+def learn_regtree(name, train_x, train_y, depth=50, save=False):
     tree = DecisionTreeRegressor(max_depth=depth)
     nsamples, nx, ny = train_x.shape
     d2_train_dataset = train_x.reshape((nsamples, nx * ny))
     tree.fit(d2_train_dataset, train_y)
-    name = "tree"
-    pickle.dump(tree, open("models/{}.sav".format(name), "wb"))
+    if save:
+        pickle.dump(tree, open("models/trees/{}.sav".format(name), "wb"))
     return tree
 
 
-def learn_randomforest(name, train_x, train_y, estimators=10, depth=50):
+def learn_randomforest(name, train_x, train_y, estimators=10, depth=50, save=False):
     forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
     nsamples, nx, ny = train_x.shape
     d2_train_dataset = train_x.reshape((nsamples, nx * ny))
     forest.fit(d2_train_dataset, train_y)
-    name = "forest"
-    pickle.dump(forest, open("models/{}.sav".format(name), "wb"))
+    if save:
+        pickle.dump(forest, open("models/forests/{}.sav".format(name), "wb"))
     return forest

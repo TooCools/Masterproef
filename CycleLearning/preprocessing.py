@@ -8,7 +8,6 @@ import random
 
 def preprocess(df,seq_len ,normalize=True, shuffle=True):
     '''
-    Removes the first 300 rows because this is the start of cycling (not interested in yet)
     Scales the torque column with a minmax scaler
     Add 2 new rows based on crank angle, removes crank angle column
     Creates sequences of length SEQ_LEN
@@ -16,8 +15,6 @@ def preprocess(df,seq_len ,normalize=True, shuffle=True):
     :return: x: the sequenced data
              y: the resulting data
     '''
-    df = df.iloc[300:]  # remove the first 300 rows, since this is the start and doesn't conform with the proposed model
-    df.reset_index(inplace=True, drop=True)
     min_max_scaler = preprocessing.MinMaxScaler()
     for col in df.columns:
         if normalize and col != df_rpm and col != df_crank_angle_rad:
