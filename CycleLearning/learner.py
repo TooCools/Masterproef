@@ -9,26 +9,26 @@ from sklearn.ensemble import RandomForestRegressor
 import pickle
 
 
-def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
+def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, save=False):
     config = tf.ConfigProto(device_count={'GPU': 1, 'CPU': 4})
     sess = tf.Session(config=config)
     tf.keras.backend.set_session(sess)
 
     model = Sequential()
     # model.add(LSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
-    model.add(CuDNNLSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
+    model.add(CuDNNLSTM(64, input_shape=train_x.shape[1:]))
     model.add(Dropout(0.2))
     model.add(BatchNormalization())  # normalizes activation outputs, same reason you want to normalize your input data.
 
     # model.add(LSTM(128, return_sequences=True))
-    model.add(CuDNNLSTM(128, return_sequences=True))
-    model.add(Dropout(0.1))
-    model.add(BatchNormalization())
+    # model.add(CuDNNLSTM(128, return_sequences=True))
+    # model.add(Dropout(0.1))
+    # model.add(BatchNormalization())
 
     # model.add(LSTM(128))
-    model.add(CuDNNLSTM(128))
-    model.add(Dropout(0.2))
-    model.add(BatchNormalization())
+    # model.add(CuDNNLSTM(128))
+    # model.add(Dropout(0.2))
+    # model.add(BatchNormalization())
 
     model.add(Dense(32))
     # model.add(Dense(32, activation='relu'))
@@ -49,7 +49,7 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
 
     filepath = "RNN_Final-{epoch:02d}-{mean_squared_error:.3f}"  # unique file name that will include the epoch and the validation acc for that epoch
     checkpoint = ModelCheckpoint(
-        "models/{}.model".format(filepath, monitor='mean_squared_error', verbose=1, save_best_only=True,
+        "models/nn/{}.model".format(filepath, monitor='mean_squared_error', verbose=1, save_best_only=True,
                                  mode='min'))  # saves only the best ones
     history = model.fit(
         train_x, train_y,
@@ -62,7 +62,8 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10):
     score = model.evaluate(val_x, val_y, verbose=0)
     print('Test loss mse:', score[0])
     # Save model
-    model.save("models/{}".format(name))
+    if save:
+        model.save("models/{}".format(name))
     return model
 
 

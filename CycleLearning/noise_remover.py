@@ -13,7 +13,7 @@ def fourier_visualisation(noisy, start_index):
     ax = fig.add_subplot(111, projection='3d')
     fig2 = plt.figure()
     ax2 = fig2.add_subplot(111, projection='3d')
-    for i in range(start_index, start_index + 5):
+    for i in range(start_index, start_index + 300):
         y = noisy[i:i + size]
         freqs = fftfreq(size, 0.1)
         fft_vals = fft(y)
@@ -32,7 +32,7 @@ def fourier_visualisation(noisy, start_index):
     ax2.set_ylabel('Y')
     ax2.set_zlabel('Z')
     ax2.set_zlim(-1000, 1000)
-    angle = 45
+    angle = 80
     ax.view_init(20, angle)
     ax2.view_init(20, angle)
     plt.show()
@@ -40,4 +40,4 @@ def fourier_visualisation(noisy, start_index):
 
 df = get_data("..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
 t_cyclist = df[" Crank_torque_Nm_filt"]
-fourier_visualisation(t_cyclist, 9500)
+fourier_visualisation(t_cyclist, 8240)
