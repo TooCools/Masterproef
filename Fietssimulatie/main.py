@@ -8,7 +8,6 @@ from params import *
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
 omega_crank = [0.0]  # rpm van de trapas
-omega_crank_calculated = [0.0]
 v_fiets = [0.0]  # snelheid in m/s
 t_cy = [0.0]
 t_mg1 = [0.0]
@@ -21,6 +20,7 @@ slope_array = [0.0]
 f_grav_array = [0.0]
 f_fric_array = [0.0]
 f_aero_array = [0.0]
+fcc_array = [0.0]
 t_dc_max = 60
 slope_offset = -8
 
@@ -36,12 +36,13 @@ Een fietser trapt ongeveer 100W als hij stevig rechtdoor fietst, 150W als hij be
 
 
 def bicycle_model():
-    # fcc = 10 * t_dc - 30
-    fcc = 7 * t_dc - 10
+    fcc = 7 * t_dc - 10  # todo deze berekening doen op het gemiddelde t_dc, aangezien dit cyclish is varieert dit op momenten van 0 tot 20 waardoor rpm per tijdseenheid van 0 naar 120 schommelt
     if fcc < 0:
         fcc = 0
     elif fcc > 120:
         fcc = 120
+    fcc = int(5 * round(fcc / 5))
+    fcc_array.append(fcc)
     return fcc
 
 
@@ -52,7 +53,7 @@ def cadence_for_speed(v):
     :return: cadence in rpm
     """
     # if v <= 15:
-    rpm = v * 50 / 15
+    rpm = v * 60 / 15
     # else:
     #     rpm = 50 + (v - 15) * 2
     fcc = bicycle_model()
@@ -109,7 +110,7 @@ def simulate():
         print('time', int(h / 10), 'speed', v_fiets_previous_kmh, 'slope', slope_rad, 'rpm', omega_crank_current_rpm,
               'tdc',
               t_dc_array[h])
-        f_grav = total_mass * g * sin(slope_rad) * 0.3
+        f_grav = total_mass * g * sin(slope_rad)
         f_friction = total_mass * g * cos(slope_rad) * cr
         f_aero = 0.5 * cd * ro_aero * a_aero * (v_fiets_previous_ms ** 2)
         f_aero *= np.sign(v_fiets_previous_kmh)
@@ -156,7 +157,7 @@ data = {'speed (km/h)': v_fiets,
         }
 
 # save(data)
-save(data, "validation")
+# save(data, "test")
 print("Finished")
 
 
