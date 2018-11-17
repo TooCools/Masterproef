@@ -24,3 +24,4 @@ Met tensorboard kun je ook modelcheckpoints gebruiken. Wanneer bijvoorbeeld de a
 
 LSTM (Long short term memory) voor sequential data (bij cpu versie duurt het leren precies wat lang)
 GRU (Gated recurring? unit) voor sequential data
+Passive Agressive zou goed moeten zijn voor online learning => warm_start op true zetten gebruikt vorige "weights" worden hergebruikt
