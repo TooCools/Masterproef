@@ -1,0 +1,12 @@
+fcc afronden naar #5 + v ref naar 32 zetten + support level hoger
+modellen aanpassen zodat hij de fcc gaat raden
+
+
+Het aanpassen van de cadans door de gebruiker moet probabilistisch worden. Hoe verder de fcc verwijderd is van de huidige cadans, hoe meer probable dat het is dat het model moet aangepast worden
+De aanpassingen gebeuren met increments van 5. Elke +-3 seconden mag er een aanpassing gebeuren.
+(NIET DOEN ATM, maar afvlakken zodat fcc nooit minder is dan 40)
+
+fourier transformatie doorsturen naar Jorrit
+PDF's van Passive Agressive naar Rugen sturen
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.108.566&rep=rep1&type=pdf
