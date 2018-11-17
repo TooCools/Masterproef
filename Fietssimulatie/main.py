@@ -22,12 +22,12 @@ f_fric_array = [0.0]
 f_aero_array = [0.0]
 fcc_array = [0.0]
 t_dc_max = 60
-slope_offset = -8
+slope_offset = 19
 
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
 route_slots = []
-total_timesteps = 10000
+total_timesteps = 100000
 
 '''
 Bepaald hoeveel vermogen een fietser trapt. P=T*O, met P het vermogen, T = t_dc en O= optimale cadans.
@@ -36,7 +36,9 @@ Een fietser trapt ongeveer 100W als hij stevig rechtdoor fietst, 150W als hij be
 
 
 def bicycle_model():
-    fcc = 7 * t_dc - 10  # todo deze berekening doen op het gemiddelde t_dc, aangezien dit cyclish is varieert dit op momenten van 0 tot 20 waardoor rpm per tijdseenheid van 0 naar 120 schommelt
+    avg_tdc = np.average(t_dc_array[-50:])
+    # fcc = 7 * t_dc_array[-1:][0] - 10
+    fcc = 7 * avg_tdc - 10
     if fcc < 0:
         fcc = 0
     elif fcc > 120:
@@ -52,11 +54,11 @@ def cadence_for_speed(v):
     :param v: speed in km/h
     :return: cadence in rpm
     """
-    # if v <= 15:
-    rpm = v * 60 / 15
-    # else:
-    #     rpm = 50 + (v - 15) * 2
     fcc = bicycle_model()
+    if v <= 15:
+        rpm = v * 70 / 15
+    else:
+        rpm = 70 + (v - 15) * 8
     if rpm > fcc:
         return fcc
     return rpm
@@ -87,7 +89,7 @@ def update(h):
     t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
     global slope_rad
     n = noise.pnoise1(slope_offset + (h / 2000), 6, 0.1, 3, 1024)
-    slope_rad = np.interp(n, [-1, 1], [-0.13, 0.13])
+    slope_rad = np.interp(n, [-1, 1], [-0.02, 0.07])
 
 
 def simulate():
@@ -110,7 +112,7 @@ def simulate():
         print('time', int(h / 10), 'speed', v_fiets_previous_kmh, 'slope', slope_rad, 'rpm', omega_crank_current_rpm,
               'tdc',
               t_dc_array[h])
-        f_grav = total_mass * g * sin(slope_rad)
+        f_grav = total_mass * g * sin(slope_rad)*0.9
         f_friction = total_mass * g * cos(slope_rad) * cr
         f_aero = 0.5 * cd * ro_aero * a_aero * (v_fiets_previous_ms ** 2)
         f_aero *= np.sign(v_fiets_previous_kmh)
@@ -153,11 +155,12 @@ data = {'speed (km/h)': v_fiets,
         'slope °': slope_array,
         'force gravity': f_grav_array,
         'force friction': f_fric_array,
-        'force aero': f_aero_array
+        'force aero': f_aero_array,
+        'fcc': fcc_array
         }
 
-# save(data)
-# save(data, "test")
+save(data)
+# save(data, "validation")
 print("Finished")
 
 

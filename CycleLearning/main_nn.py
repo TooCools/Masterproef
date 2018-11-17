@@ -23,8 +23,8 @@ def visualize_data(ys, legends, name, path,show):
 
 
 print("Loading Data")
-df_main = get_data("data\\data.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
-df_val = get_data("data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
+df_main = get_data("data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_val = get_data("data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 print("Data loaded")
 
 print("Preprocessing data")

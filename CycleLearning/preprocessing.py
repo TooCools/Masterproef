@@ -6,7 +6,7 @@ from params import *
 import random
 
 
-def preprocess(df,seq_len ,normalize=True, shuffle=True):
+def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False):
     '''
     Scales the torque column with a minmax scaler
     Add 2 new rows based on crank angle, removes crank angle column
@@ -15,9 +15,10 @@ def preprocess(df,seq_len ,normalize=True, shuffle=True):
     :return: x: the sequenced data
              y: the resulting data
     '''
+    print("Preprocessing")
     min_max_scaler = preprocessing.MinMaxScaler()
     for col in df.columns:
-        if normalize and col != df_rpm and col != df_crank_angle_rad:
+        if normalize and col != df_fcc and col != df_crank_angle_rad:
             vals_scaled = min_max_scaler.fit_transform(df[[col]])
             df_new = pandas.DataFrame(vals_scaled)
             df[col] = df_new
@@ -26,12 +27,17 @@ def preprocess(df,seq_len ,normalize=True, shuffle=True):
             df['cos_angle'] = pandas.Series(np.cos(df[col].values))
             df['sin_angle'] = pandas.Series(np.sin(df[col].values))
 
-    df.drop(df_crank_angle_rad, 1)
+    if classification:
+        df[df_fcc] = (df[df_fcc] - 40) / 5
+        df[df_fcc][df[df_fcc] < 0] = 0
 
+    df = df.drop(df_crank_angle_rad, 1)
+
+    df = df[[df_fcc, df_torque, 'cos_angle', 'sin_angle']]
     sequences = []
     prev_data = deque(maxlen=seq_len)
     for i in df.values:
-        prev_data.append([n for n in i[1:]])  #
+        prev_data.append([n for n in i[1:]])
         if len(prev_data) == seq_len:
             sequences.append([np.array(prev_data), i[0]])
     if shuffle:
@@ -41,4 +47,5 @@ def preprocess(df,seq_len ,normalize=True, shuffle=True):
     for seq, target in sequences:
         x.append(seq)
         y.append(target)
+    print("Preprocessing Finished")
     return np.array(x), y

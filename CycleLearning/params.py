@@ -6,4 +6,4 @@ BATCH_SIZE = 64
 
 df_torque = 't_cyclist'
 df_crank_angle_rad = 'crank_angle_%2PI'
-df_rpm = 'rpm'
+df_fcc = 'fcc'

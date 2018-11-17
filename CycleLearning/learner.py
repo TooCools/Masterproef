@@ -4,8 +4,8 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM, CuDNNLSTM, BatchNormal
 from tensorflow.keras import metrics
 from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
 import time
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 import pickle
 
 
@@ -50,7 +50,7 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, sa
     filepath = "RNN_Final-{epoch:02d}-{mean_squared_error:.3f}"  # unique file name that will include the epoch and the validation acc for that epoch
     checkpoint = ModelCheckpoint(
         "models/nn/{}.model".format(filepath, monitor='mean_squared_error', verbose=1, save_best_only=True,
-                                 mode='min'))  # saves only the best ones
+                                    mode='min'))  # saves only the best ones
     history = model.fit(
         train_x, train_y,
         batch_size=batch_size,
@@ -67,8 +67,11 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, sa
     return model
 
 
-def learn_regtree(name, train_x, train_y, depth=50, save=False):
-    tree = DecisionTreeRegressor(max_depth=depth)
+def learn_tree(name, train_x, train_y, depth=10, save=False, classification=False):
+    if classification:
+        tree=DecisionTreeClassifier(max_depth=depth)
+    else:
+        tree = DecisionTreeRegressor(max_depth=depth)
     nsamples, nx, ny = train_x.shape
     d2_train_dataset = train_x.reshape((nsamples, nx * ny))
     tree.fit(d2_train_dataset, train_y)
@@ -77,8 +80,11 @@ def learn_regtree(name, train_x, train_y, depth=50, save=False):
     return tree
 
 
-def learn_randomforest(name, train_x, train_y, estimators=10, depth=50, save=False):
-    forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
+def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=False, classification=False):
+    if classification:
+        forest=RandomForestClassifier(max_depth=depth,n_estimators=estimators)
+    else:
+        forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
     nsamples, nx, ny = train_x.shape
     d2_train_dataset = train_x.reshape((nsamples, nx * ny))
     forest.fit(d2_train_dataset, train_y)
