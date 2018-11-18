@@ -1,0 +1,10 @@
+Online passive-aggressive (PA) algorithms [4] are a family of margin-based online
+learning algorithms that are specially suitable for adaptation tasks where a convenient
+change in the value of the parameters of our models is desired after every sample is
+presented to the system. -Passive-Aggressive for On-Line Learning in Statistical Machine Translation
+
+As in classification tasks, it is common to add a slack variable into the optimisation problem to get more flexibility during the learning process. -Passive-Aggressive for On-Line Learning in Statistical Machine Translation
+
+The introduction of the slack variable allows to have soft-margins (like in SVM) and a degree of tolerance controlled by the parameter C - https://www.bonaccorso.eu/2017/10/06/ml-algorithms-addendum-passive-aggressive-algorithms/
+
+Testen op fietssimulatie data tonen aan dat PA beter gebruikt wordt als een regressor <=> classifier

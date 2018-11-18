@@ -1,4 +1,5 @@
 import tensorflow as tf
+from sklearn.linear_model import PassiveAggressiveClassifier, PassiveAggressiveRegressor
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LSTM, CuDNNLSTM, BatchNormalization
 from tensorflow.keras import metrics
@@ -91,3 +92,14 @@ def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=Fal
     if save:
         pickle.dump(forest, open("models/forests/{}.sav".format(name), "wb"))
     return forest
+
+
+def learn_PA(name,train_x,train_y,max_iter=100,save=False,classification=False):
+    if classification:
+        model=PassiveAggressiveClassifier(max_iter=max_iter,warm_start=True)
+    else:
+        model=PassiveAggressiveRegressor(max_iter=max_iter,warm_start=True)
+    model.fit(train_x,train_y)
+    if save:
+        pickle.dump(model, open("models/pa/{}.sav".format(name), "wb"))
+    return model

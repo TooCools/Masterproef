@@ -2,11 +2,11 @@ from sklearn import preprocessing
 import pandas
 from collections import deque
 import numpy as np
-from params import *
+from xsrc.params import *
 import random
 
 
-def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False):
+def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False, seqs=False):
     '''
     Scales the torque column with a minmax scaler
     Add 2 new rows based on crank angle, removes crank angle column
@@ -48,4 +48,8 @@ def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False):
         x.append(seq)
         y.append(target)
     print("Preprocessing Finished")
-    return np.array(x), y
+    xs = np.array(x)
+    if not seqs:
+        nsamples, nx, ny = xs.shape
+        return xs.reshape((nsamples, nx * ny)),y
+    return xs, y

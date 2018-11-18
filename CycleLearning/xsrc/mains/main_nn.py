@@ -1,8 +1,9 @@
-from excel_to_data import get_data
-import matplotlib.pyplot as plt
-from learner import learn_lstm
-from params import *
-from preprocessing import preprocess
+from xsrc.excel_to_data import get_data
+from xsrc.learner import learn_lstm
+from xsrc.params import *
+from xsrc.preprocessing import preprocess
+from xsrc.analyze import visualize_data
+
 import time
 
 
@@ -10,22 +11,10 @@ import time
 
 # df_main = get_data("..\\Fietssimulatie\\data.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 # df_val = get_data("..\\Fietssimulatie\\validation.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
-def visualize_data(ys, legends, name, path,show):
-    plt.title(name)
-    for y in ys:
-        plt.plot(y)
-    plt.legend(legends)
-    if show:
-        plt.show()
-    else:
-        plt.savefig(path + name)
-        plt.close()
 
 
-print("Loading Data")
-df_main = get_data("data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
-df_val = get_data("data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
-print("Data loaded")
+df_main = get_data("..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_val = get_data("..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 
 print("Preprocessing data")
 train_x, train_y = preprocess(df_main, SEQ_LEN_NN)

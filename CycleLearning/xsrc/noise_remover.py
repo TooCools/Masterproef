@@ -1,9 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from numpy.fft import fft, fftfreq, ifft
-from mpl_toolkits.mplot3d import Axes3D
-from excel_to_data import get_data
-from params import *
+from numpy.fft import fft, fftfreq
+from xsrc.excel_to_data import get_data
 
 size = 50
 

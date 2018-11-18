@@ -10,3 +10,6 @@ fourier transformatie doorsturen naar Jorrit
 PDF's van Passive Agressive naar Rugen sturen
 
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.108.566&rep=rep1&type=pdf
+
+Expectation-Maximisation algorithm??? Ortiz-Martinez, D., Garcia-Varea, I., Casacuberta, F.: Online learning for interactive statistical
+machine translation. In: Proceedings of NAACL HLT, Los Angeles (June 2010)

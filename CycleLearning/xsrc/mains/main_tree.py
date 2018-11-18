@@ -1,29 +1,17 @@
-from excel_to_data import get_data
-from learner import learn_tree, learn_randomforest
-from params import *
-from preprocessing import preprocess
-import time
-import matplotlib.pyplot as plt
-
+from xsrc.analyze import visualize_data
+from xsrc.excel_to_data import get_data
+from xsrc.learner import learn_randomforest
+from xsrc.params import *
+from xsrc.preprocessing import preprocess
 # df_slope = 'slope °'
 
 # df_main = get_data("..\\Fietssimulatie\\data.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 # df_val = get_data("..\\Fietssimulatie\\validation.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 
-df_main = get_data("data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
-df_val = get_data("data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_main = get_data("..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_val = get_data("..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 
 
-def visualize_data(ys, legends, name, path, save=False):
-    plt.title(name)
-    for y in ys:
-        plt.plot(y)
-    plt.legend(legends)
-    if save:
-        plt.savefig(path + name)
-        plt.close()
-    else:
-        plt.show()
 
 
 # val_x, val_y = preprocess(df_val, 50, normalize=False, shuffle=False, classification=True)
