@@ -1,0 +1,16 @@
+online <=> offline
+
+fcc <=> cadans
+
+preprocessing
+	cos en sin
+	noise filtering
+		wegnoise en motor noise aan frequenties 20hz> en 1000hz>
+	sequences
+	(normalization)
+
+fietssimulatie
+
+bijleren
+	keuze van datapunten
+	probabilistisch

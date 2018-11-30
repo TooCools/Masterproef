@@ -15,7 +15,7 @@ def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False, 
     :return: x: the sequenced data
              y: the resulting data
     '''
-    print("Preprocessing")
+    # print("Preprocessing")
     min_max_scaler = preprocessing.MinMaxScaler()
     for col in df.columns:
         if normalize and col != df_fcc and col != df_crank_angle_rad:
@@ -47,9 +47,23 @@ def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False, 
     for seq, target in sequences:
         x.append(seq)
         y.append(target)
-    print("Preprocessing Finished")
+    # print("Preprocessing Finished")
     xs = np.array(x)
     if not seqs:
         nsamples, nx, ny = xs.shape
-        return xs.reshape((nsamples, nx * ny)),y
+        return xs.reshape((nsamples, nx * ny)), y
     return xs, y
+
+
+def preprocess_dict(dict, seq_len, normalize=True, shuffle=True, classification=False, seqs=False):
+    '''
+    Scales the torque column with a minmax scaler
+    Add 2 new rows based on crank angle, removes crank angle column
+    Creates sequences of length SEQ_LEN
+    :param df: The dataframe
+    :return: x: the sequenced data
+             y: the resulting data
+    '''
+    df = pandas.DataFrame(dict)
+    return preprocess(df, seq_len, normalize=normalize, shuffle=shuffle, classification=classification, seqs=seqs)
+

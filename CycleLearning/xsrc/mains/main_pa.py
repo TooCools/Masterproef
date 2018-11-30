@@ -5,7 +5,6 @@ from xsrc.excel_to_data import get_data
 from xsrc.learner import learn_PA
 from xsrc.params import *
 from xsrc.preprocessing import preprocess
-import numpy as np
 
 df_main = get_data("..\\..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 df_val = get_data("..\\..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])

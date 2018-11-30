@@ -70,7 +70,7 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, sa
 
 def learn_tree(name, train_x, train_y, depth=10, save=False, classification=False):
     if classification:
-        tree=DecisionTreeClassifier(max_depth=depth)
+        tree = DecisionTreeClassifier(max_depth=depth)
     else:
         tree = DecisionTreeRegressor(max_depth=depth)
     nsamples, nx, ny = train_x.shape
@@ -83,7 +83,7 @@ def learn_tree(name, train_x, train_y, depth=10, save=False, classification=Fals
 
 def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=False, classification=False):
     if classification:
-        forest=RandomForestClassifier(max_depth=depth,n_estimators=estimators)
+        forest = RandomForestClassifier(max_depth=depth, n_estimators=estimators)
     else:
         forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
     nsamples, nx, ny = train_x.shape
@@ -94,12 +94,16 @@ def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=Fal
     return forest
 
 
-def learn_PA(name,train_x,train_y,max_iter=100,save=False,classification=False):
+def learn_PA(name, train_x, train_y, max_iter=100, save=False, classification=False):
     if classification:
-        model=PassiveAggressiveClassifier(max_iter=max_iter,warm_start=True)
+        model = PassiveAggressiveClassifier(max_iter=max_iter, warm_start=True,shuffle=True)
     else:
-        model=PassiveAggressiveRegressor(max_iter=max_iter,warm_start=True)
-    model.fit(train_x,train_y)
+        model = PassiveAggressiveRegressor(max_iter=max_iter, warm_start=True,shuffle=True)
+    model.fit(train_x, train_y)
     if save:
         pickle.dump(model, open("models/pa/{}.sav".format(name), "wb"))
     return model
+
+
+def defaultPA():
+    return PassiveAggressiveRegressor(max_iter=100, warm_start=True)

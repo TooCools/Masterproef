@@ -159,15 +159,15 @@ data = {'speed (km/h)': v_fiets,
         'fcc': fcc_array
         }
 
-save(data)
-# save(data, "validation")
-print("Finished")
-
-
-def visualize_data(y):
-    for data in y:
-        plt.plot(data)
-    plt.show()
-
-
-visualize_data([omega_crank, slope_array])
+# save(data)
+## save(data, "validation")
+# print("Finished")
+#
+#
+# def visualize_data(y):
+#     for data in y:
+#         plt.plot(data)
+#     plt.show()
+#
+#
+# visualize_data([omega_crank, slope_array])
