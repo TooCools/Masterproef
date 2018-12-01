@@ -1,8 +1,10 @@
+from xsrc.analyze import visualize_data
 from xsrc.learner import learn_PA
 from xsrc.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad
 from xsrc.simulation.cycleModel import *
 from xsrc.simulation.params import *
 import numpy as np
+from sklearn.metrics import mean_squared_error
 
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
@@ -21,6 +23,9 @@ f_fric_array = [0.0]
 f_aero_array = [0.0]
 fcc_array = [0.0]
 t_dc_max = 60
+predicted = []
+actual_fcc = []
+mse_array=[]
 
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
@@ -29,6 +34,7 @@ total_timesteps = 100000
 seqlen = 50
 
 model = learn_PA("test", [range(seqlen * 3)], [0])
+
 
 train_x = []
 train_y = []
@@ -122,15 +128,20 @@ for h in range(1, int(total_timesteps)):
     #       'tdc',
     #       t_dc_array[h])
     if h > seqlen:
-        predicted = -1
+        predicted_fcc = -1
         if h % 5 == 0:
-            predicted = predict(h)[0]
-            diff = fcc_array[h] - predicted
-            print("Predicted: " + str(predicted), "Actual: " + str(fcc_array[h]), "Difference: " + str(diff))
+            predicted_fcc = predict(h)[0]
+            predicted.append(predicted_fcc)
+            diff = fcc_array[h] - predicted_fcc
+            actual_fcc.append(fcc_array[h])
+            mse = mean_squared_error(actual_fcc, predicted)
+            mse_array.append(mse)
+            print("Predicted: " + str(predicted_fcc), "Actual: " + str(fcc_array[h]), "Difference: " + str(diff),
+                  "MSE: " + str(mse))
             if h % 30 == 0 and h > 2 * seqlen:
                 if abs(diff) >= 5:
                     print("Training the model because the difference was too high; diff= " + str(diff))
-                    train(h, predicted, fcc_array[h])
+                    train(h, predicted_fcc, fcc_array[h])
 
 data = {'speed (km/h)': v_fiets,
         'rpm': omega_crank,
@@ -149,6 +160,9 @@ data = {'speed (km/h)': v_fiets,
         'force aero': f_aero_array,
         'fcc': fcc_array
         }
+
+visualize_data([predicted,actual_fcc],["Predicted fcc","Actual fcc"])
+visualize_data([mse_array],["MSE"])
 
 print("Times trained: " + str(times_trained))
 
