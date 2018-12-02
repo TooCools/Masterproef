@@ -10,19 +10,17 @@ def bicycle_model(t_dc_array, fcc_array):
     avg_tdc = np.average(t_dc_array[-50:])
     # fcc = 7 * t_dc_array[-1:][0] - 10
     fcc = 7 * avg_tdc - 10
-    if fcc < 0:
-        fcc = 0
+    fcc = int(5 * round(fcc / 5))
+    if fcc < 40:
+        fcc = 40
     elif fcc > 120:
         fcc = 120
-    fcc = int(5 * round(fcc / 5))
     fcc_array.append(fcc)
     return fcc
 
 
 def cadence_for_speed(v, t_dc_array, fcc_array):
-    # print("VOOR: "+str(len(t_dc_array)))
     fcc = bicycle_model(t_dc_array, fcc_array)
-    # print("NA: "+str(len(t_dc_array)))
     if v <= 15:
         rpm = v * 70 / 15
     else:
@@ -32,14 +30,18 @@ def cadence_for_speed(v, t_dc_array, fcc_array):
     return rpm
 
 
-def fietsers_koppel(angle, t_dc, t_dc_array, t_cyclist_no_noise):
+def fietsers_koppel(angle, t_dc, t_dc_array, t_cyclist_no_noise, dominant_leg=False):
     gaussian_random = np.random.normal(0, 0.3)
+    gaussian_random=0
     t_dc_noise = t_dc + gaussian_random
     if t_dc_noise < 0:
         t_dc_noise = 0
     t_dc_array.append(t_dc_noise)
     t_cyclist_no_noise.append(t_dc * (1 + sin(2 * angle - (pi / 6))))
-    return t_dc_noise * (1 + sin(2 * angle - (pi / 6)))
+    koppel = t_dc_noise * (1 + sin(2 * angle - (pi / 6)))
+    if dominant_leg:
+        koppel += (1 + sin(angle - (5*pi / 6)))
+    return koppel
 
 
 def update(h, omega_crank, v_fiets):

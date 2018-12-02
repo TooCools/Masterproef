@@ -1,6 +1,7 @@
 from xsrc.analyze import visualize_data
-from xsrc.learner import learn_PA
-from xsrc.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad
+from xsrc.excel_to_data import get_data
+from xsrc.learner import learn_PA, learn_SGD, get_SGD
+from xsrc.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad, preprocess
 from xsrc.simulation.cycleModel import *
 from xsrc.simulation.params import *
 import numpy as np
@@ -32,8 +33,10 @@ slope_rad = 0.0  # helling waarop de fiets zich bevindt
 route_slots = []
 total_timesteps = 100000
 seqlen = 50
+start=True
 
 model = learn_PA("test", [range(seqlen * 3)], [0])
+# model = learn_SGD("test", [range(seqlen * 3)], [0])
 
 
 train_x = []
@@ -55,14 +58,19 @@ def predict(i):
 def train(i, predicted, actual):
     global model
     global times_trained
+    global start
     stuff = {
         df_torque: t_cy[i - seqlen * 2 - 1:i],
         df_fcc: fcc_array[i - seqlen * 2 - 1:i],
         df_crank_angle_rad: theta_crank_rad[i - seqlen * 2 - 1:i],
     }
-    x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=False)
+    x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=True)
     concat_training(x, y)
-    model = model.fit(train_x, train_y)
+    if start:
+        model=learn_PA("",train_x,train_y)
+        start=False
+    else:
+        model = model.fit(train_x, train_y)
     times_trained += 1
 
 
@@ -94,7 +102,7 @@ for h in range(1, int(total_timesteps)):
     theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
 
     # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
-    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise)
+    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=True)
     t_mg1_current = t_cyclist * kcr_r * (ns / nr) * ks_mg1
     t_mg2_current = min(20, support_level * t_cyclist)
     t_rw = t_cyclist * kcr_r * ((nr + ns) / nr)
@@ -131,6 +139,10 @@ for h in range(1, int(total_timesteps)):
         predicted_fcc = -1
         if h % 5 == 0:
             predicted_fcc = predict(h)[0]
+            if predicted_fcc<40:
+                predicted_fcc=40
+            elif predicted_fcc>120:
+                predicted_fcc=120
             predicted.append(predicted_fcc)
             diff = fcc_array[h] - predicted_fcc
             actual_fcc.append(fcc_array[h])
@@ -142,6 +154,7 @@ for h in range(1, int(total_timesteps)):
                 if abs(diff) >= 5:
                     print("Training the model because the difference was too high; diff= " + str(diff))
                     train(h, predicted_fcc, fcc_array[h])
+
 
 data = {'speed (km/h)': v_fiets,
         'rpm': omega_crank,

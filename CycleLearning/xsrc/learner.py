@@ -1,5 +1,5 @@
 import tensorflow as tf
-from sklearn.linear_model import PassiveAggressiveClassifier, PassiveAggressiveRegressor
+from sklearn.linear_model import PassiveAggressiveClassifier, PassiveAggressiveRegressor, SGDClassifier, SGDRegressor
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LSTM, CuDNNLSTM, BatchNormalization
 from tensorflow.keras import metrics
@@ -96,14 +96,28 @@ def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=Fal
 
 def learn_PA(name, train_x, train_y, max_iter=100, save=False, classification=False):
     if classification:
-        model = PassiveAggressiveClassifier(max_iter=max_iter, warm_start=True,shuffle=True)
+        model = PassiveAggressiveClassifier(max_iter=max_iter, warm_start=True, shuffle=True)
     else:
-        model = PassiveAggressiveRegressor(max_iter=max_iter, warm_start=True,shuffle=True)
+        model = PassiveAggressiveRegressor(max_iter=max_iter, warm_start=True, shuffle=True)
     model.fit(train_x, train_y)
     if save:
         pickle.dump(model, open("models/pa/{}.sav".format(name), "wb"))
     return model
 
 
-def defaultPA():
-    return PassiveAggressiveRegressor(max_iter=100, warm_start=True)
+def learn_SGD(name, train_x, train_y, max_iter=100, save=False, classification=False):
+    if classification:
+        model = SGDClassifier(max_iter=max_iter, warm_start=True, shuffle=True)
+    else:
+        model = SGDRegressor(max_iter=max_iter, shuffle=True, alpha=0.01)
+    model.fit(train_x, train_y)
+    if save:
+        pickle.dump(model, open("models/sgd/{}.sav".format(name), "wb"))
+    return model
+
+
+def get_SGD(max_iter=100, classification=False):
+    if classification:
+        return SGDClassifier(max_iter=max_iter, warm_start=True, shuffle=True)
+    else:
+        return SGDRegressor(max_iter=max_iter, shuffle=True, alpha=0.01)
