@@ -10,6 +10,8 @@ preprocessing
 	(normalization)
 
 fietssimulatie
+	realistisch
+	last model
 
 bijleren
 	keuze van datapunten
