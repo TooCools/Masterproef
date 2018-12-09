@@ -26,14 +26,14 @@ fcc_array = [0.0]
 t_dc_max = 60
 predicted = []
 actual_fcc = []
-mse_array=[]
+mse_array = []
 
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
 route_slots = []
 total_timesteps = 100000
 seqlen = 50
-start=True
+start = True
 
 model = learn_PA("test", [range(seqlen * 3)], [0])
 # model = learn_SGD("test", [range(seqlen * 3)], [0])
@@ -52,10 +52,15 @@ def predict(i):
         df_crank_angle_rad: theta_crank_rad[i - seqlen:i],
     }
     x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=False)
-    return model.predict(x)
+    model_prediction = model.predict(x)[0]
+    if model_prediction < 40:
+        model_prediction = 40
+    elif model_prediction > 120:
+        model_prediction = 120
+    return model_prediction
 
 
-def train(i, predicted, actual):
+def train(i):
     global model
     global times_trained
     global start
@@ -67,8 +72,8 @@ def train(i, predicted, actual):
     x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=True)
     concat_training(x, y)
     if start:
-        model=learn_PA("",train_x,train_y)
-        start=False
+        model = learn_PA("", train_x, train_y)
+        start = False
     else:
         model = model.fit(train_x, train_y)
     times_trained += 1
@@ -84,6 +89,34 @@ def concat_training(x, y):
     else:
         train_x = np.concatenate((train_x, x))
         train_y = train_y + y
+
+
+mse_fcc = []
+mse_predicted = []
+
+
+def mse(i, predicted_opt_cadence, fcc, diff):
+    if i > 300:
+        mse_fcc.append(fcc)
+        mse_predicted.append(predicted_opt_cadence)
+        mse_value = mean_squared_error(mse_fcc, mse_predicted)
+        mse_array.append(mse_value)
+        print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]), "Difference: " + str(diff),
+              "MSE: " + str(mse_value))
+
+
+def machine_learning():
+    if h > seqlen:
+        if h % 5 == 0:
+            predicted_opt_cadence = predict(h)
+            predicted.append(predicted_opt_cadence)
+            diff = fcc_array[h] - predicted_opt_cadence
+            mse(h, predicted_opt_cadence, fcc_array[h], diff)
+            actual_fcc.append(fcc_array[h])
+            if h % 30 == 0 and h > 2 * seqlen:
+                if abs(diff) >= 5:
+                    print("Training the model because the difference was too high; diff= " + str(diff))
+                    train(h)
 
 
 for h in range(1, int(total_timesteps)):
@@ -102,7 +135,7 @@ for h in range(1, int(total_timesteps)):
     theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
 
     # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
-    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=True)
+    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise, dominant_leg=True)
     t_mg1_current = t_cyclist * kcr_r * (ns / nr) * ks_mg1
     t_mg2_current = min(20, support_level * t_cyclist)
     t_rw = t_cyclist * kcr_r * ((nr + ns) / nr)
@@ -135,26 +168,7 @@ for h in range(1, int(total_timesteps)):
     # print('time', int(h / 10), 'speed', v_fiets_previous_kmh, 'slope', slope_rad, 'rpm', omega_crank_current_rpm,
     #       'tdc',
     #       t_dc_array[h])
-    if h > seqlen:
-        predicted_fcc = -1
-        if h % 5 == 0:
-            predicted_fcc = predict(h)[0]
-            if predicted_fcc<40:
-                predicted_fcc=40
-            elif predicted_fcc>120:
-                predicted_fcc=120
-            predicted.append(predicted_fcc)
-            diff = fcc_array[h] - predicted_fcc
-            actual_fcc.append(fcc_array[h])
-            mse = mean_squared_error(actual_fcc, predicted)
-            mse_array.append(mse)
-            print("Predicted: " + str(predicted_fcc), "Actual: " + str(fcc_array[h]), "Difference: " + str(diff),
-                  "MSE: " + str(mse))
-            if h % 30 == 0 and h > 2 * seqlen:
-                if abs(diff) >= 5:
-                    print("Training the model because the difference was too high; diff= " + str(diff))
-                    train(h, predicted_fcc, fcc_array[h])
-
+    machine_learning()
 
 data = {'speed (km/h)': v_fiets,
         'rpm': omega_crank,
@@ -174,8 +188,8 @@ data = {'speed (km/h)': v_fiets,
         'fcc': fcc_array
         }
 
-visualize_data([predicted,actual_fcc],["Predicted fcc","Actual fcc"])
-visualize_data([mse_array],["MSE"])
+visualize_data([predicted, actual_fcc], ["Predicted fcc", "Actual fcc"])
+visualize_data([mse_array], ["MSE"])
 
 print("Times trained: " + str(times_trained))
 
