@@ -1,11 +1,13 @@
+from math import sin, cos, pi
+
 from xsrc.analyze import visualize_data
 from xsrc.excel_to_data import get_data
 from xsrc.learner import learn_PA, learn_SGD, get_SGD
 from xsrc.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad, preprocess
-from xsrc.simulation.cycleModel import *
+from xsrc.simulation.cycleModel import update, fietsers_koppel
 from xsrc.simulation.params import *
 import numpy as np
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, accuracy_score
 
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
@@ -37,7 +39,7 @@ start = True
 
 model = learn_PA("test", [range(seqlen * 3)], [0])
 # model = learn_SGD("test", [range(seqlen * 3)], [0])
-
+current_opt_cadence = 120
 
 train_x = []
 train_y = []
@@ -52,12 +54,7 @@ def predict(i):
         df_crank_angle_rad: theta_crank_rad[i - seqlen:i],
     }
     x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=False)
-    model_prediction = model.predict(x)[0]
-    if model_prediction < 40:
-        model_prediction = 40
-    elif model_prediction > 120:
-        model_prediction = 120
-    return model_prediction
+    return model.predict(x)[0]
 
 
 def train(i):
@@ -92,31 +89,75 @@ def concat_training(x, y):
 
 
 mse_fcc = []
-mse_predicted = []
+mse_model_predictions = []
+accuracy_predicted_opt_cadense = []
+accuracy_fcc = []
+warmup = 300
 
 
-def mse(i, predicted_opt_cadence, fcc, diff):
-    if i > 300:
-        mse_fcc.append(fcc)
-        mse_predicted.append(predicted_opt_cadence)
-        mse_value = mean_squared_error(mse_fcc, mse_predicted)
-        mse_array.append(mse_value)
-        print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]), "Difference: " + str(diff),
-              "MSE: " + str(mse_value))
+def score(i, model_prediction, predicted_opt_cadence, fcc, diff):
+    if i > warmup:
+        if predicted_opt_cadence == 40 and fcc == 40:
+            print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]),
+                  "Difference: " + str(diff))
+        else:
+            mse_fcc.append(fcc)
+            accuracy_predicted_opt_cadense.append(predicted_opt_cadence)
+            mse_model_predictions.append(model_prediction)
+            mse_value = mean_squared_error(mse_fcc, mse_model_predictions)
+            accuracy = accuracy_score(mse_fcc, accuracy_predicted_opt_cadense)
+            mse_array.append(mse_value)
+            accuracy_fcc.append(accuracy)
+            print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]),
+                  "Difference: " + str(diff),
+                  "MSE: " + str(mse_value) + " Accuracy: " + str(accuracy))
+
+
+def bicycle_model():
+    avg_tdc = np.average(t_dc_array[-50:])
+    # fcc = 7 * t_dc_array[-1:][0] - 10
+    fcc = 7 * avg_tdc - 10
+    fcc = int(5 * round(fcc / 5))
+    if fcc < 40:
+        fcc = 40
+    elif fcc > 120:
+        fcc = 120
+    return fcc
 
 
 def machine_learning():
+    global current_opt_cadence
     if h > seqlen:
         if h % 5 == 0:
-            predicted_opt_cadence = predict(h)
+            model_prediction = predict(h)
+            if model_prediction < 40:
+                model_prediction = 40
+            elif model_prediction > 120:
+                model_prediction = 120
+            predicted_opt_cadence = int(5 * round(model_prediction / 5))
+
             predicted.append(predicted_opt_cadence)
-            diff = fcc_array[h] - predicted_opt_cadence
-            mse(h, predicted_opt_cadence, fcc_array[h], diff)
+            diff = bicycle_model() - predicted_opt_cadence
+            score(h, model_prediction, predicted_opt_cadence, fcc_array[h], diff)
             actual_fcc.append(fcc_array[h])
             if h % 30 == 0 and h > 2 * seqlen:
-                if abs(diff) >= 5:
+                if abs(diff) > 5:
                     print("Training the model because the difference was too high; diff= " + str(diff))
                     train(h)
+            if h >= warmup:
+                current_opt_cadence = predicted_opt_cadence
+    if h < warmup:
+        current_opt_cadence = bicycle_model()
+
+
+def cadence_for_speed(v):
+    if v <= 15:
+        rpm = v * 70 / 15
+    else:
+        rpm = 70 + (v - 15) * 8
+    if rpm > current_opt_cadence:
+        return current_opt_cadence
+    return rpm
 
 
 for h in range(1, int(total_timesteps)):
@@ -128,8 +169,7 @@ for h in range(1, int(total_timesteps)):
     v_fiets_previous_ms = v_fiets_previous_kmh / 3.6
 
     omega_crank_current_rpm = cadence_for_speed(
-        v_fiets_previous_kmh, t_dc_array,
-        fcc_array)  # min(omega_opt_rpm, cadence_for_speed(v_fiets_previous_kmh)) + rpm_offset
+        v_fiets_previous_kmh)  # min(omega_opt_rpm, cadence_for_speed(v_fiets_previous_kmh)) + rpm_offset
     omega_crank_current_rads = omega_crank_current_rpm * 0.10467
 
     theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
@@ -168,6 +208,8 @@ for h in range(1, int(total_timesteps)):
     # print('time', int(h / 10), 'speed', v_fiets_previous_kmh, 'slope', slope_rad, 'rpm', omega_crank_current_rpm,
     #       'tdc',
     #       t_dc_array[h])
+
+    fcc_array.append(bicycle_model())
     machine_learning()
 
 data = {'speed (km/h)': v_fiets,
@@ -188,8 +230,9 @@ data = {'speed (km/h)': v_fiets,
         'fcc': fcc_array
         }
 
-visualize_data([predicted, actual_fcc], ["Predicted fcc", "Actual fcc"])
+visualize_data([predicted, actual_fcc], ["Predicted Optimal Cadence", "FCC"])
 visualize_data([mse_array], ["MSE"])
+visualize_data([accuracy_fcc], ["Accuracy"])
 
 print("Times trained: " + str(times_trained))
 
