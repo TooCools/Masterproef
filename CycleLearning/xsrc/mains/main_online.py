@@ -26,9 +26,10 @@ f_fric_array = [0.0]
 f_aero_array = [0.0]
 fcc_array = [0.0]
 t_dc_max = 60
-predicted = []
+predicted_opt_cadence_array = []
 actual_fcc = []
 mse_array = []
+predictions = []
 
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
@@ -54,7 +55,12 @@ def predict(i):
         df_crank_angle_rad: theta_crank_rad[i - seqlen:i],
     }
     x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=False)
-    return model.predict(x)[0]
+    pred = model.predict(x)[0]
+    if pred > 120:
+        pred = 120
+    elif pred < 40:
+        pred = 40
+    return pred
 
 
 def train(i):
@@ -99,7 +105,7 @@ def score(i, model_prediction, predicted_opt_cadence, fcc, diff):
     if i > warmup:
         if predicted_opt_cadence == 40 and fcc == 40:
             print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]),
-                  "Difference: " + str(diff))
+                  "Difference: " + str(diff) + " T: " + str(i))
         else:
             mse_fcc.append(fcc)
             accuracy_predicted_opt_cadense.append(predicted_opt_cadence)
@@ -110,7 +116,7 @@ def score(i, model_prediction, predicted_opt_cadence, fcc, diff):
             accuracy_fcc.append(accuracy)
             print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]),
                   "Difference: " + str(diff),
-                  "MSE: " + str(mse_value) + " Accuracy: " + str(accuracy))
+                  "MSE: " + str(mse_value) + " Accuracy: " + str(accuracy) + " T: " + str(i))
 
 
 def bicycle_model():
@@ -125,18 +131,34 @@ def bicycle_model():
     return fcc
 
 
+smoothing_factor = 0.1
+
+
+def postprocessing(model_prediction):
+    # if model_prediction < 40:
+    #     model_prediction = 40
+    # elif model_prediction > 120:
+    #     model_prediction = 120
+    # predicted_opt_cadence = int(5 * round(model_prediction / 5))
+    # return predicted_opt_cadence
+    # previous_predictions = predictions[-5:]
+    # return int(5 * round(np.average(previous_predictions) / 5))
+    if len(mse_model_predictions) == 0:
+        return int(5 * round(model_prediction / 5))
+    else:
+        previous_pred = mse_model_predictions[-1]
+        smoothed = smoothing_factor * previous_pred + (1 - smoothing_factor) * model_prediction
+        return int(5 * round(smoothed / 5))
+
+
 def machine_learning():
     global current_opt_cadence
     if h > seqlen:
+        model_prediction = predict(h)
+        predictions.append(model_prediction)
         if h % 5 == 0:
-            model_prediction = predict(h)
-            if model_prediction < 40:
-                model_prediction = 40
-            elif model_prediction > 120:
-                model_prediction = 120
-            predicted_opt_cadence = int(5 * round(model_prediction / 5))
-
-            predicted.append(predicted_opt_cadence)
+            predicted_opt_cadence = postprocessing(model_prediction)
+            predicted_opt_cadence_array.append(predicted_opt_cadence)
             diff = bicycle_model() - predicted_opt_cadence
             score(h, model_prediction, predicted_opt_cadence, fcc_array[h], diff)
             actual_fcc.append(fcc_array[h])
@@ -230,7 +252,7 @@ data = {'speed (km/h)': v_fiets,
         'fcc': fcc_array
         }
 
-visualize_data([predicted, actual_fcc], ["Predicted Optimal Cadence", "FCC"])
+visualize_data([predicted_opt_cadence_array, actual_fcc], ["Predicted Optimal Cadence", "FCC"])
 visualize_data([mse_array], ["MSE"])
 visualize_data([accuracy_fcc], ["Accuracy"])
 
