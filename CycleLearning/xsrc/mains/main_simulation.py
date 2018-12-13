@@ -1,5 +1,5 @@
 from xsrc.analyze import visualize_data
-from xsrc.simulation.cycleModel import *
+from xsrc.simulation.cycle_model import *
 from xsrc.simulation.data_to_csv import save
 from xsrc.simulation.params import *
 

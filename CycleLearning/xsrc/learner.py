@@ -73,9 +73,9 @@ def learn_tree(name, train_x, train_y, depth=10, save=False, classification=Fals
         tree = DecisionTreeClassifier(max_depth=depth)
     else:
         tree = DecisionTreeRegressor(max_depth=depth)
-    nsamples, nx, ny = train_x.shape
-    d2_train_dataset = train_x.reshape((nsamples, nx * ny))
-    tree.fit(d2_train_dataset, train_y)
+    # nsamples, nx, ny = train_x.shape
+    # d2_train_dataset = train_x.reshape((nsamples, nx * ny))
+    tree.fit(train_x, train_y)
     if save:
         pickle.dump(tree, open("models/trees/{}.sav".format(name), "wb"))
     return tree
@@ -86,9 +86,9 @@ def learn_randomforest(name, train_x, train_y, estimators=10, depth=10, save=Fal
         forest = RandomForestClassifier(max_depth=depth, n_estimators=estimators)
     else:
         forest = RandomForestRegressor(max_depth=depth, n_estimators=estimators)
-    nsamples, nx, ny = train_x.shape
-    d2_train_dataset = train_x.reshape((nsamples, nx * ny))
-    forest.fit(d2_train_dataset, train_y)
+    # nsamples, nx, ny = train_x.shape
+    # d2_train_dataset = train_x.reshape((nsamples, nx * ny))
+    forest.fit(train_x, train_y)
     if save:
         pickle.dump(forest, open("models/forests/{}.sav".format(name), "wb"))
     return forest
