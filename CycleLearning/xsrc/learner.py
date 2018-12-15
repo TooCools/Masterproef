@@ -10,6 +10,41 @@ from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 import pickle
 
 
+def get_lstm():
+    model = Sequential()
+    # model.add(LSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
+    model.add(CuDNNLSTM(64, input_shape=(3, 1)))
+    model.add(Dropout(0.2))
+    model.add(BatchNormalization())  # normalizes activation outputs, same reason you want to normalize your input data.
+
+    # model.add(LSTM(128, return_sequences=True))
+    # model.add(CuDNNLSTM(128, return_sequences=True))
+    # model.add(Dropout(0.1))
+    # model.add(BatchNormalization())
+
+    # model.add(LSTM(128))
+    # model.add(CuDNNLSTM(128))
+    # model.add(Dropout(0.2))
+    # model.add(BatchNormalization())
+
+    model.add(Dense(32))
+    # model.add(Dense(32, activation='relu'))
+    model.add(Dropout(0.2))
+
+    model.add(Dense(1))
+    # model.add(Dense(1, activation='softmax'))
+
+    opt = tf.keras.optimizers.Adam(lr=0.001, decay=1e-6)
+
+    # Compile model
+    model.compile(
+        loss='mean_squared_error',
+        optimizer=opt,
+        metrics=['mean_squared_error']
+    )
+    return model
+
+
 def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, save=False):
     config = tf.ConfigProto(device_count={'GPU': 1, 'CPU': 4})
     sess = tf.Session(config=config)
@@ -62,6 +97,55 @@ def learn_lstm(name, train_x, train_y, val_x, val_y, batch_size=64, epoch=10, sa
 
     score = model.evaluate(val_x, val_y, verbose=0)
     print('Test loss mse:', score[0])
+    # Save model
+    if save:
+        model.save("models/{}".format(name))
+    return model
+
+
+def learn_lstm(name, train_x, train_y, batch_size=64, epoch=10, save=False):
+    config = tf.ConfigProto(device_count={'GPU': 1, 'CPU': 4})
+    sess = tf.Session(config=config)
+    tf.keras.backend.set_session(sess)
+
+    model = Sequential()
+    # model.add(LSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
+    model.add(CuDNNLSTM(64, input_shape=train_x.shape[1:]))
+    model.add(Dropout(0.2))
+    model.add(BatchNormalization())  # normalizes activation outputs, same reason you want to normalize your input data.
+
+    # model.add(LSTM(128, return_sequences=True))
+    # model.add(CuDNNLSTM(128, return_sequences=True))
+    # model.add(Dropout(0.1))
+    # model.add(BatchNormalization())
+
+    # model.add(LSTM(128))
+    # model.add(CuDNNLSTM(128))
+    # model.add(Dropout(0.2))
+    # model.add(BatchNormalization())
+
+    model.add(Dense(32))
+    # model.add(Dense(32, activation='relu'))
+    model.add(Dropout(0.2))
+
+    model.add(Dense(1))
+    # model.add(Dense(1, activation='softmax'))
+
+    opt = tf.keras.optimizers.Adam(lr=0.001, decay=1e-6)
+
+    # Compile model
+    model.compile(
+        loss='mean_squared_error',
+        optimizer=opt,
+        metrics=['mean_squared_error']
+    )
+
+    model.fit(
+        train_x, train_y,
+        batch_size=batch_size,
+        epochs=epoch
+    )
+
     # Save model
     if save:
         model.save("models/{}".format(name))

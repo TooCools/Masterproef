@@ -1,3 +1,5 @@
+from math import sin, cos
+
 from sklearn import preprocessing
 import pandas
 from collections import deque
@@ -24,8 +26,13 @@ def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False, 
             df[col] = df_new
             # df[col] = preprocessing.scale(df[col].values) todo check if this is better
         if col == df_crank_angle_rad:
-            df['cos_angle'] = pandas.Series(np.cos(df[col].values))
-            df['sin_angle'] = pandas.Series(np.sin(df[col].values))
+            cosvals1 = []
+            sinvals1 = []
+            for val in df[col].values:
+                cosvals1.append(cos(val))
+                sinvals1.append(sin(val))
+            df['cos_angle'] = pandas.Series(cosvals1)
+            df['sin_angle'] = pandas.Series(sinvals1)
 
     if classification:
         df[df_fcc] = (df[df_fcc] - 40) / 5
@@ -66,4 +73,3 @@ def preprocess_dict(dict, seq_len, normalize=True, shuffle=True, classification=
     '''
     df = pandas.DataFrame(dict)
     return preprocess(df, seq_len, normalize=normalize, shuffle=shuffle, classification=classification, seqs=seqs)
-
