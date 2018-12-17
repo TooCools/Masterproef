@@ -52,5 +52,5 @@ def update(h, omega_crank, v_fiets):
     t_dc_max = (-omega_crank[h - 1]) / 2 + 60
     t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
     n = noise.pnoise1(slope_offset + (h / 2000), 6, 0.1, 3, 1024)
-    slope_rad = np.interp(n, [-1, 1], [-0.02, 0.07])
+    slope_rad = np.interp(n, [-1, 1], [0.02, 0.09])
     return t_dc, t_dc_max, slope_rad

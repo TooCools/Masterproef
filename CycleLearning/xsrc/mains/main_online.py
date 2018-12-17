@@ -96,7 +96,7 @@ def concat_training(x, y):
 
 mse_fcc = []
 mse_model_predictions = []
-accuracy_predicted_opt_cadense = []
+predicted_opt_cadense = []
 accuracy_fcc = []
 warmup = 300
 
@@ -108,15 +108,13 @@ def score(i, model_prediction, predicted_opt_cadence, fcc, diff):
                   "Difference: " + str(diff) + " T: " + str(i))
         else:
             mse_fcc.append(fcc)
-            accuracy_predicted_opt_cadense.append(predicted_opt_cadence)
+            predicted_opt_cadense.append(predicted_opt_cadence)
             mse_model_predictions.append(model_prediction)
             mse_value = mean_squared_error(mse_fcc, mse_model_predictions)
-            accuracy = accuracy_score(mse_fcc, accuracy_predicted_opt_cadense)
             mse_array.append(mse_value)
-            accuracy_fcc.append(accuracy)
             print("Predicted: " + str(predicted_opt_cadence), "Actual: " + str(fcc_array[h]),
                   "Difference: " + str(diff),
-                  "MSE: " + str(mse_value) + " Accuracy: " + str(accuracy) + " T: " + str(i))
+                  "MSE: " + str(mse_value) +" T: " + str(i))
 
 
 def bicycle_model():

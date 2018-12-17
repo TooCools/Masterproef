@@ -100,23 +100,23 @@ data = {'speed (km/h)': v_fiets,
 
 import matplotlib.pyplot as plt
 
-start = 500
-stop = 2400
+start = 400
+stop = 2700
 x = theta_crank_rad[start:stop]
 y = t_cy[start:stop]
 import numpy as np
 
-xcos=np.cos(x)
-ysin=np.sin(x)
+xcos = np.cos(x)
+ysin = np.sin(x)
 
 
-plt.plot(x, y)
-plt.xlabel("Tijd [cs]")
+plt.scatter(x, y, c=y, cmap=plt.get_cmap("autumn"))
+plt.xlabel("Hoek [rad]")
 plt.ylabel("Koppel [Nm]")
 plt.show()
-
-plt.scatter(x, y,c=y,cmap=plt.get_cmap("autumn"))
-
+plt.scatter(xcos, ysin, c=y, cmap=plt.get_cmap("autumn"))
+plt.xlabel("Cos(θ)")
+plt.ylabel("Sin(θ)")
 plt.show()
 
 # def visualize_data(y):
