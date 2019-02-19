@@ -1,0 +1,35 @@
+﻿Voorwoord
+ToC
+Abstract
+Inleiding/doel van de thesis
+	Voor deze thesis => zelf instellen
+	Na deze thesis => ML dan instelling doen op basis van omstandigheden + personal preference
+	Data beschikbaar, usertests in jan/feb?
+	MOET WERKEN OP RASPBERRY PI #?
+Voorgaand werk
+	(de andere mensen die jorrit in zijn paper heeft staan?)
+	Jorrit
+	IntuEdrive
+Fietssimulatie
+	Sinusvormig verloop bespreken (graph van het verloop + graph van sinus verloop)	Variërend koppel
+	Aanhalen ruis/schokken van wegdek?
+	Lastmodel, waarom? hypothese = hoe meer last => hoe hoger de cadans
+	Simulatie helling
+	Fcc, keuzemodel, makkelijk uitwisselbaar, zelf gekozen (intuïtie), cadans <=> FCC <=> geschatte FCC
+ML deel
+	Gebruikte libraries/tools aanhalen
+	Preprocessing, (nog eens ruis/schokken aanhalen?), sinus => cyclish => sin & cos zodat begin en einde van cyclus dicht bij elkaar liggen
+		=> zo leren we het model al dat de data cyclish is
+		Normalizeren
+	Modellen
+		Benodigdheden/voorwaarden waarom een model goed/slecht is
+		Aanhalen modellen, waarom deze modellen gekozen?
+	Postprocessing
+		Output is "bibbert", hoe oplossen? verschillende technieken. Voor/nadelen van technieken
+	
+?	Deel van aanpassing van gebruiker
+?Toepassen op echte data
+?Op fiets zetten gedeelte
+Conclusie
+	
+	
