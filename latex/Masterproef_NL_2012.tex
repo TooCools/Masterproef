@@ -1,0 +1,220 @@
+% ---------- Titelblad Masterproef Faculteit Wetenschappen -----------
+% Dit document is opgesteld voor compilatie met pdflatex.  Indien je
+% wilt compileren met latex naar dvi/ps, dien je de figuren naar
+% (e)ps-formaat om te zetten.
+%                           -- december 2012
+% -------------------------------------------------------------------
+\RequirePackage{fix-cm}
+\documentclass[12pt,a4paper,oneside]{book}
+
+% --------------------- In te laden pakketten -----------------------
+% Deze kan je eventueel toevoegen aan de pakketten die je al inlaadt
+% als je dit titelblad integreert met de rest van thesis.
+% -------------------------------------------------------------------
+\usepackage{graphicx,xcolor,textpos}
+\usepackage{helvet}
+\usepackage{tikz}
+\usetikzlibrary{fit,shapes,arrows,positioning,calc}
+
+
+% -------------------- Pagina-instellingen --------------------------
+% Indien je deze wijzigt, zal het titelblad ook wijzigen.  Dit dien je
+% dan manueel aan te passen.
+% --------------------------------------------------------------------
+
+\topmargin -10mm
+\textwidth 160truemm
+\textheight 240truemm
+\oddsidemargin 0mm
+\evensidemargin 0mm
+
+% ------------------- textpos-instellingen ---------------------------
+% Enkele andere instellingen voor het voorblad.
+% --------------------------------------------------------------------
+
+\definecolor{green}{RGB}{172,196,0}
+\definecolor{bluetitle}{RGB}{29,141,176}
+\definecolor{blueaff}{RGB}{0,0,128}
+\definecolor{blueline}{RGB}{82,189,236}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+\renewcommand{\contentsname}{Inhoudstafel}
+\renewcommand{\listfigurename}{Lijst van figuren}
+\begin{document}
+
+% ---------------------- Voorblad ------------------------------------
+% Vergeet niet de tekst aan te passen:
+% - Titel en, indien van toepassing, ondertitel
+%          voor eventuele formules in de titel of ondertitel
+%          gebruik je  \form{$...$}
+% - Je naam
+% - Je (co)promotor, begeleider (indien van toepassing)
+% - Je opleiding
+% - Het academiejaar
+% --------------------------------------------------------------------
+\thispagestyle{empty}
+\newcommand{\form}[1]{\scalebox{1.087}{\boldmath{#1}}}
+\sffamily
+%
+\begin{textblock}{191}(-24,-11)
+\colorbox{green}{\hspace{113mm}\ \parbox[c][18truemm]{100mm}{\textcolor{white}{FACULTEIT COMPUTERWETENSCHAPPEN}}}
+\end{textblock}
+%
+\begin{textblock}{70}(-18,-19)
+\textblockcolour{}
+\includegraphics*[height=19.8truemm]{LogoKULeuven}
+\end{textblock}
+%
+\begin{textblock}{160}(-6,63)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushleft
+\fontsize{40}{42}\selectfont \textcolor{bluetitle}{Real-Time Cadansaanpassing in een Automatische fietstransmissie }\\[1.5mm]
+\end{textblock}
+%
+
+\begin{textblock}{160}(8,153)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+\fontsize{14}{16}\selectfont \textbf{Arno Cools}
+\end{textblock}
+%
+\begin{textblock}{70}(-6,191)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushleft
+Promotor:\\Prof. M. Moens\\[-2pt]
+\vspace{5mm}
+Begeleider:\\
+\textsl{Ir. Tomas Keppens\\Ir. Jorrit Heidbuchel\\Ir. Rugen Heidbuchel}\\[-2pt]
+\end{textblock}
+%
+\begin{textblock}{160}(8,191)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+Proefschrift ingediend tot het\\[4.5pt]
+behalen van de graad van\\[4.5pt]
+Master of Toegepase Informatica\\
+\end{textblock}
+%
+\begin{textblock}{160}(8,232)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+Academiejaar 2018-2019
+\end{textblock}
+%
+\begin{textblock}{191}(-24,248)
+{\color{blueline}\rule{550pt}{5.5pt}}
+\end{textblock}
+%
+\vfill
+\newpage
+
+% Als je het titelblad wil integreren met de rest van je thesis,
+% kan je hieronder verder.
+% ----------------------- Eerste pagina's -------------------------
+% Hier kan je inhoudsopgave, voorwoord en dergelijke kwijt.
+% -----------------------------------------------------------------
+\rmfamily
+\frontmatter
+\pagenumbering{roman}
+\tableofcontents
+\setcounter{page}{0}
+\chapter{Voorwoord}
+
+A preface
+
+\chapter{Abstract}
+
+An abstract.
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Lijst van figuren}
+
+\chapter{Lijst van symbolen en afkortingen}
+lijst van symbolen en afkortingen
+
+\mainmatter
+\pagenumbering{arabic}
+
+\chapter{Inleiding}
+\tikzset{
+block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=9em},
+tmp/.style  = {coordinate}, 
+input/.style = {coordinate},
+output/.style= {coordinate},
+box/.style={draw=gray,dashed,fill opacity = 0,thick,inner sep=5pt},
+test/.style = {}
+}
+\begin{figure}
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=fietsinput] (fietsinput) {};
+    \node [block, right of=fietsinput,node distance=5cm] (fietser) {Fietser};
+    \node [tmp, right of=fietser,node distance=3cm] (tmp4){};
+    \node [block, right of=tmp4,node distance=3cm] (fiets) {Fiets};
+    \node [tmp, below of=tmp4] (tmp5) {};
+    \node [block, below of=fiets] (controller){Controller};
+    \node [block, below of=controller] (cadencecontrol) {Cadans Controller};   
+    \node [tmp, right of=fiets,node distance=4cm] (tmp1){};    
+    \node [output, right of=tmp1,node distance=2cm] (output) {};
+    \node [tmp, below of=tmp1] (tmp2){};
+    \node [tmp, below of=tmp2] (tmp3){};
+    \node [box, fit=(fiets) (controller)] (metafiets){};
+    \node [test, above=0.3cm of metafiets] (metafiets2){Metafiets};
+    \draw [->] (fietsinput) -- node{$r$} (fietser);
+    \draw [->] (fietser) -- node{$u$} (fiets);
+    \draw [->] (cadencecontrol) -- node{} (controller);
+    \draw [->] (fiets) -- node [name=y] {$y$}(output);   
+    \draw [->] (tmp1) |- (tmp2) -- node {} (controller);
+    \draw [->] (tmp2) |- (tmp3) -- node {} (cadencecontrol);
+    \draw [-] (controller.west) |- (tmp5) -- node {} (tmp4);
+\end{tikzpicture}
+\caption{Plant diagram van de fiets}
+  \label{fig:plantdiagram}
+\end{figure}
+
+
+
+\newpage
+% ----------------------- Achterblad ------------------------------
+% Vergeet niet de tekst aan te passen:
+% - Afdeling
+% - Adres van de afdeling
+% - Telefoon en faxnummer
+% -----------------------------------------------------------------
+\thispagestyle{empty}
+\sffamily
+%
+\begin{textblock}{191}(113,-11)
+{\color{blueline}\rule{160pt}{5.5pt}}
+\end{textblock}
+%
+\begin{textblock}{191}(168,-11)
+{\color{blueline}\rule{5.5pt}{59pt}}
+\end{textblock}
+%
+\begin{textblock}{183}(-24,-11)
+\textblockcolour{}
+\flushright
+\fontsize{7}{7.5}\selectfont
+\textbf{Computerwetenschappen}\\
+Celestijnenlaan 200 A bus 2402\\
+3000 LEUVEN, BELGI\"{E}\\
+tel. + 32 16 32 77 00\\
+fax + 32 16 32 79 96\\
+www.kuleuven.be\\
+\end{textblock}
+%
+\begin{textblock}{191}(154,-7)
+\textblockcolour{}
+\includegraphics*[height=16.5truemm]{sedes}
+\end{textblock}
+%
+\begin{textblock}{191}(-20,235)
+{\color{bluetitle}\rule{544pt}{55pt}}
+\end{textblock}
+\end{document}
