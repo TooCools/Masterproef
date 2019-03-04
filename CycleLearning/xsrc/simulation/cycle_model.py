@@ -40,7 +40,7 @@ def fietsers_koppel(angle, t_dc, t_dc_array, t_cyclist_no_noise, dominant_leg=Fa
     t_cyclist_no_noise.append(t_dc * (1 + sin(2 * angle - (pi / 6))))
     koppel = t_dc_noise * (1 + sin(2 * angle - (pi / 6)))
     if dominant_leg:
-        koppel += (1 + sin(angle - (5*pi / 6)))
+        koppel = t_dc_noise * (1 + sin(2 * angle - (pi / 6)) + sin(angle - (pi / 3)) / 2.5)
     return koppel
 
 
@@ -50,7 +50,7 @@ def update(h, omega_crank, v_fiets):
     :param h: timestep
     '''
     t_dc_max = (-omega_crank[h - 1]) / 2 + 60
-    t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
+    t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - 22)))
     n = noise.pnoise1(slope_offset + (h / 2000), 6, 0.1, 3, 1024)
     slope_rad = np.interp(n, [-1, 1], [0.02, 0.09])
     return t_dc, t_dc_max, slope_rad

@@ -24,7 +24,7 @@ t_dc_max = 60
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
 route_slots = []
-total_timesteps = 100000
+total_timesteps = 500
 
 for h in range(1, int(total_timesteps)):
     a, b, c = update(h, omega_crank, v_fiets)
@@ -42,7 +42,7 @@ for h in range(1, int(total_timesteps)):
     theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
 
     # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
-    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise)
+    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=True)
     t_mg1_current = t_cyclist * kcr_r * (ns / nr) * ks_mg1
     t_mg2_current = min(20, support_level * t_cyclist)
     t_rw = t_cyclist * kcr_r * ((nr + ns) / nr)
@@ -97,7 +97,8 @@ data = {'speed (km/h)': v_fiets,
 # save(data)
 # save(data, "validation")
 
-# visualize_data([omega_crank, slope_array])
+visualize_data([t_cyclist_no_noise[-50:]],["Gesimuleerde koppel (dominant been)"])
+# visualize_data([t_cyclist_no_noise[100:150]],["Gesimuleerde koppel"])
 
 # def visualize_data(y):
 #     for data in y:

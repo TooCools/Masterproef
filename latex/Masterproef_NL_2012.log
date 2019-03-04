@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  23 FEB 2019 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  26 FEB 2019 19:39
 entering extended mode
 **./Masterproef_NL_2012.tex
 (Masterproef_NL_2012.tex
@@ -715,7 +715,7 @@ Overfull \hbox (28.85274pt too wide) in paragraph at lines 175--176
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 204.
-<sedes.png, id=37, 402.5439pt x 683.6742pt>
+<sedes.png, id=38, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 214.
@@ -727,13 +727,13 @@ Overfull \hbox (18.18004pt too wide) in paragraph at lines 218--219
 
 [2 <./sedes.png>] (Masterproef_NL_2012.aux) ) 
 Here is how much of TeX's memory you used:
- 14783 strings out of 492946
- 326753 string characters out of 3126710
- 374125 words of memory out of 3000000
- 18385 multiletter control sequences out of 15000+200000
+ 14764 strings out of 492946
+ 326367 string characters out of 3126710
+ 372125 words of memory out of 3000000
+ 18366 multiletter control sequences out of 15000+200000
  18327 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,67p,454b,817s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,67p,454b,762s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Arno/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Arno/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Arno/AppData/L
@@ -743,7 +743,7 @@ C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
 .pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/
 uhvr8a.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/hel
 vetic/uhvro8a.pfb>
-Output written on Masterproef_NL_2012.pdf (8 pages, 175816 bytes).
+Output written on Masterproef_NL_2012.pdf (8 pages, 175239 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

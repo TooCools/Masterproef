@@ -163,8 +163,8 @@ test/.style = {}
     \node [output, right of=tmp1,node distance=2cm] (output) {};
     \node [tmp, below of=tmp1] (tmp2){};
     \node [tmp, below of=tmp2] (tmp3){};
-    \node [box, fit=(fiets) (controller)] (metafiets){};
-    \node [test, above=0.3cm of metafiets] (metafiets2){Metafiets};
+    %\node [box, fit=(fiets) (controller)] (metafiets){};
+%    \node [test, above=0.3cm of metafiets] (metafiets2){Metafiets};
     \draw [->] (fietsinput) -- node{$r$} (fietser);
     \draw [->] (fietser) -- node{$u$} (fiets);
     \draw [->] (cadencecontrol) -- node{} (controller);
