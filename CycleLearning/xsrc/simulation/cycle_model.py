@@ -6,11 +6,11 @@ from xsrc.simulation.params import *
 slope_offset = 19
 
 
-def bicycle_model(t_dc_array, fcc_array):
-    avg_tdc = np.average(t_dc_array[-50:])
+def bicycle_model(fcc_array, t_dc):
+    # avg_tdc = np.average(t_dc_array[-50:])
     # fcc = 7 * t_dc_array[-1:][0] - 10
-    fcc = 7 * avg_tdc - 10
-    fcc = int(5 * round(fcc / 5))
+    fcc = 7 * t_dc -10
+    # fcc = int(5 * round(fcc / 5))
     if fcc < 40:
         fcc = 40
     elif fcc > 120:
@@ -19,12 +19,12 @@ def bicycle_model(t_dc_array, fcc_array):
     return fcc
 
 
-def cadence_for_speed(v, t_dc_array, fcc_array):
-    fcc = bicycle_model(t_dc_array, fcc_array)
+def cadence_for_speed(v, fcc_array, t_dc):
+    fcc = bicycle_model(fcc_array, t_dc)
     if v <= 15:
-        rpm = v * 70 / 15
+        rpm = v * 50 / 15
     else:
-        rpm = 70 + (v - 15) * 8
+        rpm = 50 + (v - 15) * 2
     if rpm > fcc:
         return fcc
     return rpm
@@ -32,7 +32,7 @@ def cadence_for_speed(v, t_dc_array, fcc_array):
 
 def fietsers_koppel(angle, t_dc, t_dc_array, t_cyclist_no_noise, dominant_leg=False):
     gaussian_random = np.random.normal(0, 0.3)
-    gaussian_random=0
+    gaussian_random = 0
     t_dc_noise = t_dc + gaussian_random
     if t_dc_noise < 0:
         t_dc_noise = 0
@@ -50,7 +50,10 @@ def update(h, omega_crank, v_fiets):
     :param h: timestep
     '''
     t_dc_max = (-omega_crank[h - 1]) / 2 + 60
-    t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - 22)))
+    if h < 70:
+        t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
+    else:
+        t_dc = max(0, -K * (v_fiets[h - 1] - v_fiets_ref))
     n = noise.pnoise1(slope_offset + (h / 2000), 6, 0.1, 3, 1024)
-    slope_rad = np.interp(n, [-1, 1], [0.02, 0.09])
+    slope_rad = np.interp(n, [-1, 1], [-0.02, 0.08])
     return t_dc, t_dc_max, slope_rad

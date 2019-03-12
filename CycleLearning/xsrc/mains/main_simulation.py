@@ -24,7 +24,7 @@ t_dc_max = 60
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
 route_slots = []
-total_timesteps = 500
+total_timesteps = 5000
 
 for h in range(1, int(total_timesteps)):
     a, b, c = update(h, omega_crank, v_fiets)
@@ -35,19 +35,19 @@ for h in range(1, int(total_timesteps)):
     v_fiets_previous_ms = v_fiets_previous_kmh / 3.6
 
     omega_crank_current_rpm = cadence_for_speed(
-        v_fiets_previous_kmh, t_dc_array,
-        fcc_array)  # min(omega_opt_rpm, cadence_for_speed(v_fiets_previous_kmh)) + rpm_offset
+        v_fiets_previous_kmh,
+        fcc_array,t_dc)  # min(omega_opt_rpm, cadence_for_speed(v_fiets_previous_kmh)) + rpm_offset
     omega_crank_current_rads = omega_crank_current_rpm * 0.10467
 
     theta_crank_current_rad = theta_crank_rad[h - 1] + omega_crank_current_rads * timestep
 
     # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
-    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=True)
+    t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=False)
     t_mg1_current = t_cyclist * kcr_r * (ns / nr) * ks_mg1
     t_mg2_current = min(20, support_level * t_cyclist)
     t_rw = t_cyclist * kcr_r * ((nr + ns) / nr)
 
-    f_grav = total_mass * g * sin(slope_rad) * 0.9
+    f_grav = total_mass * g * sin(slope_rad)*0.8
     f_friction = total_mass * g * cos(slope_rad) * cr
     f_aero = 0.5 * cd * ro_aero * a_aero * (v_fiets_previous_ms ** 2)
     f_aero *= np.sign(v_fiets_previous_kmh)
@@ -97,7 +97,7 @@ data = {'speed (km/h)': v_fiets,
 # save(data)
 # save(data, "validation")
 
-visualize_data([t_cyclist_no_noise[-50:]],["Gesimuleerde koppel (dominant been)"])
+visualize_data([t_cyclist_no_noise[-50:]],[])
 # visualize_data([t_cyclist_no_noise[100:150]],["Gesimuleerde koppel"])
 
 # def visualize_data(y):

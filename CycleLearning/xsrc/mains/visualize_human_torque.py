@@ -10,8 +10,9 @@ print(torque[index:])
 stuff=torque[index:index+50]
 print()
 plt.plot(stuff.reset_index()[" Crank_torque_Nm_filt"])
-plt.legend(["Menselijk koppel"])
+plt.xlabel("Tijd")
+plt.ylabel("Koppel (Nm)")
+# plt.legend(["Menselijk koppel"])
 plt.show()
 
 # visualize_data(torque[index:],["Human torque"])
-print("yeet")

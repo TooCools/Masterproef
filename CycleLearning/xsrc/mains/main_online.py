@@ -8,7 +8,7 @@ from xsrc.simulation.cycle_model import update, fietsers_koppel
 from xsrc.simulation.params import *
 import numpy as np
 from sklearn.metrics import mean_squared_error, accuracy_score
-
+#todo deptricated, use cycle_model
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
 omega_crank = [0.0]  # rpm van de trapas

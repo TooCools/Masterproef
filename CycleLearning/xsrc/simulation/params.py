@@ -6,7 +6,7 @@ nr = 83  # Aantal tanden ringwiel
 rw = 0.3231  # Straal van voor- en achterwiel
 total_mass = 100  # gewicht fietser + fiets in kg
 timestep = .1  # tijdsverschil tussen 2 berekeningen in seconde
-support_level = 2  # Ondersteuningsniveau
+support_level = 0  # Ondersteuningsniveau
 
 g = 9.81  # gravity
 cr = 0.006  # rolling friction coefficient
@@ -14,5 +14,5 @@ cd = 1.05  # aerodynamic drag coefficient
 ro_aero = 1.2  # air density kg/m³
 a_aero = 0.5  # frontal area of cyclist and bicycle m²
 
-v_fiets_ref = 32
+v_fiets_ref = 22
 K = 30 / 5
