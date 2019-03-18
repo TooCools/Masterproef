@@ -1,15 +1,32 @@
-fcc afronden naar #5 + v ref naar 32 zetten + support level hoger
-modellen aanpassen zodat hij de fcc gaat raden
+2 motoren beïnvloeden de trapcadans niet (jorrit gaat dit verbeteren)
 
+de fietser geeft input aan de fiets, de toestand van de fiets veranderd adhv deze input.
 
-Het aanpassen van de cadans door de gebruiker moet probabilistisch worden. Hoe verder de fcc verwijderd is van de huidige cadans, hoe meer probable dat het is dat het model moet aangepast worden
-De aanpassingen gebeuren met increments van 5. Elke +-3 seconden mag er een aanpassing gebeuren.
-(NIET DOEN ATM, maar afvlakken zodat fcc nooit minder is dan 40)
+simulatie
 
-fourier transformatie doorsturen naar Jorrit
-PDF's van Passive Agressive naar Rugen sturen
+	Ten slotte is het mogelijk om slechts 1 parameter aan te passen tijdens tests, wat praktisch onmogelijk is in realiteit.
+	- we kunne quantitatief zeggen hoe goed een oplossing is en dit is niet mogelijk in de werkelijkhied
+	
+	niet zeggen dat het een nadeel is, ik weet dat het een simulatie is en daar moet ik mee leven.
+	
+	frequentie van de figuren bij t_dc enzo hetzelfde maken en ipv tijd/ koppel => hoek/koppel  3 omwentellingen (6 pi) want cadans varieert op fiets bij het trappen en in de simulatie is dit zeer constant
+	
+	crank to ring ratio
+	t_cy is torque op de trapas
+	
+	t_mg2 minimum vermogen aanpassen naar 35 (van 25)
+	
+	denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
+	
+	
+	
+Hoofdstuk 2: On-line voorspellen
 
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.108.566&rep=rep1&type=pdf
+Preprocessing
+Lengte van sequence
+welke variabelen (waarom?)
+welke algoritmen? (waarom?)
+2 settings, eerst alle data leren, dan testen \/ On-line leren (aantal keer bijleren, mse, foutgrens)
 
-Expectation-Maximisation algorithm??? Ortiz-Martinez, D., Garcia-Varea, I., Casacuberta, F.: Online learning for interactive statistical
-machine translation. In: Proceedings of NAACL HLT, Los Angeles (June 2010)
+	
+Postprocessing

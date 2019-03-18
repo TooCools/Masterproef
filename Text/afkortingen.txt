@@ -1,0 +1,40 @@
+Afkortingen
+CVT - Continu variabele transmissie
+Hz - Hertz; eenheid van frequentie
+rpm - Revolutions per minute; omwentellingen per seconde
+fcc - freely chosen cadence
+Nm - Newton meter; eenheid van koppel
+
+Symbolen
+
+r - input vector fietser; bestaat uit v_ref
+u - input vector fiets; bestaande uit t_cy en u_c; heeft invloed op de toestand van de fiets
+y - output vector fiets
+v_ref - referentie snelheid van de fietser
+t_cy - koppel geleverd door de fietser
+t_cy,m - gemeten koppel geleverd door de fietser
+u_c - variabele die aanduid of de knoppen op de fiets ingedrukt zijn
+(θ) theta_cr - hoek van de trapas
+v_bike - snelheid van de fiets
+α - helling
+t_dc - gemiddeld koppel
+t_dc_max - maximum gemiddeld koppel
+(ω) omega_crank - hoeksnelheid van de trapas/cadans (in rpm)
+k_cr,r - Verhouding overbrenging trapas-ringwiel
+nr - aantal tanden op het ringwiel (planeetwielmechanisme)
+ns - aantal tanden op het zonnewiel (planeetwielmechanisme)
+support_level - instelling van de fiets dat de hoeveelheid extra ondersteuning bepaald
+f_grav - gravitationele last
+f_friction - wrijvings last
+f_aero - luchtweerstand
+f_load - totale last
+m - totale massa van fiets en fietser
+g - gravitationele constante
+c_r - rolwaarstandcoeficient
+c_d - luchtweerstand coëfficient
+ρ_aero - luchtdichtheid
+A_aero - frontaal oppervlak fietser
+T_MG2 - koppel geleverd door motor op voorwiel
+t_rw - koppel geleverd op het achterwiel
+r_w - Straal van voor- en achterwiel
+P - vermogen

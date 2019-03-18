@@ -8,8 +8,8 @@ from xsrc.preprocessing import preprocess
 # df_main = get_data("..\\Fietssimulatie\\data.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 # df_val = get_data("..\\Fietssimulatie\\validation.xlsx", [df_torque, df_crank_angle_rad, df_rpm])
 
-df_main = get_data("..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
-df_val = get_data("..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_main = get_data("..\\..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
+df_val = get_data("..\\..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 
 
 
@@ -24,6 +24,8 @@ nsamples2, nx2, ny2 = val_x.shape
 d2_val_dataset = val_x.reshape((nsamples2, nx2 * ny2))
 forest = learn_randomforest("", train_x, train_y, 5,9, classification=True)
 predictions = forest.predict(d2_val_dataset)
+# forest = learn_randomforest("", train_x, train_y, 5,9, classification=True)
+# predictions = forest.predict(d2_val_dataset)
 
 for (i, item) in enumerate(predictions):
     predictions[i] = (40 + item * 5)

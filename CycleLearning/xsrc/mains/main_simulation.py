@@ -44,7 +44,7 @@ for h in range(1, int(total_timesteps)):
     # Dit zijn waarden voor het vermogen (torque) van de fietser + motor generatoren op het voor- (2) en achterwiel (1)
     t_cyclist = fietsers_koppel(theta_crank_current_rad, t_dc, t_dc_array, t_cyclist_no_noise,dominant_leg=False)
     t_mg1_current = t_cyclist * kcr_r * (ns / nr) * ks_mg1
-    t_mg2_current = min(20, support_level * t_cyclist)
+    t_mg2_current = min(35, support_level * t_cyclist)
     t_rw = t_cyclist * kcr_r * ((nr + ns) / nr)
 
     f_grav = total_mass * g * sin(slope_rad)*0.8
