@@ -1,13 +1,13 @@
 from math import sin, cos, pi
 
 from xsrc.analyze import visualize_data
-from xsrc.excel_to_data import get_data
-from xsrc.learner import learn_PA, learn_SGD, get_SGD
-from xsrc.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad, preprocess
+from xsrc.stuff.learner import learn_PA
+from xsrc.stuff.preprocessing import preprocess_dict, df_torque, df_fcc, df_crank_angle_rad
 from xsrc.simulation.cycle_model import update, fietsers_koppel
-from xsrc.simulation.params import *
+from xsrc.params import *
 import numpy as np
-from sklearn.metrics import mean_squared_error, accuracy_score
+from sklearn.metrics import mean_squared_error
+
 #todo deptricated, use cycle_model
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
@@ -54,6 +54,7 @@ def predict(i):
         df_fcc: fcc_array[i - seqlen:i],
         df_crank_angle_rad: theta_crank_rad[i - seqlen:i],
     }
+    print(len(stuff[df_torque]))
     x, y = preprocess_dict(stuff, seqlen, normalize=False, shuffle=False)
     pred = model.predict(x)[0]
     if pred > 120:

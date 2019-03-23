@@ -16,6 +16,10 @@
 \usepackage{tikz}
 \usetikzlibrary{fit,shapes,arrows,positioning,calc}
 
+\usepackage{wrapfig}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 
 % -------------------- Pagina-instellingen --------------------------
 % Indien je deze wijzigt, zal het titelblad ook wijzigen.  Dit dien je
@@ -41,6 +45,8 @@
 
 \renewcommand{\contentsname}{Inhoudstafel}
 \renewcommand{\listfigurename}{Lijst van figuren}
+\renewcommand{\chaptername}{Hoofdstuk}
+
 \begin{document}
 
 % ---------------------- Voorblad ------------------------------------
@@ -141,7 +147,44 @@ lijst van symbolen en afkortingen
 \mainmatter
 \pagenumbering{arabic}
 
-\chapter{Inleiding}
+\chapter{Probleemstelling}
+\section{Mobiliteitsvraagstuk}
+De auto is het slachtoffer geworden van zijn eigen succes: we staan meer dan ooit in de file en de CO2 van personenverkeer stijgt jaar na jaar. De belg neemt al snel de auto voor korte afstanden ($<$ 25 km). In deze auto zit meestal maar 1 persoon. Het Belgische wagenpark blijft groeien (tabel 1). Hier zien we wel een trend ontstaan. Er worden steeds meer elektrische en hybride wagens verkocht, maar die staan natuurlijk net zo goed in de file. Mobiliteit op twee wielen kan hier een oplossing bieden.
+\\
+\begin{wrapfigure}{R}{0.45\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{images/snelheid-veiligheid-tradeoff.png}
+  \caption{snelheid-veiligheid trade-off (bron: IntuEdrive)}
+  \label{fig:ok}
+\end{wrapfigure}
+
+Mobiliteit op twee wielen kennen we al lang: fietsen bestaan al sinds de 19de eeuw. Elektrische fietsen hebben het potentieel van deze tweewielers enorm verhoogd: fietsen wordt moeiteloos en stukken sneller. Spijtig genoeg neemt het risico op ongevallen ook toe bij hogere snelheid. Dat komt omdat e-bikes en speed e-bikes precies dezelfde technologie gebruiken als normale fietsen – grote wielen met smalle banden, kettingaandrijving met manuele versnellingen, mechanische handremmen – bij veel hogere snelheden. IntuEdrive noemt dit de snelheid-veiligheid trade-off. De veiligheid kan beperkt worden verhoogd door componenten toe te voegen (bv. Bosch e-bike ABS), maar de functionaliteit van deze systemen blijft beperkt. Er is een meer holistische aanpak nodig. Bovendien bieden elektrische fietsen vandaag nog niet het gebruiksgemak en de betrouwbaarheid die de consument gewend is van zijn wagen.
+\\
+IntuEdrive’s CoSaR is een snelle elektrische fiets die veiliger is dan de klassieke mechanische fiets, dankzij hun innovatie tweewielaandrijving en elektrische remfunctie. Dit systeem reduceert de stopafstand met 60\% en maakt schakelen overbodig (automatische versnellingen). Het stapt ook af van de onderhoudsintensieve fietscomponenten (ketting, tandwielen, mechanische remmen). Dit maakt CoSaR de perfecte e-bike voor woon-werkverkeer: makkelijk, veilig en betrouwbaar.
+\\
+Door automatisch te schakelen zorgt CoSaR ervoor dat de fietser in elke situatie precies zo snel trapt als hij of zij wil. Deze gewenste trapsnelheid – of beter trapcadans – varieert van persoon tot persoon en hangt af van omstandigheden zoals helling, tegenwind en rijsnelheid. Omdat deze gewenste cadans niet op voorhand gekend is, schakelt de transmissie momenteel op basis van een vaste wetmatigheid die tijdens testen getuned is om voor zoveel mogelijk gebruikers comfortabel aan te voelen. Wijkt deze wetmatigheid af van de gewenste cadans van een specifieke gebruiker, dan kan deze gebruiker via knoppen op het stuur tijdens het fietsen zijn of haar cadans manueel aanpassen.
+\\
+\begin{table}[]
+\begin{tabular}{llllll}
+ & 2014 & 2015 & 2016 & 2017 & 2018 \\
+Personenwagens                              & 5.555.499 & 5.623.579 & 5.712.061 & 5.785.447 & 5.853.782 \\
+- rijdend op benzine                        & 2.029.688 & 2.091.327 & 2.199.038 & 2.335.349 & 2.518.942 \\
+- rijdend op diesel                         & 3.458.424 & 3.457.526 & 3.424.592 & 3.339.034 & 3.193.658 \\
+- rijdend op gas                            & 22.051    & 18.967    & 17.238    & 15.965    & 15.500    \\
+- met elektrische motor                     & 1.792     & 2.871     & 4.368     & 6.552     & 9.244     \\
+- hybride                                   & 23.444    & 32.151    & 44.364    & 63.740    & 87.012    \\
+- niet nader bepaald                        & 20.100    & 20.737    & 22.461    & 24.807    & 29.426    \\
+Inwoners per personenauto  & 2,01      & 1,99      & 1,97      & 1,96      & 1,94     
+\end{tabular}
+ \caption{Grootte van het voertuigenpark 2014-2018 (bron: statbel.fgov.be)} 	\label{table:Grootte van het voertuigenpark 2014-2018}
+\end{table}	
+\section{Online machine learning voor geïndividualiseerde cadanscontrole}
+
+ 
+\chapter{Methode}
+\chapter{Resultaten}
+\chapter{Discussie}
+
 \tikzset{
 block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=9em},
 tmp/.style  = {coordinate}, 
@@ -154,27 +197,25 @@ test/.style = {}
 \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=fietsinput] (fietsinput) {};
     \node [block, right of=fietsinput,node distance=5cm] (fietser) {Fietser};
-    \node [tmp, right of=fietser,node distance=3cm] (tmp4){};
-    \node [block, right of=tmp4,node distance=3cm] (fiets) {Fiets};
-    \node [tmp, below of=tmp4] (tmp5) {};
+    \node [tmp, right of=fietser,node distance=3cm] (above_fietser){};
+    \node [block, below of=above_fietser,node distance=3cm] (fiets) {Fiets};
+    \node [tmp, left = 1.5cm of fiets] (left_fiets) {};
     \node [block, below of=fiets] (controller){Controller};
-    \node [block, below of=controller] (cadencecontrol) {Cadans Controller};   
-    \node [tmp, right of=fiets,node distance=4cm] (tmp1){};    
-    \node [output, right of=tmp1,node distance=2cm] (output) {};
-    \node [tmp, below of=tmp1] (tmp2){};
-    \node [tmp, below of=tmp2] (tmp3){};
-    %\node [box, fit=(fiets) (controller)] (metafiets){};
-%    \node [test, above=0.3cm of metafiets] (metafiets2){Metafiets};
+    \node [tmp, left = 1.5cm of controller] (left_controller) {};
+    \node [block, below of=controller] (cadencecontroller) {Cadanscontroller};   
+    \node [tmp, left = 1.5cm of cadencecontroller] (left_cadencecontrol) {};
+    \node [tmp, right of=fiets,node distance=3cm] (right_fiets){};    
+    \node [tmp, right of=right_fiets] (output){};    
     \draw [->] (fietsinput) -- node{$r$} (fietser);
-    \draw [->] (fietser) -- node{$u$} (fiets);
-    \draw [->] (cadencecontrol) -- node{} (controller);
+    \draw [->] (fietser) |- (above_fietser) -- node{$u_{cy}$} (fiets);
+    \draw [->] (controller.west) |- (left_controller) |- node {$u_{contr}$} (fiets.west);
+    \draw [->] (cadencecontroller) -- node{$FCC_{est}$} (controller);
+   	\draw [->] (right_fiets) |- (controller.east);
+   	\draw [->] (right_fiets) |- (cadencecontroller.east);
     \draw [->] (fiets) -- node [name=y] {$y$}(output);   
-    \draw [->] (tmp1) |- (tmp2) -- node {} (controller);
-    \draw [->] (tmp2) |- (tmp3) -- node {} (cadencecontrol);
-    \draw [-] (controller.west) |- (tmp5) -- node {} (tmp4);
 \end{tikzpicture}
-\caption{Plant diagram van de fiets}
-  \label{fig:plantdiagram}
+\caption{Blokdiagram van het fiets-fietser-controller systeem}
+  \label{fig:Blokdiagram van het fiets-fietser-controller systeem}
 \end{figure}
 
 

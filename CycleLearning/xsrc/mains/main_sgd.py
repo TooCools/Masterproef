@@ -1,10 +1,8 @@
-import time
-
 from xsrc.analyze import visualize_data
 from xsrc.excel_to_data import get_data
-from xsrc.learner import learn_PA, learn_SGD
-from xsrc.params import *
-from xsrc.preprocessing import preprocess
+from xsrc.stuff.learner import learn_SGD
+from xsrc.stuff.params import *
+from xsrc.stuff.preprocessing import preprocess
 
 df_main = get_data("..\\..\\data\\data.xlsx", [df_torque, df_crank_angle_rad, df_fcc])
 df_val = get_data("..\\..\\data\\validation.xlsx", [df_torque, df_crank_angle_rad, df_fcc])

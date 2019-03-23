@@ -1,7 +1,7 @@
 from xsrc.excel_to_data import get_data
-from xsrc.learner import learn_lstm
-from xsrc.params import *
-from xsrc.preprocessing import preprocess
+from xsrc.stuff.learner import learn_lstm
+from xsrc.stuff.params import *
+from xsrc.stuff.preprocessing import preprocess
 from xsrc.analyze import visualize_data
 
 import time

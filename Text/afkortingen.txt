@@ -1,14 +1,24 @@
 Afkortingen
+FCC - freely chosen cadence
 CVT - Continu variabele transmissie
 Hz - Hertz; eenheid van frequentie
-rpm - Revolutions per minute; omwentellingen per seconde
-fcc - freely chosen cadence
+rpm - Revolutions per minute
+fcc - Freely Chosen Cadence
 Nm - Newton meter; eenheid van koppel
+DT - Decision Tree
+RF - Random Forest
+MA - Moving Average
+ES - Exponential Smoothing
+LSTM - Long Short-Term Memory
+RNN - Recurrent Neural Network
+
 
 Symbolen
 
-r - input vector fietser; bestaat uit v_ref
-u - input vector fiets; bestaande uit t_cy en u_c; heeft invloed op de toestand van de fiets
+r - input vector fietser
+u_cy - input vector fiets, geleverd door de fietser
+y_contr - input vector fiets, geleverd door de controller
+FCC_est - schatting van FCC, geleverd door de cadans controller
 y - output vector fiets
 v_ref - referentie snelheid van de fietser
 t_cy - koppel geleverd door de fietser
@@ -17,13 +27,15 @@ u_c - variabele die aanduid of de knoppen op de fiets ingedrukt zijn
 (θ) theta_cr - hoek van de trapas
 v_bike - snelheid van de fiets
 α - helling
-t_dc - gemiddeld koppel
-t_dc_max - maximum gemiddeld koppel
+T_dc - gemiddeld koppel
+T_dc_max - maximum gemiddeld koppel
 (ω) omega_crank - hoeksnelheid van de trapas/cadans (in rpm)
+FCC_pred - voorspelde FCC
+FCC_est - geschatte FCC, dient als instelling voor de fietscontroller
 k_cr,r - Verhouding overbrenging trapas-ringwiel
 nr - aantal tanden op het ringwiel (planeetwielmechanisme)
 ns - aantal tanden op het zonnewiel (planeetwielmechanisme)
-support_level - instelling van de fiets dat de hoeveelheid extra ondersteuning bepaald
+S - instelling van de fiets dat de hoeveelheid extra ondersteuning bepaald
 f_grav - gravitationele last
 f_friction - wrijvings last
 f_aero - luchtweerstand
@@ -35,6 +47,10 @@ c_d - luchtweerstand coëfficient
 ρ_aero - luchtdichtheid
 A_aero - frontaal oppervlak fietser
 T_MG2 - koppel geleverd door motor op voorwiel
-t_rw - koppel geleverd op het achterwiel
+T_rw - koppel geleverd op het achterwiel
 r_w - Straal van voor- en achterwiel
 P - vermogen
+sd - smoothing factor
+f_k - factor voor fietsersmodel in functie van het gemiddeld koppel
+f_h - factor voor fietsersmodel in functie van de helling
+f_v - factor voor fietsersmodel in functie van de snelheid

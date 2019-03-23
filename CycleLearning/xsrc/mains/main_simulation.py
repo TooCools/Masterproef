@@ -1,7 +1,6 @@
-from xsrc.analyze import visualize_data
 from xsrc.simulation.cycle_model import *
 from xsrc.simulation.data_to_csv import save
-from xsrc.simulation.params import *
+from xsrc.params import *
 
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI
@@ -23,7 +22,6 @@ t_dc_max = 60
 
 t_dc = 0.0
 slope_rad = 0.0  # helling waarop de fiets zich bevindt
-route_slots = []
 total_timesteps = 5000
 
 for h in range(1, int(total_timesteps)):
@@ -59,19 +57,19 @@ for h in range(1, int(total_timesteps)):
     omega_mg2 = v_fiets_current_ms / rw
     omega_mg1 = (1 / ks_mg1) * ((1 + (nr / ns)) * omega_mg2 - ((nr / ns) * (omega_crank_current_rads / kcr_r)))
 
-    theta_crank_rad.append(theta_crank_current_rad)
-    theta_crank_rad2.append(theta_crank_current_rad % (2 * pi))
-    omega_crank.append(omega_crank_current_rpm)
-    v_fiets.append(v_fiets_current_ms * 3.6)
-    t_cy.append(t_cyclist)
-    t_mg1.append(t_mg1_current)
-    t_mg2.append(t_mg2_current)
-    o_mg1.append(omega_mg1)
-    o_mg2.append(omega_mg2)
-    slope_array.append(slope_rad * 57.296)
-    f_grav_array.append(f_grav)
-    f_fric_array.append(f_friction)
-    f_aero_array.append(f_aero)
+    theta_crank_rad.append(theta_crank_current_rad)#
+    theta_crank_rad2.append(theta_crank_current_rad % (2 * pi))#
+    omega_crank.append(omega_crank_current_rpm)#
+    v_fiets.append(v_fiets_current_ms * 3.6)#
+    t_cy.append(t_cyclist)#
+    t_mg1.append(t_mg1_current)#
+    t_mg2.append(t_mg2_current)#
+    o_mg1.append(omega_mg1)#
+    o_mg2.append(omega_mg2)#
+    slope_array.append(slope_rad * 57.296)#
+    f_grav_array.append(f_grav)#
+    f_fric_array.append(f_friction)#
+    f_aero_array.append(f_aero)#
     print('time', int(h / 10), 'speed', v_fiets_previous_kmh, 'slope', slope_rad, 'rpm', omega_crank_current_rpm,
           'tdc',
           t_dc_array[h])
@@ -94,10 +92,10 @@ data = {'speed (km/h)': v_fiets,
         'fcc': fcc_array
         }
 
-# save(data)
+save(data)
 # save(data, "validation")
 
-visualize_data([t_cyclist_no_noise[-50:]],[])
+# visualize_data([t_cyclist_no_noise[-50:]],[])
 # visualize_data([t_cyclist_no_noise[100:150]],["Gesimuleerde koppel"])
 
 # def visualize_data(y):

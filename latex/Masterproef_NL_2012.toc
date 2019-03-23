@@ -2,4 +2,9 @@
 \contentsline {chapter}{Abstract}{ii}% 
 \contentsline {chapter}{Lijst van figuren}{iii}% 
 \contentsline {chapter}{Lijst van symbolen en afkortingen}{iv}% 
-\contentsline {chapter}{\numberline {1}Inleiding}{1}% 
+\contentsline {chapter}{\numberline {1}Probleemstelling}{1}% 
+\contentsline {section}{\numberline {1.1}Mobiliteitsvraagstuk}{1}% 
+\contentsline {section}{\numberline {1.2}Online machine learning voor ge\IeC {\"\i }ndividualiseerde cadanscontrole}{2}% 
+\contentsline {chapter}{\numberline {2}Methode}{3}% 
+\contentsline {chapter}{\numberline {3}Resultaten}{4}% 
+\contentsline {chapter}{\numberline {4}Discussie}{5}% 

@@ -1,7 +1,7 @@
-from math import sin, pi, cos
+from math import sin, pi
 import noise
 import numpy as np
-from xsrc.simulation.params import *
+from xsrc.params import *
 
 slope_offset = 19
 
@@ -50,10 +50,10 @@ def update(h, omega_crank, v_fiets):
     :param h: timestep
     '''
     t_dc_max = (-omega_crank[h - 1]) / 2 + 60
-    if h < 70:
-        t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
-    else:
-        t_dc = max(0, -K * (v_fiets[h - 1] - v_fiets_ref))
+    # if h < 70:
+    t_dc = min(t_dc_max, max(0, -K * (v_fiets[h - 1] - v_fiets_ref)))
+    # else:
+    #     t_dc = max(0, -K * (v_fiets[h - 1] - v_fiets_ref))
     n = noise.pnoise1(slope_offset + (h / 2000), 6, 0.1, 3, 1024)
     slope_rad = np.interp(n, [-1, 1], [-0.02, 0.08])
     return t_dc, t_dc_max, slope_rad

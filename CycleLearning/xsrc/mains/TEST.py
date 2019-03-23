@@ -1,7 +1,5 @@
-from xsrc.analyze import visualize_data
 from xsrc.simulation.cycle_model import *
-from xsrc.simulation.data_to_csv import save
-from xsrc.simulation.params import *
+from xsrc.params import *
 
 theta_crank_rad = [0.0]  # Hoek van van de trapas
 theta_crank_rad2 = [0.0]  # Hoek van de trapas %2PI

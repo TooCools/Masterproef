@@ -2,15 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numpy.fft import fft, fftfreq
 from xsrc.excel_to_data import get_data
+from mpl_toolkits.mplot3d import axes3d, Axes3D #<-- Note the capitalization!
 
 size = 50
 
 
 def fourier_visualisation(noisy, start_index):
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    # ax = fig.add_subplot(111, projection='3d')
+    ax = Axes3D(fig)
     fig2 = plt.figure()
-    ax2 = fig2.add_subplot(111, projection='3d')
+    # ax2 = fig2.add_subplot(111, projection='3d')
+    ax2 = Axes3D(fig2)
+
     for i in range(start_index, start_index + 300):
         y = noisy[i:i + size]
         freqs = fftfreq(size, 0.1)
@@ -26,9 +30,9 @@ def fourier_visualisation(noisy, start_index):
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
     ax.set_zlim(-1000, 1000)
-    ax2.set_xlabel('X')
-    ax2.set_ylabel('Y')
-    ax2.set_zlabel('Z')
+    ax2.set_xlabel('Frequentie')
+    ax2.set_ylabel('Tijd')
+    ax2.set_zlabel('Amplitude')
     ax2.set_zlim(-1000, 1000)
     angle = 80
     ax.view_init(20, angle)
@@ -36,6 +40,6 @@ def fourier_visualisation(noisy, start_index):
     plt.show()
 
 
-df = get_data("..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
+df = get_data("..\\..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
 t_cyclist = df[" Crank_torque_Nm_filt"]
 fourier_visualisation(t_cyclist, 8240)

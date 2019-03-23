@@ -2,4 +2,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Plant diagram van de fiets}}{1}% 
+\contentsline {figure}{\numberline {1}{\ignorespaces snelheid-veiligheid trade-off (bron: IntuEdrive)}}{1}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2}{\ignorespaces Blokdiagram van het fiets-fietser-controller systeem}}{6}% 
