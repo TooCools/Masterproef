@@ -1,44 +1,4 @@
-- 2 motoren beïnvloeden de trapcadans niet (jorrit gaat dit verbeteren)
-
-- de fietser geeft input aan de fiets, de toestand van de fiets veranderd adhv deze input.
-
-simulatie
-
-	- Ten slotte is het mogelijk om slechts 1 parameter aan te passen tijdens tests, wat praktisch onmogelijk is in realiteit.
-	- we kunne quantitatief zeggen hoe goed een oplossing is en dit is niet mogelijk in de werkelijkhied
-	
-	- niet zeggen dat het een nadeel is, ik weet dat het een simulatie is en daar moet ik mee leven.
-	
-	- frequentie van de figuren bij t_dc enzo hetzelfde maken en ipv tijd/ koppel => hoek/koppel  3 omwentellingen (6 pi) want cadans varieert op fiets bij het trappen en in de simulatie is dit zeer constant
-	
-	- crank to ring ratio
-	- t_cy is torque op de trapas
-	
-	- t_mg2 minimum vermogen aanpassen naar 35 (van 25)
-	
-	denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
-	
-	
-	
-Hoofdstuk 2: On-line voorspellen
-
-Preprocessing
-Lengte van sequence
-welke variabelen (waarom?)
-welke algoritmen? (waarom?)
-2 settings, eerst alle data leren, dan testen \/ On-line leren (aantal keer bijleren, mse, foutgrens)
-
-	
-Postprocessing
-
-rugen verwittiegen doodle
-vergelijking in nieuw hoofdstuk dit zijn de resultaten
-	apart hoofdstuk discussie sectie
-	
-hs1 probleemstelling
-hs2 methode
-hs3 resultate
-hs4 discussie
+denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
 
 t_cy das de phase da verschuifs want daar is de kracht het hoogst
 t_dc_max reden: is bij elke motor zo beperkt vermogen; te hoog koppel => maakt kappot; te hoge snelheid => vliegt uit elkaar (ofwal weinig vermogen en hoog toerental; ofwel veel vermogen en weinig toeren; hetzelfde als in de werkelijkheid)
@@ -48,3 +8,9 @@ is een functie die bepaalde inputs heeft, en op basis daarvan outputs … fcc = 
 we doen dit om te zien of het algortime de vercshillende modellen kan leren we beperken ons tot simpele modellen 
 beginnen met uitleggen van wat het fietsersmodel is.
 fcc's maken (niet enkel die van tdc, ook helling snelheid, ...)
+
+IN LATEX NOG ZETTEN:
+	Uit deze formule is het ook meteen duidelijk dat het DC koppel ook het vermogen-equivalent koppel is. Dat wil zeggen dat het DC koppel gedurende een volledige omwenteling van de trapas evenveel arbeid levert als het fietserkoppel.
+	(de formule, geen idee of dit juist is) 
+	koppel toerentalkarakteristiek correct?
+	blokdiagram u_contr = [???] hier iets zetten?

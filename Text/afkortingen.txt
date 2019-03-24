@@ -3,22 +3,18 @@ FCC - freely chosen cadence
 CVT - Continu variabele transmissie
 Hz - Hertz; eenheid van frequentie
 rpm - Revolutions per minute
-fcc - Freely Chosen Cadence
 Nm - Newton meter; eenheid van koppel
 DT - Decision Tree
 RF - Random Forest
 MA - Moving Average
 ES - Exponential Smoothing
-LSTM - Long Short-Term Memory
-RNN - Recurrent Neural Network
 
 
 Symbolen
 
 r - input vector fietser
 u_cy - input vector fiets, geleverd door de fietser
-y_contr - input vector fiets, geleverd door de controller
-FCC_est - schatting van FCC, geleverd door de cadans controller
+u_contr - input vector fiets, geleverd door de controller
 y - output vector fiets
 v_ref - referentie snelheid van de fietser
 t_cy - koppel geleverd door de fietser
@@ -50,7 +46,8 @@ T_MG2 - koppel geleverd door motor op voorwiel
 T_rw - koppel geleverd op het achterwiel
 r_w - Straal van voor- en achterwiel
 P - vermogen
-sd - smoothing factor
+sf - smoothing factor
 f_k - factor voor fietsersmodel in functie van het gemiddeld koppel
 f_h - factor voor fietsersmodel in functie van de helling
 f_v - factor voor fietsersmodel in functie van de snelheid
+K - agressiviteits parameter voor proportionele regelaar

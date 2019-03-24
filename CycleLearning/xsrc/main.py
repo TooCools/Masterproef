@@ -10,7 +10,7 @@ from xsrc.bike import Bike
 from xsrc.cadence_controller import CadenceController
 from xsrc.params import seqlen
 
-timesteps = 20000
+timesteps = 5000
 """PA"""
 # for loss in ["epsilon_insensitive", "squared_epsilon_insensitive"]:
 #     for c in [1, 2, 5, 10]:
@@ -80,31 +80,31 @@ timesteps = 20000
 #                "C:\\Users\\Arno\\Desktop\\Masterproef\\Images\\evaluatie\\20000", True)
 
 
-# model = Sequential()
-# # model.add(LSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
-# model.add(LSTM(16))
-# model.add(Dropout(0.2))
-# model.add(BatchNormalization())
-# model.add(Dense(1))
-# opt = Adam(lr=0.001, decay=1e-6)
-#
-# # Compile model
-# model.compile(
-#     loss='mean_squared_error',
-#     optimizer=opt,
-#     metrics=['mean_squared_error']
-# )
-# cadence_controller = CadenceController(model
-#                                        , ptype="none", verbose=False,keras=True)
-# cycle = Bike(verbose=False)
-# for h in range(1, timesteps):
-#     t_cy, crank_angle, v_cy, slope = cycle.get_recent_data(h, seqlen)
-#     if h > cadence_controller.warmup:
-#         predicted_rpm = cadence_controller.predict(t_cy, crank_angle, v_cy, slope)
-#         cycle.update(h, predicted_rpm)
-#     else:
-#         cycle.update(h)
-#         predicted_rpm = 0
-#
-#     fcc_rpm = cycle.get_recent_fcc(h, 1)[0]
-#     cadence_controller.update(h, predicted_rpm, fcc_rpm, cycle)
+model = Sequential()
+# model.add(LSTM(128, input_shape=train_x.shape[1:], return_sequences=True))
+model.add(LSTM(32))
+model.add(Dropout(0.2))
+model.add(BatchNormalization())
+model.add(Dense(1))
+opt = Adam(lr=5, decay=0)
+
+# Compile model
+model.compile(
+    loss='mean_squared_error',
+    optimizer=opt,
+    metrics=['mean_squared_error']
+)
+cadence_controller = CadenceController(model
+                                       , ptype="none", verbose=True,keras=True)
+cycle = Bike(verbose=False)
+for h in range(1, timesteps):
+    t_cy, crank_angle, v_cy, slope = cycle.get_recent_data(h, seqlen)
+    if h > cadence_controller.warmup:
+        predicted_rpm = cadence_controller.predict(t_cy, crank_angle, v_cy, slope)
+        cycle.update(h, predicted_rpm)
+    else:
+        cycle.update(h)
+        predicted_rpm = 0
+
+    fcc_rpm = cycle.get_recent_fcc(h, 1)[0]
+    cadence_controller.update(h, predicted_rpm, fcc_rpm, cycle)

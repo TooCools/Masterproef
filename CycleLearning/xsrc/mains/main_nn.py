@@ -18,6 +18,7 @@ df_val = get_data("..\\..\\data\\validation.xlsx", [df_torque, df_crank_angle_ra
 print("Preprocessing data")
 train_x, train_y = preprocess(df_main, SEQ_LEN_NN, seqs=True, normalize=True)
 val_x, val_y = preprocess(df_val, SEQ_LEN_NN, shuffle=False, seqs=True, normalize=True)
+print(train_y)
 
 print("Start learning")
 name = f"SEQ_{SEQ_LEN_NN}_EPOCH_{EPOCH}_{int(time.time())}"

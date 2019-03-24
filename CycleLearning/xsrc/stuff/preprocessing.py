@@ -62,7 +62,60 @@ def preprocess(df, seq_len, normalize=True, shuffle=True, classification=False, 
     return xs, y
 
 
-def preprocess_keras(dict, seq_len, normalize=True, shuffle=True, seqs=False):
+def preprocess_keras2(dict, fcc, seq_len, normalize=True, shuffle=True, seqs=False):
+    '''
+    Scales the torque column with a minmax scaler
+    Add 2 new rows based on crank angle, removes crank angle column
+    Creates sequences of length SEQ_LEN
+    :param df: The dataframe
+    :return: x: the sequenced data
+             y: the resulting data
+    '''
+    # print("Preprocessing")
+    df = pandas.DataFrame(dict)
+
+    min_max_scaler = preprocessing.MinMaxScaler()
+    for col in df.columns:
+        if normalize and col != df_crank_angle_rad:
+            vals_scaled = min_max_scaler.fit_transform(df[[col]])
+            df_new = pandas.DataFrame(vals_scaled)
+            df[col] = df_new
+            # df[col] = preprocessing.scale(df[col].values) todo check if this is better
+        if col == df_crank_angle_rad:
+            cosvals1 = []
+            sinvals1 = []
+            for val in df[col].values:
+                cosvals1.append(cos(val))
+                sinvals1.append(sin(val))
+            df['cos_angle'] = pandas.Series(cosvals1)
+            df['sin_angle'] = pandas.Series(sinvals1)
+
+    df = df.drop(df_crank_angle_rad, 1)
+
+    sequences = []
+    prev_data = deque(maxlen=seq_len)
+    j = -1
+    for i in df.values:
+        prev_data.append([n for n in i])
+        if len(prev_data) == seq_len and j != 50:
+            sequences.append([np.array(prev_data), fcc[j]])
+
+    if shuffle:
+        random.shuffle(sequences)
+    x = []
+    y = []
+    for seq, target in sequences:
+        x.append(seq)
+        y.append(target)
+    # print("Preprocessing Finished")
+    xs = np.array(x)
+    if not seqs:
+        nsamples, nx, ny = xs.shape
+        return xs.reshape((nsamples, nx * ny)), y
+    return xs, y
+
+
+def preprocess_keras(dict, fcc, seq_len, normalize=True, shuffle=True, seqs=False):
     '''
     Scales the torque column with a minmax scaler
     Add 2 new rows based on crank angle, removes crank angle column
@@ -99,24 +152,30 @@ def preprocess_keras(dict, seq_len, normalize=True, shuffle=True, seqs=False):
             df['sin_angle'] = pandas.Series(sinvals1)
 
     df = df.drop(df_crank_angle_rad, 1)
-
+    print(df.head())
     sequences = []
-    prev_data = deque(maxlen=seq_len)
-    for i in df.values:
-        prev_data.append([n for n in i[1:]])
-        if len(prev_data) == seq_len:
-            sequences.append([np.array(prev_data), i[0]])
-    x = []
+    prev_data = deque(maxlen=seq_len * 5)
+    j = 0
+    for i in range(0, len(df) - 1):
+        for cols in df.iloc[i]:
+            prev_data.append(cols)
+        if len(prev_data) == seq_len * 5:
+            sequences.append([np.array(prev_data), fcc[j]])
+            j += 1
+
+    if shuffle:
+        random.shuffle(sequences)
+    X = []
     y = []
     for seq, target in sequences:
-        x.append(seq)
+        X.append(seq)
         y.append(target)
     # print("Preprocessing Finished")
-    xs = np.array(x)
+    xs = np.array(X)
     if not seqs:
         nsamples, nx, ny = xs.shape
         return xs.reshape((nsamples, nx * ny)), y
-    return xs
+    return xs, y
 
 
 def preprocess_dict(dict, seq_len, normalize=True, shuffle=True, classification=False, seqs=False):

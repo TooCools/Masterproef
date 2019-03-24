@@ -1,10 +1,16 @@
-\contentsline {chapter}{Voorwoord}{i}% 
-\contentsline {chapter}{Abstract}{ii}% 
+\contentsline {chapter}{Voorwoord}{}% 
+\contentsline {chapter}{Abstract}{i}% 
 \contentsline {chapter}{Lijst van figuren}{iii}% 
-\contentsline {chapter}{Lijst van symbolen en afkortingen}{iv}% 
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{iv}% 
 \contentsline {chapter}{\numberline {1}Probleemstelling}{1}% 
 \contentsline {section}{\numberline {1.1}Mobiliteitsvraagstuk}{1}% 
 \contentsline {section}{\numberline {1.2}Online machine learning voor ge\IeC {\"\i }ndividualiseerde cadanscontrole}{2}% 
-\contentsline {chapter}{\numberline {2}Methode}{3}% 
-\contentsline {chapter}{\numberline {3}Resultaten}{4}% 
-\contentsline {chapter}{\numberline {4}Discussie}{5}% 
+\contentsline {section}{\numberline {1.3}Huidige systeem}{3}% 
+\contentsline {chapter}{\numberline {2}Methode}{5}% 
+\contentsline {section}{\numberline {2.1}De fietssimulatie}{5}% 
+\contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{5}% 
+\contentsline {section}{\numberline {2.3}Het fietsersmodel}{8}% 
+\contentsline {section}{\numberline {2.4}Het lastmodel}{9}% 
+\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{11}% 
+\contentsline {chapter}{\numberline {3}Resultaten}{12}% 
+\contentsline {chapter}{\numberline {4}Discussie}{13}% 

@@ -5,9 +5,13 @@ import pandas
 import numpy as np
 from sklearn import preprocessing
 from sklearn.metrics import mean_squared_error
+from tensorflow.python.keras import Sequential
+from tensorflow.python.keras.callbacks import EarlyStopping
+from tensorflow.python.keras.layers import LSTM, Dropout, BatchNormalization, Dense
+from tensorflow.python.keras.optimizers import Adam
 
 from xsrc.params import seqlen, df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_slope
-from xsrc.stuff.preprocessing import preprocess_keras
+from xsrc.stuff.preprocessing import preprocess_keras, preprocess_keras2
 
 
 class CadenceController:
@@ -33,8 +37,12 @@ class CadenceController:
             df_velocity: velocity,
             df_slope: slope_rad
         }
-        x = self.preprocess(data, normalize=False)
-        pred = self.model.predict([x])[0]
+        if not self.keras:
+            x = self.preprocess(data, normalize=False)
+            pred = self.model.predict([x])[0]
+        else:
+            x, y = preprocess_keras2(data, np.zeros(50), seqlen, normalize=False, shuffle=True, seqs=True)
+            pred = self.model.predict(x)[0][0]
         # if random.random() > 0.8:
         #     pred += (random.random() - 0.5) * 20
         optimal_cadence = self.postprocess(pred)
@@ -90,20 +98,32 @@ class CadenceController:
             return sf * self.previous_opt_cadence[-1] + (1 - sf) * curr
         return prediction
 
+    def train_keras(self, torque, cr_angle, velocity, slope_rad, fcc):
+        data = {
+            df_torque: torque,
+            df_crank_angle_rad: cr_angle,
+            df_velocity: velocity,
+            df_slope: slope_rad
+        }
+        X, y = preprocess_keras2(data, fcc, seqlen, normalize=False, seqs=True)
+        for i in range(len(X)):
+            self.training_set.append([X[i], y[i]])
+        random.shuffle(self.training_set)
+        training_X = []
+        training_y = []
+        for X, y in self.training_set:
+            training_X.append(X)
+            training_y.append(y)
+        self.model.fit(np.array(training_X), np.array(training_y),epochs=5,verbose=0)
+        # self.model.fit(X,ys)
+        # print("noice")
+
     def train(self, h, cycle):
         torque, cr_angle, velocity, slope_rad = cycle.get_recent_data(h, seqlen * 2)
         fcc = cycle.get_recent_fcc(h, seqlen)
 
         if self.keras:
-            data = {
-                df_torque: torque,
-                df_crank_angle_rad: cr_angle,
-                df_velocity: velocity,
-                df_slope: slope_rad
-            }
-            X = preprocess_keras(data, seqlen, normalize=True, shuffle=True, seqs=True)
-            # self.model.fit(X,ys)
-            # print("noice")
+            self.train_keras(torque, cr_angle, velocity, slope_rad, fcc)
         else:
             for i in range(0, seqlen):
                 data = {
@@ -113,13 +133,13 @@ class CadenceController:
                     df_slope: slope_rad[i:seqlen + i]
                 }
                 self.training_set.append([self.preprocess(data), fcc[i]])
-        random.shuffle(self.training_set)
-        training_X = []
-        training_y = []
-        for X, y in self.training_set:
-            training_X.append(X)
-            training_y.append(y)
-        self.model.fit(training_X, training_y)
+            random.shuffle(self.training_set)
+            training_X = []
+            training_y = []
+            for X, y in self.training_set:
+                training_X.append(X)
+                training_y.append(y)
+            self.model.fit(training_X, training_y)
         self.aantalkeer_getrained += 1
 
     def update(self, h, prediction, actual, cycle):
