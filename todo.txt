@@ -1,16 +1,14 @@
-denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
-
-t_cy das de phase da verschuifs want daar is de kracht het hoogst
-t_dc_max reden: is bij elke motor zo beperkt vermogen; te hoog koppel => maakt kappot; te hoge snelheid => vliegt uit elkaar (ofwal weinig vermogen en hoog toerental; ofwel veel vermogen en weinig toeren; hetzelfde als in de werkelijkheid)
-
-
-is een functie die bepaalde inputs heeft, en op basis daarvan outputs … fcc = f(v,t_dc,alpha,f_load) we beperken tot fcc=7.5tdc
-we doen dit om te zien of het algortime de vercshillende modellen kan leren we beperken ons tot simpele modellen 
-beginnen met uitleggen van wat het fietsersmodel is.
-fcc's maken (niet enkel die van tdc, ook helling snelheid, ...)
-
 IN LATEX NOG ZETTEN:
 	Uit deze formule is het ook meteen duidelijk dat het DC koppel ook het vermogen-equivalent koppel is. Dat wil zeggen dat het DC koppel gedurende een volledige omwenteling van de trapas evenveel arbeid levert als het fietserkoppel.
 	(de formule, geen idee of dit juist is) 
 	koppel toerentalkarakteristiek correct?
 	blokdiagram u_contr = [???] hier iets zetten?
+	
+denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
+	Voor de simulatie: Hoe groter het verschil is tussen het fietsermodel en de voorspelling, hoe hoger de kans op aanpassing 
+					   Er is een grens van 5 rpm. verschil = 5? 0.2 kans, verschil > 10 1 kans, ertussen? (lineair? sublin? expon?)
+	
+	Op de fiets: Op basis van tijd tussen het drukken op de knop (HMM)
+				 Lange tijd niet op knop geduwt? hoge kans op veranderen
+				 een tweede keer kort erna duwen? lage kans (misschien is het algoritme nog aan het bijleren / moet de cadans nog convergeren naar  de voorspellingen / double click)
+				 stijgende kans als fietser blijft drukken? Blijven drukken op de knop kan wijzen op slechte schattingen.

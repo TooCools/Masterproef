@@ -1,6 +1,5 @@
 https://en.wikipedia.org/wiki/Continuously_variable_transmission
 https://nl.wikipedia.org/wiki/Vermogen_%28natuurkunde%29
-https://nl.wikipedia.org/wiki/Planeetwielmechanisme
 https://en.wikipedia.org/wiki/Random_forest
 https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf
 Jorrit zijn thesis
@@ -14,4 +13,8 @@ ftp://ftp.sas.com/pub/neural/FAQ2.html#A_functions_activation
 Passive-Aggressive for On-Line Learning in Statistical Machine Translation
 https://link-springer-com.kuleuven.ezproxy.kuleuven.be/content/pdf/10.1007%2F978-3-642-21257-4.pdf
 
+
+images/tables
+https://nl.wikipedia.org/wiki/Planeetwielmechanisme
 https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark#figures
+

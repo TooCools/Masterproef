@@ -25,3 +25,6 @@ Met tensorboard kun je ook modelcheckpoints gebruiken. Wanneer bijvoorbeeld de a
 LSTM (Long short term memory) voor sequential data (bij cpu versie duurt het leren precies wat lang)
 GRU (Gated recurring? unit) voor sequential data
 Passive Agressive zou goed moeten zijn voor online learning => warm_start op true zetten gebruikt vorige "weights" worden hergebruikt
+
+t_cy das de phase da verschuifs want daar is de kracht het hoogst
+t_dc_max reden: is bij elke motor zo beperkt vermogen; te hoog koppel => maakt kappot; te hoge snelheid => vliegt uit elkaar (ofwal weinig vermogen en hoog toerental; ofwel veel vermogen en weinig toeren; hetzelfde als in de werkelijkheid)
