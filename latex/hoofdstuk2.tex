@@ -6,19 +6,25 @@ Het voordeel van de fietssimulatie is de enorme flexibiliteit. Uren aan data kun
 \section{Modelleren van het fietserkoppel}
 Het fietserkoppel wordt gemodelleerd als een sinusfunctie met twee pieken per omwenteling van de trapas (2 benen), met het DC koppel van de fietser als parameter.
 \\
-\begin{align*}
- T_{cy} &= T_{dc}(1+sin(2\theta_{cr}-\frac{\pi}{6}))
-\end{align*}
+\begin{gather*}
+ T_{cy} = T_{dc}(1+sin(2\theta_{cr}-\frac{\pi}{6}))
+\end{gather*}
 \\
 Uit deze formule is het ook meteen duidelijk dat het DC koppel ook het vermogen-equivalent koppel is. Dat wil zeggen dat het DC koppel gedurende een volledige omwenteling van de trapas evenveel arbeid levert als het fietserkoppel.
-\\\\
+\\
+\begin{align*}
+\int_{0}^{2\pi} T_{cy}(1+sin(2x-\frac{\pi}{6})) dx &= T_{cy} \int_{0}^{2\pi}(1+sin(2x-\frac{\pi}{6})) dx\\
+&= T_{cy} \left[x-\frac{1}{2}sin(\frac{1}{3}(6x+\pi))\right]_0^{2\pi}\\
+&= 2\pi \ T_{cy}
+\end{align*}
+\\
 Het gemiddelde koppel geleverd door de fietser wordt gemodelleerd als een proportionele regelaar. Het doel is om een bepaalde snelheid, $v_{ref}$, te behalen. Hoe groter het verschil is tussen de referentie snelheid en de eigenlijke snelheid, hoe meer kracht er geleverd zal worden. Als deze referentie snelheid overschreden wordt, dan zal er geen koppel meer geleverd worden. Dit wordt ook wel freewheelen genoemd. Om de kracht van de actor te limiteren, wordt er een maximum koppel ingesteld naar gelang de huidige cadans (\gls{omega_cr}). Zo wordt er meer kracht geleverd wanneer de cadans laag is, net zoals in de werkelijkheid. \gls{k} bepaalt de agressiviteit van de regelaar. De formules zien er als volgt uit:
 
 \begin{gather*}
 T_{dc,max} = \frac{-\omega_{cr}}{2}+60 \tab (Figuur\ \ref{fig:koppeltoerentalkarakteristiek}) \\
 T_{dc} = min(T_{dc,max},max(0,-K*(v_{bike}-v_{ref}))
 \end{gather*}
-
+\\
 \begin{figure}
   \includegraphics[width=\linewidth]{images/koppel-toerentalkarakteristiek.png}
   \caption{Het koppel-toerentalkarakteristiek}
@@ -74,14 +80,14 @@ Hoe kiest een fietser zijn cadans? Dit is voor elke fietser verschillend en er i
 Het fietsersmodel is een functie die op verschillende manieren uitgedrukt kan worden: op basis van de helling, gemiddeld koppel, of een stabiel vermogen. Wat het correcte model is wordt in deze thesis niet uitgewerkt. Het is vooral van belang dat de cadanscontroller het model zo snel en zo nauwkeurig mogelijk kan achterhalen, ongeacht wat het model precies is. Hier wordt de volgende aanname gemaakt: hoe hoger het koppel geleverd door de fietser, hoe hoger de gewenste cadans. Wanneer de fietser bijvoorbeeld een helling oprijdt schakelt hij of zij een versnelling omlaag zodat de kracht die op de pedalen gezet moet worden aangenaam blijft. We stellen hier volgende eenvoudige modellen voor:
 \phantom{\gls{f_k}\gls{f_h}\gls{f_v}}
 \begin{align*}
-Gemiddeld koppel:\tab fcc &= f_k . T_{dc}\\
+Gemiddeld \ koppel:\tab fcc &= f_k . T_{dc}\\
 Helling:\tab fcc &= f_h . \alpha\\
 Snelheid:\tab fcc &= f_v . v_{bike}
 \end{align*}
-Er wordt verder aangenomen dat de fietser ook een zeker lineariteit verwacht bij lage snelheden. Dat wil zeggen dat een fietser het niet comfortabel vindt wanneer hij of zij snel moet trappen wanneer de fiets nog stilstaat of heel traag rijdt, ook al moet er op dat moment veel koppel geleverd worden om te kunnen vertrekken. Daarom wordt bij lage snelheden de FCC begrensd door een lineair oplopend maximum, te vergelijken met een mechanische fietsversnelling. Omdat de doorsnee fietser niet heel traag of heel snel trapt wordt de FCC begrensd tussen de 40 en 120 rpm. Figuur \ref{fig:cadansverloop} toont een voorbeeld van deze berekening waarbij de fcc is ingesteld op 70 rpm.
+Er wordt verder aangenomen dat de fietser ook een zeker lineariteit verwacht bij lage snelheden. Dat wil zeggen dat een fietser het niet comfortabel vindt wanneer hij of zij snel moet trappen wanneer de fiets nog stilstaat of heel traag rijdt, ook al moet er op dat moment veel koppel geleverd worden om te kunnen vertrekken. Daarom wordt bij lage snelheden de FCC begrensd door een lineair oplopend maximum, te vergelijken met een mechanische fietsversnelling. Omdat de doorsnee fietser niet heel traag of heel snel trapt wordt de FCC begrensd tussen de 40 en 120 rpm.
 \begin{figure}
   \includegraphics[width=\linewidth]{images/cadansverloop.png}
-  \caption{Cadansverloop in functie van de snelheid begrensd door fcc}
+  \caption{Verwacht cadansverloop in functie van de snelheid. Er wordt verwacht dat de eigenlijke cadans tussen het minimum en maximum ligt.}
   \label{fig:cadansverloop}
 \end{figure}
 \newpage

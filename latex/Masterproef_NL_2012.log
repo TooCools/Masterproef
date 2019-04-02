@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  24 MAR 2019 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  1 APR 2019 15:46
 entering extended mode
 **./Masterproef_NL_2012.tex
 (Masterproef_NL_2012.tex
@@ -1079,12 +1079,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--51
  []
 
 [3])
-Underfull \hbox (badness 10000) in paragraph at lines 67--161
+Underfull \hbox (badness 10000) in paragraph at lines 64--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--161
+Underfull \hbox (badness 10000) in paragraph at lines 64--161
 
  []
 
@@ -1104,7 +1104,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
@@ -1117,128 +1117,127 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
 File: images/koppel-toerentalkarakteristiek.png Graphic file (type png)
 <use images/koppel-toerentalkarakteristiek.png>
 Package pdftex.def Info: images/koppel-toerentalkarakteristiek.png  used on inp
-ut line 23.
+ut line 29.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 <images/menselijkkoppel.png, id=67, 642.4pt x 481.8pt>
 File: images/menselijkkoppel.png Graphic file (type png)
 <use images/menselijkkoppel.png>
-Package pdftex.def Info: images/menselijkkoppel.png  used on input line 34.
+Package pdftex.def Info: images/menselijkkoppel.png  used on input line 40.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 <images/gesimuleerdekoppel.png, id=68, 642.4pt x 481.8pt>
 File: images/gesimuleerdekoppel.png Graphic file (type png)
 <use images/gesimuleerdekoppel.png>
-Package pdftex.def Info: images/gesimuleerdekoppel.png  used on input line 40.
+Package pdftex.def Info: images/gesimuleerdekoppel.png  used on input line 46.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 <images/gesimuleerdekoppeldominantbeen.png, id=69, 642.4pt x 481.8pt>
 File: images/gesimuleerdekoppeldominantbeen.png Graphic file (type png)
 <use images/gesimuleerdekoppeldominantbeen.png>
 Package pdftex.def Info: images/gesimuleerdekoppeldominantbeen.png  used on inp
-ut line 46.
+ut line 52.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--53
+Underfull \hbox (badness 10000) in paragraph at lines 34--59
 
  []
 
-[6 <./images/koppel-toerentalkarakteristiek.png (PNG copy)>]
-<images/planeetwielmechanisme.png, id=73, 237.88875pt x 179.92218pt>
+[6] [7 <./images/koppel-toerentalkarakteristiek.png (PNG copy)>]
+<images/planeetwielmechanisme.png, id=76, 237.88875pt x 179.92218pt>
 File: images/planeetwielmechanisme.png Graphic file (type png)
 <use images/planeetwielmechanisme.png>
-Package pdftex.def Info: images/planeetwielmechanisme.png  used on input line 5
-6.
+Package pdftex.def Info: images/planeetwielmechanisme.png  used on input line 6
+2.
 (pdftex.def)             Requested size: 227.62204pt x 172.16602pt.
 
-Underfull \hbox (badness 1824) in paragraph at lines 57--57
+Underfull \hbox (badness 1824) in paragraph at lines 63--63
 []\OT1/cmr/m/n/12 Figure 6: |Pla-neetwielmech-a-nisme (bron:
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 61--62
+Underfull \hbox (badness 1320) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 wiel. CoSaR maakt ge-bruik van een
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--67
+Underfull \hbox (badness 10000) in paragraph at lines 70--73
 
  []
 
-[7 <./images/menselijkkoppel.png (PNG copy)> <./images/gesimuleerdekoppel.png (
+[8 <./images/menselijkkoppel.png (PNG copy)> <./images/gesimuleerdekoppel.png (
 PNG copy)> <./images/gesimuleerdekoppeldominantbeen.png (PNG copy)> <./images/p
 laneetwielmechanisme.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 78--82
 
  []
 
-<images/cadansverloop.png, id=78, 1032.10594pt x 667.74469pt>
+<images/cadansverloop.png, id=81, 642.4pt x 481.8pt>
 File: images/cadansverloop.png Graphic file (type png)
 <use images/cadansverloop.png>
-Package pdftex.def Info: images/cadansverloop.png  used on input line 83.
-(pdftex.def)             Requested size: 455.24408pt x 294.53198pt.
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Package pdftex.def Info: images/cadansverloop.png  used on input line 89.
+(pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
+[9] [10 <./images/cadansverloop.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--103
+Underfull \hbox (badness 10000) in paragraph at lines 103--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--103
+Underfull \hbox (badness 10000) in paragraph at lines 103--109
 
  []
 
-[9 <./images/cadansverloop.png>]
-<images/parcour_slope_example.png, id=86, 642.4pt x 481.8pt>
+<images/parcour_slope_example.png, id=88, 642.4pt x 481.8pt>
 File: images/parcour_slope_example.png Graphic file (type png)
 <use images/parcour_slope_example.png>
 Package pdftex.def Info: images/parcour_slope_example.png  used on input line 1
-06.
+12.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
-[10 <./images/parcour_slope_example.png (PNG copy)>])
-Underfull \hbox (badness 10000) in paragraph at lines 116--162
+[11])
+Underfull \hbox (badness 10000) in paragraph at lines 122--162
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 116--162
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 122--162
 [] 
  []
 
-[11]
+[12 <./images/parcour_slope_example.png (PNG copy)>] [13]
 Hoofdstuk 3.
-[12
+[14
 
 
 ]
 Hoofdstuk 4.
-[13
+[15
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 192.
-<sedes.png, id=103, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 211.
+<sedes.png, id=108, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 202.
+Package pdftex.def Info: sedes.png  used on input line 221.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 206--207
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 225--226
 [][][] 
  []
 
-[14 <./sedes.png>] (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)) 
+[16 <./sedes.png>] (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)) 
 ) 
 Here is how much of TeX's memory you used:
  21993 strings out of 492946
  441610 string characters out of 3126710
- 540251 words of memory out of 3000000
+ 540252 words of memory out of 3000000
  25412 multiletter control sequences out of 15000+200000
  20606 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1263,9 +1262,9 @@ no/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Us
 ers/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
 <C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro
 8a.pfb>
-Output written on Masterproef_NL_2012.pdf (22 pages, 623833 bytes).
+Output written on Masterproef_NL_2012.pdf (24 pages, 597500 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 

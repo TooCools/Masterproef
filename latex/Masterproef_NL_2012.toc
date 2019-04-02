@@ -9,8 +9,8 @@
 \contentsline {chapter}{\numberline {2}Methode}{5}% 
 \contentsline {section}{\numberline {2.1}De fietssimulatie}{5}% 
 \contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{5}% 
-\contentsline {section}{\numberline {2.3}Het fietsersmodel}{8}% 
-\contentsline {section}{\numberline {2.4}Het lastmodel}{9}% 
+\contentsline {section}{\numberline {2.3}Het fietsersmodel}{9}% 
+\contentsline {section}{\numberline {2.4}Het lastmodel}{11}% 
 \contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{11}% 
-\contentsline {chapter}{\numberline {3}Resultaten}{12}% 
-\contentsline {chapter}{\numberline {4}Discussie}{13}% 
+\contentsline {chapter}{\numberline {3}Resultaten}{14}% 
+\contentsline {chapter}{\numberline {4}Discussie}{15}% 

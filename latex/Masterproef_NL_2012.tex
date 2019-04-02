@@ -161,6 +161,25 @@ An abstract.
 \include{hoofdstuk1}
 \include{hoofdstuk2}
 \chapter{Resultaten}
+\begin{gather*}
+FCC_{est,t} = sf . FCC_{pred,t} + (1-sf) . FCC_{est,t-1} \\
+FCC_{est,t} = \frac{\sum_{i=0}^{n} FCC_{pred,t-i} }{n}
+\end{gather*}
+\begin{gather*}
+x_t = \begin{bmatrix} 
+       \theta _{cr} \\ T_{cy,m} \\ v_{bike} \\ \alpha
+     \end{bmatrix} \tab
+input = \begin{bmatrix} 
+       x_t \\ x_{t-1} \\ ... \\ x_{t-n}
+     \end{bmatrix} 
+\end{gather*}
+\begin{gather*}
+y_t=w_t \cdot x_t\\
+loss(w_{t+1};(x_t,y_t) \leq \epsilon
+\end{gather*}
+
+
+
 \chapter{Discussie}
 
 

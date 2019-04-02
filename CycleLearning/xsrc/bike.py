@@ -117,8 +117,7 @@ class Bike:
         self.o_mg2.append(omega_mg2)
 
     def cycler_torque(self, angle):
-        gaussian_random = np.random.normal(0, 0.3)
-        gaussian_random = 0
+        gaussian_random = np.random.normal(0, 0.3)*5
         t_dc_noise = self.t_dc + gaussian_random
         if t_dc_noise < 0:
             t_dc_noise = 0

@@ -40,6 +40,6 @@ def fourier_visualisation(noisy, start_index):
     plt.show()
 
 
-df = get_data("..\\..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
+df = get_data("..\\..\\..\\Data\\BikeControl.xlsx", [" Crank_torque_Nm_filt"])
 t_cyclist = df[" Crank_torque_Nm_filt"]
 fourier_visualisation(t_cyclist, 8240)

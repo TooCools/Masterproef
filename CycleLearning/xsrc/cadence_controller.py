@@ -5,18 +5,13 @@ import pandas
 import numpy as np
 from sklearn import preprocessing
 from sklearn.metrics import mean_squared_error
-from tensorflow.python.keras import Sequential
-from tensorflow.python.keras.callbacks import EarlyStopping
-from tensorflow.python.keras.layers import LSTM, Dropout, BatchNormalization, Dense
-from tensorflow.python.keras.optimizers import Adam
 
-from xsrc.params import seqlen, df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_slope
-from xsrc.stuff.preprocessing import preprocess_keras, preprocess_keras2
+from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_slope, timestep
 
 
 class CadenceController:
 
-    def __init__(self, model, ptype="none", verbose=True, keras=False):
+    def __init__(self, model, ptype="none", seqlen=50, verbose=True, stochastic=False):
         self.model = model
         self.warmup = 300
         self.ptype = ptype
@@ -28,7 +23,8 @@ class CadenceController:
         self.actual_fcc_mse = []
         self.previous_predictions_mse = []
         self.aantalkeer_getrained = 0
-        self.keras = keras
+        self.seqlen = seqlen
+        self.stochastic = stochastic
 
     def predict(self, torque, cr_angle, velocity, slope_rad):
         data = {
@@ -37,12 +33,9 @@ class CadenceController:
             df_velocity: velocity,
             df_slope: slope_rad
         }
-        if not self.keras:
-            x = self.preprocess(data, normalize=False)
-            pred = self.model.predict([x])[0]
-        else:
-            x, y = preprocess_keras2(data, np.zeros(50), seqlen, normalize=False, shuffle=True, seqs=True)
-            pred = self.model.predict(x)[0][0]
+        x = self.preprocess(data, normalize=False)
+        pred = self.model.predict([x])[0]
+
         # if random.random() > 0.8:
         #     pred += (random.random() - 0.5) * 20
         optimal_cadence = self.postprocess(pred)
@@ -98,58 +91,45 @@ class CadenceController:
             return sf * self.previous_opt_cadence[-1] + (1 - sf) * curr
         return prediction
 
-    def train_keras(self, torque, cr_angle, velocity, slope_rad, fcc):
-        data = {
-            df_torque: torque,
-            df_crank_angle_rad: cr_angle,
-            df_velocity: velocity,
-            df_slope: slope_rad
-        }
-        X, y = preprocess_keras2(data, fcc, seqlen, normalize=False, seqs=True)
-        for i in range(len(X)):
-            self.training_set.append([X[i], y[i]])
+    def train(self, h, cycle):
+        torque, cr_angle, velocity, slope_rad = cycle.get_recent_data(h, self.seqlen * 2)
+        fcc = cycle.get_recent_fcc(h, self.seqlen)
+
+        for i in range(0, self.seqlen):
+            data = {
+                df_torque: torque[i:self.seqlen + i],
+                df_crank_angle_rad: cr_angle[i:self.seqlen + i],
+                df_velocity: velocity[i:self.seqlen + i],
+                df_slope: slope_rad[i:self.seqlen + i]
+            }
+            self.training_set.append([self.preprocess(data), fcc[i]])
         random.shuffle(self.training_set)
         training_X = []
         training_y = []
         for X, y in self.training_set:
             training_X.append(X)
             training_y.append(y)
-        self.model.fit(np.array(training_X), np.array(training_y),epochs=5,verbose=0)
-        # self.model.fit(X,ys)
-        # print("noice")
-
-    def train(self, h, cycle):
-        torque, cr_angle, velocity, slope_rad = cycle.get_recent_data(h, seqlen * 2)
-        fcc = cycle.get_recent_fcc(h, seqlen)
-
-        if self.keras:
-            self.train_keras(torque, cr_angle, velocity, slope_rad, fcc)
-        else:
-            for i in range(0, seqlen):
-                data = {
-                    df_torque: torque[i:seqlen + i],
-                    df_crank_angle_rad: cr_angle[i:seqlen + i],
-                    df_velocity: velocity[i:seqlen + i],
-                    df_slope: slope_rad[i:seqlen + i]
-                }
-                self.training_set.append([self.preprocess(data), fcc[i]])
-            random.shuffle(self.training_set)
-            training_X = []
-            training_y = []
-            for X, y in self.training_set:
-                training_X.append(X)
-                training_y.append(y)
-            self.model.fit(training_X, training_y)
+        self.model.fit(training_X, training_y)
         self.aantalkeer_getrained += 1
 
+    def stochastic_training(self, h, difference, cycle):
+        if difference > 5:
+            chance = (difference / 10 - 0.3) * timestep
+            if random.random() < chance:
+                self.verbose_printing("Trained with chance")
+                self.train(h, cycle)
+
     def update(self, h, prediction, actual, cycle):
-        if seqlen < h:
-            if 2 * seqlen < h < self.warmup and h % 30 == 0:
+        difference = abs(prediction - actual)
+        if self.seqlen < h:
+            if 2 * self.seqlen < h < self.warmup and h % 30 == 0:
                 self.verbose_printing("Training")
                 self.train(h, cycle)
-            elif h > self.warmup and h % 30 == 0 and abs(prediction - actual) > 5:
+            elif h > self.warmup and h % 30 == 0 and difference > 5 and not self.stochastic:
                 self.verbose_printing("Training; diff: " + str(abs(prediction - actual)))
                 self.train(h, cycle)
+            elif self.stochastic and h>self.warmup:
+                self.stochastic_training(h, difference, cycle)
             if h > self.warmup:
                 self.actual_fcc_mse.append(actual)
                 self.previous_predictions_mse.append(prediction)
