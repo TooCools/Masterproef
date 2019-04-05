@@ -11,28 +11,27 @@ from xsrc.params import seqlen
 
 # file = open("C:\\Users\\Arno\\Desktop\\Masterproef\\CycleLearning\\output.txt", "a")
 #
+estimators = 10
+depth = 4
+
 timesteps = 20000
 
-# cadence_controller = CadenceController(
-#     # PassiveAggressiveRegressor(C=1, max_iter=25, tol=0.1, warm_start=True, shuffle=True,),
-#     DecisionTreeRegressor(max_depth=4),
-#     ptype="none", seqlen=seqlen, verbose=True,stochastic=True)
-# cycle = Bike(verbose=False)
-# start = time.time()
-# for h in range(1, timesteps):
-#     t_cy, crank_angle, v_cy, slope = cycle.get_recent_data(h, seqlen)
-#     if h > cadence_controller.warmup:
-#         predicted_rpm = cadence_controller.predict(t_cy, crank_angle, v_cy, slope)
-#         cycle.update(h, predicted_rpm)
-#     else:
-#         cycle.update(h)
-#         predicted_rpm = 0
-#
-#     fcc_rpm = cycle.get_recent_fcc(h, 1)[0]
-#     cadence_controller.update(h, predicted_rpm, fcc_rpm, cycle)
-# end = time.time()
-# visualize_data([cadence_controller.mse], [], ["Tijd", "mse"])
-# print("Aantal keer getrained: "+str(cadence_controller.aantalkeer_getrained))
+cadence_controller = CadenceController(
+    RandomForestRegressor(max_depth=depth, n_estimators=estimators))
+cycle = Bike()
+
+for h in range(1, timesteps):
+    t_cy, crank_angle, v_cy, slope = cycle.get_recent_data(h, seqlen)
+    predicted_rpm = 0
+    if h > cadence_controller.warmup:
+        predicted_rpm = cadence_controller.predict(t_cy, crank_angle, v_cy, slope)
+        cycle.update(h, predicted_rpm)
+    else:
+        cycle.update(h)
+
+    fcc_rpm = cycle.get_recent_fcc(h, 1)[0]
+    cadence_controller.update(h, predicted_rpm, fcc_rpm, cycle)
+
 """PA"""
 # for loss in ["epsilon_insensitive", "squared_epsilon_insensitive"]:
 #     type = "PA-I" if loss == "epsilon_insensitive" else "PA-II"
@@ -86,7 +85,7 @@ for depth in [3, 4, 5]:
         tijd = []
         for i in range(0, 10):
             cadence_controller = CadenceController(
-                RandomForestRegressor(max_depth=depth, n_estimators=estimators,n_jobs=1),
+                RandomForestRegressor(max_depth=depth, n_estimators=estimators, n_jobs=1),
                 ptype="none", seqlen=seqlen, verbose=False)
             cycle = Bike(verbose=False)
             start = time.time()

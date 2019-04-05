@@ -1,15 +1,19 @@
 het is niet deterministisch bij de mens. We willen zien dat de algoritmes er goed mee omkunnen.
 kansaanpassing niet afhangen van frequentie
 
+parallelliseren gaat niet op de fiets
+F is load + t_mg
+voorwaardse euler transformatie
+a= dv/dt = v[h]-v[h-1]/Δt
+noise, kleine piekjes worden afgebeeld op kleinere frequenties + piek op 1 = dominant been
+
+
 todo: glossary fixen denkek
-	  random forest met 1 job proberen
+	  random forest met 1 job proberen (doet niets)
 	  PA data normaliseren
 
-IN LATEX NOG ZETTEN:
-	Uit deze formule is het ook meteen duidelijk dat het DC koppel ook het vermogen-equivalent koppel is. Dat wil zeggen dat het DC koppel gedurende een volledige omwenteling van de trapas evenveel arbeid levert als het fietserkoppel.
-	(de formule, geen idee of dit juist is) 
+IN LATEX NOG ZETTEN:	 
 	koppel toerentalkarakteristiek correct? 
-	blokdiagram u_contr = [???] hier iets zetten? WEGDOEN
 	
 denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
 	Voor de simulatie: Hoe groter het verschil is tussen het fietsermodel en de voorspelling, hoe hoger de kans op aanpassing 
