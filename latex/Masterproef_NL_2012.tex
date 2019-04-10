@@ -18,15 +18,23 @@
 \usepackage{wrapfig}
 \usepackage{chngcntr}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx,caption}
 \usepackage{subcaption}
+\usepackage[utf8]{inputenc}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 
 \usepackage[acronym]{glossaries}
 \include{glossary}
- 
+\setlength{\glsdescwidth}{10.5cm}
+\newglossarystyle{mystyle}{%
+  \glossarystyle{long}%
+  \renewenvironment{theglossary}%
+     {\begin{longtable}{p{1.5cm}p{\glsdescwidth}}}%
+     {\end{longtable}}%
+} 
 \makeglossaries
 
 
@@ -55,7 +63,7 @@
 \renewcommand{\contentsname}{Inhoudstafel}
 \renewcommand{\listfigurename}{Lijst van figuren}
 \renewcommand{\listoftables}{Lijst van tabellen}
-
+\DeclareMathOperator*{\argmin}{argmin}
 \renewcommand{\chaptername}{Hoofdstuk}
 
 \begin{document}
@@ -114,7 +122,7 @@ Begeleider:\\
 \flushright
 Proefschrift ingediend tot het\\[4.5pt]
 behalen van de graad van\\[4.5pt]
-Master of Toegepase Informatica\\
+Master in de Toegepase Informatica\\
 \end{textblock}
 %
 \begin{textblock}{160}(8,232)
@@ -148,39 +156,24 @@ A preface
 
 An abstract.
 \tableofcontents
+\newpage
 \listoffigures
 \addcontentsline{toc}{chapter}{Lijst van figuren}
-
-\chapter{Lijst van afkortingen en symbolen}
-\printglossary[type=\acronymtype,title=Afkortingen]
-\printglossary[title=Symbolen]
+\newpage
+\printglossary[type=\acronymtype ,title=Afkortingen ,style=mystyle]
+\addcontentsline{toc}{chapter}{Afkortingen}
+\newpage
+\addcontentsline{toc}{chapter}{Symbolen}
+\printglossary[title=Symbolen,style=mystyle]
 
 \mainmatter
 \pagenumbering{arabic}
 
 \include{hoofdstuk1}
 \include{hoofdstuk2}
-\chapter{Resultaten}
-\begin{gather*}
-FCC_{est,t} = sf . FCC_{pred,t} + (1-sf) . FCC_{est,t-1} \\
-FCC_{est,t} = \frac{\sum_{i=0}^{n} FCC_{pred,t-i} }{n}
-\end{gather*}
-\begin{gather*}
-x_t = \begin{bmatrix} 
-       \theta _{cr} \\ T_{cy,m} \\ v_{bike} \\ \alpha
-     \end{bmatrix} \tab
-input = \begin{bmatrix} 
-       x_t \\ x_{t-1} \\ ... \\ x_{t-n}
-     \end{bmatrix} 
-\end{gather*}
-\begin{gather*}
-y_t=w_t \cdot x_t\\
-loss(w_{t+1};(x_t,y_t)) \leq \epsilon
-\end{gather*}
-
-
-
-\chapter{Discussie}
+\include{hoofdstuk3}
+\include{hoofdstuk4}
+\include{appendix}
 
 
 

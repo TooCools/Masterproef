@@ -1,7 +1,8 @@
 \contentsline {chapter}{Voorwoord}{}% 
 \contentsline {chapter}{Abstract}{i}% 
-\contentsline {chapter}{Lijst van figuren}{iii}% 
-\contentsline {chapter}{Lijst van afkortingen en symbolen}{iv}% 
+\contentsline {chapter}{Lijst van figuren}{iv}% 
+\contentsline {chapter}{Afkortingen}{v}% 
+\contentsline {chapter}{Symbolen}{vi}% 
 \contentsline {chapter}{\numberline {1}Probleemstelling}{1}% 
 \contentsline {section}{\numberline {1.1}Mobiliteitsvraagstuk}{1}% 
 \contentsline {section}{\numberline {1.2}Online machine learning voor ge\IeC {\"\i }ndividualiseerde cadanscontrole}{2}% 
@@ -11,6 +12,19 @@
 \contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{5}% 
 \contentsline {section}{\numberline {2.3}Het fietsersmodel}{9}% 
 \contentsline {section}{\numberline {2.4}Het lastmodel}{11}% 
-\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{11}% 
-\contentsline {chapter}{\numberline {3}Resultaten}{14}% 
-\contentsline {chapter}{\numberline {4}Discussie}{15}% 
+\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{12}% 
+\contentsline {section}{\numberline {2.6}On-line voorspellen van de cadans}{13}% 
+\contentsline {section}{\numberline {2.7}Preprocessing}{14}% 
+\contentsline {section}{\numberline {2.8}Algoritmes}{15}% 
+\contentsline {subsection}{\numberline {2.8.1}Passive Aggressive Algorithm}{15}% 
+\contentsline {subsection}{\numberline {2.8.2}Decision Tree en Random Forest}{16}% 
+\contentsline {section}{\numberline {2.9}Postprocessing}{17}% 
+\contentsline {chapter}{\numberline {3}Resultaten}{19}% 
+\contentsline {section}{\numberline {3.1}Sequentie preprocessing}{19}% 
+\contentsline {section}{\numberline {3.2}Algoritmes}{20}% 
+\contentsline {subsection}{\numberline {3.2.1}Passive Aggressive Algorithm}{20}% 
+\contentsline {subsection}{\numberline {3.2.2}Decision Tree en Random Forest}{22}% 
+\contentsline {chapter}{\numberline {4}Discussie}{26}% 
+\contentsline {chapter}{Appendix}{27}% 
+\contentsline {section}{IntuEdrive}{27}% 
+\contentsline {section}{Bibliografie}{28}% 

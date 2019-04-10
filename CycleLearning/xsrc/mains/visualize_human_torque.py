@@ -16,10 +16,18 @@ import matplotlib.pyplot as plt
 #     return a
 #
 #
-# df = pd.read_excel("..\\..\\..\\Data\\BikeControl.xlsx")
-# torque = df[" Crank_torque_Nm_filt"]
-# cr_angle = df[" Crankangle"]
-# rads = df[" Crank_speed_rads"]
+
+
+
+
+df = pd.read_excel("..\\..\\..\\Data\\BikeControl.xlsx")
+torque = df[" Crank_torque_Nm_filt"]
+print(torque.tail())
+torque_norm = normalize(0, 120, torque)
+print(torque_norm.tail())
+torque = normalize(0, 120, torque)
+print(torque.tail())
+
 #
 # index = 7898
 # offset=25
@@ -62,13 +70,3 @@ import matplotlib.pyplot as plt
 # plt.xlim([0,50])
 # plt.ylim([0,130])
 # plt.show()
-
-fp = open("C:\\Users\\Arno\\Desktop\\Masterproef\\CycleLearning\\output.txt", "a")
-fp.write("Hello people")
-
-for i in range(0,100):
-    gaussian_random = pd.np.random.normal(0, 0.3)*5
-    print(gaussian_random)
-    fp.write(str(gaussian_random))
-
-fp.close()

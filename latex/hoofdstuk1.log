@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  24 MAR 2019 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  10 APR 2019 14:30
 entering extended mode
 **./hoofdstuk1.tex
 (hoofdstuk1.tex
@@ -714,24 +714,6 @@ l.11 \end{wrapfigure}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 6--12
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 M
-      obiliteit op twee wielen kennen we al lang: fietsen bestaan al sinds d...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no M in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -1603,6 +1585,8 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -2491,14 +2475,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \begin{figure}
+l.18 \begin{figure}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.20   \includegraphics
+l.19   \includegraphics
                        [width=\linewidth]{images/wagenpark_belgie.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2516,7 +2500,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.20   \includegraphics[width=\linewidth]
+l.19   \includegraphics[width=\linewidth]
                                          {images/wagenpark_belgie.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2525,7 +2509,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.20   \includegraphics[width=\linewidth]
+l.19   \includegraphics[width=\linewidth]
                                          {images/wagenpark_belgie.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2554,13 +2538,13 @@ Missing character: There is no k in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.20 ...aphics[width=\linewidth]{images/wagenpark_
+l.19 ...aphics[width=\linewidth]{images/wagenpark_
                                                   belgie.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.20 ...h=\linewidth]{images/wagenpark_belgie.png}
+l.19 ...h=\linewidth]{images/wagenpark_belgie.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2575,7 +2559,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21   \caption
+l.20   \caption
                {Grootte van het voertuigenpark 2014-2018 (bron: statbel.fgov...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2588,7 +2572,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \end{figure}
+l.22 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2597,7 +2581,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.23 \end{figure}
+l.22 \end{figure}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2608,7 +2592,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.23 \end{figure}
+l.22 \end{figure}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2617,47 +2601,47 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 13--24
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--23
 []
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 13--24
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/n/10 {
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 13--24
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/n/10 {
  []
 
 
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 13--24
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/n/10 '
  []
 
 
-Overfull \hbox (30.29427pt too wide) in paragraph at lines 13--24
+Overfull \hbox (30.29427pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/it/10 CoSaR
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 13--24
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/n/10 {
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 13--24
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 6--23
 \OT1/cmr/m/n/10 {
  []
 
 
-Overfull \hbox (330.71078pt too wide) in paragraph at lines 13--24
+Overfull \hbox (330.71078pt too wide) in paragraph at lines 6--23
 []\OML/cmm/m/it/10 elgie:png[][]$ 
  []
 
 ! Undefined control sequence.
-l.26 \section
+l.25 \section
              {Online machine learning voor geïndividualiseerde cadanscontrole}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2672,7 +2656,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \section{O
+l.25 \section{O
                nline machine learning voor geïndividualiseerde cadanscontrole}
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2705,16 +2689,16 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
-LaTeX Font Info:    Try loading font information for +cmr on input line 26.
-LaTeX Font Info:    No file cmr.fd. on input line 26.
+LaTeX Font Info:    Try loading font information for +cmr on input line 25.
+LaTeX Font Info:    No file cmr.fd. on input line 25.
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `/cmr/m/n' instead on input line 26.
+(Font)              using `/cmr/m/n' instead on input line 25.
 
 ! Corrupted NFSS tables.
 wrong@fontshape ...message {Corrupted NFSS tables}
                                                   error@fontshape else let f...
-l.26 \section{Online machine learning voor geï
+l.25 \section{Online machine learning voor geï
                                                ndividualiseerde cadanscontrole}
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -2723,7 +2707,7 @@ and deduce the truth by order and method.
 
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 26.
+(Font)              using `OT1/cmr/m/n' instead on input line 25.
 
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -4732,7 +4716,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <recently read> \gls 
                      
-l.33 ...itme - en de zogenaamde \textit{\gls{fcc}}
+l.32 ...itme - en de zogenaamde \textit{\gls{fcc}}
                                                    van de fietser. Die freel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5323,42 +5307,42 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 26--35
+Overfull \hbox (20.0pt too wide) in paragraph at lines 25--34
 []
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 26--35
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 
  []
 
 
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 26--35
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 26--35
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 26--35
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (11.75545pt too wide) in paragraph at lines 26--35
+Overfull \hbox (11.75545pt too wide) in paragraph at lines 25--34
 \OT1/cmr/m/it/10 fcc
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 26--35
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 \
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 26--35
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 25--34
 \/cmr/m/n/10 "
  []
 
@@ -5377,7 +5361,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
-l.36 Fietsersmodel:\tab
+l.35 Fietsersmodel:\tab
                         fcc = f(snelheid,koppel,vermogen,helling,...)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5747,7 +5731,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.39 \section
+l.38 \section
              {Huidige systeem}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5812,7 +5796,7 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.40 ...n intuEdrive gebruikt een elektrische \gls
+l.39 ...n intuEdrive gebruikt een elektrische \gls
                                                   {cvt} die ervoor zorgt dat...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6279,16 +6263,6 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -6298,7 +6272,7 @@ Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
 <write> ...r-controller systeem' on page \thepage 
                                                   \space undefined\on@line .
-l.42 ... van het fiets-fietser-controller systeem}
+l.41 ... van het fiets-fietser-controller systeem}
                                                    toont een blokdiagram van...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6308,7 +6282,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `fig:Blokdiagram van het fiets-fietser-controller syst
-eem' on page  undefined on input line 42.
+eem' on page  undefined on input line 41.
 
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -6435,7 +6409,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.42 ...ment een bepaalde referentiesnelheid (\gls
+l.41 ...ment een bepaalde referentiesnelheid (\gls
                                                   {v_ref}) probeert te halen...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6447,13 +6421,13 @@ Missing character: There is no v in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.42 ...t een bepaalde referentiesnelheid (\gls{v_
+l.41 ...t een bepaalde referentiesnelheid (\gls{v_
                                                   ref}) probeert te halen, h...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.42 ...n bepaalde referentiesnelheid (\gls{v_ref}
+l.41 ...n bepaalde referentiesnelheid (\gls{v_ref}
                                                   ) probeert te halen, hier ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -6462,15 +6436,15 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 42.
+LaTeX Warning: Command \" invalid in math mode on input line 41.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 42.
+LaTeX Warning: Command \" invalid in math mode on input line 41.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ...@spacefactor \spacefactor }\accent 
                                                   #1 #2\egroup \spacefactor ...
-l.42 ...len, hier aangeduid met r. Deze kan varië
+l.41 ...len, hier aangeduid met r. Deze kan varië
                                                   ren naar gelang de situati...
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
@@ -6478,7 +6452,7 @@ I'm changing \accent to \mathaccent here; wish me luck.
 ! Missing { inserted.
 <to be read again> 
                    \edef 
-l.42 ...len, hier aangeduid met r. Deze kan varië
+l.41 ...len, hier aangeduid met r. Deze kan varië
                                                   ren naar gelang de situati...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -6488,7 +6462,7 @@ so that I will find a matching right brace soon.
 ! You can't use `\spacefactor' in math mode.
 \add@accent ...}\accent #1 #2\egroup \spacefactor 
                                                   \accent@spacefactor 
-l.42 ...len, hier aangeduid met r. Deze kan varië
+l.41 ...len, hier aangeduid met r. Deze kan varië
                                                   ren naar gelang de situati...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -6496,12 +6470,12 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 42.
+LaTeX Warning: Command \" invalid in math mode on input line 41.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ...@spacefactor \spacefactor }\accent 
                                                   #1 #2\egroup \spacefactor ...
-l.42 ...kan hij of zij het geleverde koppel varië
+l.41 ...kan hij of zij het geleverde koppel varië
                                                   ren (\gls{t_cy}), i.e. mee...
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
@@ -6509,7 +6483,7 @@ I'm changing \accent to \mathaccent here; wish me luck.
 ! You can't use `\spacefactor' in math mode.
 \add@accent ...}\accent #1 #2\egroup \spacefactor 
                                                   \accent@spacefactor 
-l.42 ...kan hij of zij het geleverde koppel varië
+l.41 ...kan hij of zij het geleverde koppel varië
                                                   ren (\gls{t_cy}), i.e. mee...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -6517,7 +6491,7 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! Undefined control sequence.
-l.42 ...f zij het geleverde koppel variëren (\gls
+l.41 ...f zij het geleverde koppel variëren (\gls
                                                   {t_cy}), i.e. meer of mind...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6526,7 +6500,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.42 ...f de cadans aanpassen met de knoppen (\gls
+l.41 ...f de cadans aanpassen met de knoppen (\gls
                                                   {u_c}). Inputs en fysische...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6535,7 +6509,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.42 ...oor sensoren op de fiets: het koppel (\gls
+l.41 ...oor sensoren op de fiets: het koppel (\gls
                                                   {t_cy,m}), de hoek van de ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6544,7 +6518,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.42 ...\gls{t_cy,m}), de hoek van de trapas (\gls
+l.41 ...\gls{t_cy,m}), de hoek van de trapas (\gls
                                                   {theta_cr}), snelheid (\gl...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6553,7 +6527,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.42 ...de trapas (\gls{theta_cr}), snelheid (\gls
+l.41 ...de trapas (\gls{theta_cr}), snelheid (\gls
                                                   {v_bike}), helling (\gls{h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6562,7 +6536,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.42 ...}), snelheid (\gls{v_bike}), helling (\gls
+l.41 ...}), snelheid (\gls{v_bike}), helling (\gls
                                                   {helling}), etc. $T_{cy}$ ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6573,7 +6547,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.42 ...{v_bike}), helling (\gls{helling}), etc. $
+l.41 ...{v_bike}), helling (\gls{helling}), etc. $
                                                   T_{cy}$ en $T_{cy,m}$ zijn...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6587,7 +6561,7 @@ Missing character: There is no T in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.42 ..._bike}), helling (\gls{helling}), etc. $T_
+l.41 ..._bike}), helling (\gls{helling}), etc. $T_
                                                   {cy}$ en $T_{cy,m}$ zijn n...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -6678,7 +6652,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.42 ...het meten. De vector van meetwaarden (\gls
+l.41 ...het meten. De vector van meetwaarden (\gls
                                                   {y}) is input voor de fiet...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6783,7 +6757,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.42 ...e E-bike aan op basis van de metingen \gls
+l.41 ...e E-bike aan op basis van de metingen \gls
                                                   {y} en de ingestelde refer...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6942,7 +6916,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.42 ...n gepersonaliseerde referentiecadans (\gls
+l.41 ...n gepersonaliseerde referentiecadans (\gls
                                                   {fcc_est}) voorspellen die...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6956,13 +6930,13 @@ Missing character: There is no c in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.42 ...ersonaliseerde referentiecadans (\gls{fcc_
+l.41 ...ersonaliseerde referentiecadans (\gls{fcc_
                                                   est}) voorspellen die als ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.42 ...naliseerde referentiecadans (\gls{fcc_est}
+l.41 ...naliseerde referentiecadans (\gls{fcc_est}
                                                   ) voorspellen die als inpu...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -6971,7 +6945,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
-l.43 \tikzset
+l.42 \tikzset
              {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6986,7 +6960,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \begin{gather*}
+l.50 \begin{gather*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6999,7 +6973,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 r = \begin{bmatrix}
+l.51 r = \begin{bmatrix}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7012,14 +6986,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54      \end{bmatrix}
+l.53      \end{bmatrix}
                         \tab
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.54      \end{bmatrix} \tab
+l.53      \end{bmatrix} \tab
                             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7034,7 +7008,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 u_{cy} = \begin{bmatrix}
+l.54 u_{cy} = \begin{bmatrix}
                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7047,14 +7021,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57      \end{bmatrix}
+l.56      \end{bmatrix}
                         \tab
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.57      \end{bmatrix} \tab
+l.56      \end{bmatrix} \tab
                             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7069,42 +7043,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 u_{contr} = \begin{bmatrix}
-                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{bmatrix}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60      \end{bmatrix}
-                        \tab
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.60      \end{bmatrix} \tab
-                            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Environment bmatrix undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 cc = \begin{bmatrix}
+l.57 cc = \begin{bmatrix}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7117,14 +7056,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63      \end{bmatrix}
+l.59      \end{bmatrix}
                         \tab
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.63      \end{bmatrix} \tab
+l.59      \end{bmatrix} \tab
                             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7139,7 +7078,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 y = \begin{bmatrix}
+l.60 y = \begin{bmatrix}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7152,7 +7091,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66      \end{bmatrix}
+l.62      \end{bmatrix}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7165,7 +7104,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 \end{gather*}
+l.63 \end{gather*}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7178,7 +7117,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \begin{figure}
+l.64 \begin{figure}
                    [h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7191,14 +7130,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 \begin{tikzpicture}
+l.65 \begin{tikzpicture}
                         [auto, node distance=2cm,>=latex']
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.70     \node
+l.66     \node
                [input, name=fietsinput] (fietsinput) {};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7207,7 +7146,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.71     \node
+l.67     \node
                [block, right of=fietsinput,node distance=5cm] (fietser) {Fie...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7216,7 +7155,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.72     \node
+l.68     \node
                [tmp, right of=fietser,node distance=3cm] (above_fietser){};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7225,7 +7164,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.73     \node
+l.69     \node
                [block, below of=above_fietser,node distance=3cm] (fiets) {Fi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7234,7 +7173,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.74     \node
+l.70     \node
                [tmp, left = 1.5cm of fiets] (left_fiets) {};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7243,7 +7182,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.75     \node
+l.71     \node
                [block, below of=fiets] (controller){Controller};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7252,7 +7191,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.76     \node
+l.72     \node
                [tmp, left = 1.5cm of controller] (left_controller) {};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7261,7 +7200,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.77     \node
+l.73     \node
                [block, below of=controller] (cadencecontroller) {Cadanscontr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7270,7 +7209,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.78     \node
+l.74     \node
                [tmp, left = 1.5cm of cadencecontroller] (left_cadencecontrol...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7279,7 +7218,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.79     \node
+l.75     \node
                [tmp, right of=fiets,node distance=3cm] (right_fiets){};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7288,7 +7227,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.80     \node
+l.76     \node
                [tmp, right of=right_fiets] (output){};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7297,7 +7236,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.81     \draw
+l.77     \draw
                [->] (fietsinput) -- node{$r$} (fietser);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7308,7 +7247,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.81     \draw [->] (fietsinput) -- node{$
+l.77     \draw [->] (fietsinput) -- node{$
                                           r$} (fietser);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7319,7 +7258,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.81     \draw [->] (fietsinput) -- node{$
+l.77     \draw [->] (fietsinput) -- node{$
                                           r$} (fietser);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7330,7 +7269,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.81     \draw [->] (fietsinput) -- node{$
+l.77     \draw [->] (fietsinput) -- node{$
                                           r$} (fietser);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7342,7 +7281,7 @@ Missing character: There is no r in font nullfont!
 ! Extra }, or forgotten $.
 <recently read> }
                  
-l.81     \draw [->] (fietsinput) -- node{$r$}
+l.77     \draw [->] (fietsinput) -- node{$r$}
                                               (fietser);
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7351,7 +7290,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
-l.82     \draw
+l.78     \draw
                [->] (fietser) |- (above_fietser) -- node{$u_{cy}$} (fiets);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7362,7 +7301,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.82 ...->] (fietser) |- (above_fietser) -- node{$
+l.78 ...->] (fietser) |- (above_fietser) -- node{$
                                                   u_{cy}$} (fiets);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7374,7 +7313,7 @@ Missing character: There is no u in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.82 ...] (fietser) |- (above_fietser) -- node{$u_
+l.78 ...] (fietser) |- (above_fietser) -- node{$u_
                                                   {cy}$} (fiets);
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7388,7 +7327,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
 ! Undefined control sequence.
-l.83     \draw
+l.79     \draw
                [->] (controller.west) |- (left_controller) |- node {$u_{cont...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7427,7 +7366,7 @@ Missing character: There is no t in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.83     \draw [->] (controller.west) |- (left_
+l.79     \draw [->] (controller.west) |- (left_
                                                controller) |- node {$u_{cont...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7435,7 +7374,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.83 ...ller.west) |- (left_controller) |- node {$
+l.79 ...ller.west) |- (left_controller) |- node {$
                                                   u_{contr}$} (fiets.west);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7447,7 +7386,7 @@ Missing character: There is no u in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.83 ...er.west) |- (left_controller) |- node {$u_
+l.79 ...er.west) |- (left_controller) |- node {$u_
                                                   {contr}$} (fiets.west);
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7466,7 +7405,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
 ! Undefined control sequence.
-l.84     \draw
+l.80     \draw
                [->] (cadencecontroller) -- node{$cc$} (controller);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7517,7 +7456,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
 ! Undefined control sequence.
-l.85    	\draw
+l.81    	\draw
                [->] (right_fiets) |- (controller.east);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7538,13 +7477,13 @@ Missing character: There is no t in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.85    	\draw [->] (right_
+l.81    	\draw [->] (right_
                            fiets) |- (controller.east);
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Undefined control sequence.
-l.86    	\draw
+l.82    	\draw
                [->] (right_fiets) |- (cadencecontroller.east);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7553,7 +7492,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.87     \draw
+l.83     \draw
                [->] (fiets) -- node [name=y] {$y$}(output);
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7564,7 +7503,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.87     \draw [->] (fiets) -- node [name=y] {$
+l.83     \draw [->] (fiets) -- node [name=y] {$
                                                y$}(output);
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7576,7 +7515,7 @@ Missing character: There is no y in font nullfont!
 ! Extra }, or forgotten $.
 <recently read> }
                  
-l.87     \draw [->] (fiets) -- node [name=y] {$y$}
+l.83     \draw [->] (fiets) -- node [name=y] {$y$}
                                                   (output);
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7591,7 +7530,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88 \end{tikzpicture}
+l.84 \end{tikzpicture}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7600,7 +7539,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.88 \end{tikzpicture}
+l.84 \end{tikzpicture}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7611,7 +7550,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.88 \end{tikzpicture}
+l.84 \end{tikzpicture}
                       
 Things are pretty mixed up, but I think the worst is over.
 
@@ -7622,7 +7561,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 \caption
+l.85 \caption
              {Blokdiagram van het fiets-fietser-controller systeem}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7682,7 +7621,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 \end{figure}
+l.87 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7691,7 +7630,7 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.91 \end{figure}
+l.87 \end{figure}
                  
 Things are pretty mixed up, but I think the worst is over.
 
@@ -7705,7 +7644,7 @@ Things are pretty mixed up, but I think the worst is over.
 Here is how much of TeX's memory you used:
  38 strings out of 492946
  545 string characters out of 3126710
- 64809 words of memory out of 3000000
+ 64798 words of memory out of 3000000
  4032 multiletter control sequences out of 15000+200000
  4294 words of font info for 16 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191

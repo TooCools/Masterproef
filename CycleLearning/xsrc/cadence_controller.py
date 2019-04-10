@@ -11,7 +11,7 @@ from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_s
 
 class CadenceController:
 
-    def __init__(self, model, ptype="none", seqlen=50, verbose=True, stochastic=False):
+    def __init__(self, model, ptype="none", seqlen=50, verbose=True, normalize=False, stochastic=False):
         self.model = model
         self.warmup = 300
         self.ptype = ptype
@@ -25,6 +25,7 @@ class CadenceController:
         self.aantalkeer_getrained = 0
         self.seqlen = seqlen
         self.stochastic = stochastic
+        self.normalize = normalize
 
     def predict(self, torque, cr_angle, velocity, slope_rad):
         data = {
@@ -33,7 +34,7 @@ class CadenceController:
             df_velocity: velocity,
             df_slope: slope_rad
         }
-        x = self.preprocess(data, normalize=False)
+        x = self.preprocess(data, normalize=self.normalize)
         pred = self.model.predict([x])[0]
 
         # if random.random() > 0.8:
@@ -45,12 +46,14 @@ class CadenceController:
 
     def preprocess(self, data, normalize=False):
         df = pandas.DataFrame(data)
-        min_max_scaler = preprocessing.MinMaxScaler()
         for col in df.columns:
             if normalize and col in [df_torque, df_velocity, df_slope]:
-                vals_scaled = min_max_scaler.fit_transform(df[[col]])
-                df_new = pandas.DataFrame(vals_scaled)
-                df[col] = df_new
+                if col == df_torque:
+                    df[col] = self.normalize_data(0, 105, df[col])
+                elif col == df_velocity:
+                    df[col] = self.normalize_data(0, 45, df[col])
+                else:
+                    df[col] = self.normalize_data(0, 0.1, df[col])
             if col == df_crank_angle_rad:
                 cosvals = []
                 sinvals = []
@@ -65,6 +68,10 @@ class CadenceController:
             for val in row:
                 x.append(val)
         return x
+
+    def normalize_data(self, min, max, data):
+        data = data.apply(lambda x: (x - min) / (max - min))
+        return data
 
     def postprocess(self, prediction):
         if prediction < 40:
@@ -102,7 +109,7 @@ class CadenceController:
                 df_velocity: velocity[i:self.seqlen + i],
                 df_slope: slope_rad[i:self.seqlen + i]
             }
-            self.training_set.append([self.preprocess(data), fcc[i]])
+            self.training_set.append([self.preprocess(data, normalize=self.normalize), fcc[i]])
         random.shuffle(self.training_set)
         training_X = []
         training_y = []
@@ -128,7 +135,7 @@ class CadenceController:
             elif h > self.warmup and h % 30 == 0 and difference > 5 and not self.stochastic:
                 self.verbose_printing("Training; diff: " + str(abs(prediction - actual)))
                 self.train(h, cycle)
-            elif self.stochastic and h>self.warmup:
+            elif self.stochastic and h > self.warmup:
                 self.stochastic_training(h, difference, cycle)
             if h > self.warmup:
                 self.actual_fcc_mse.append(actual)

@@ -9,11 +9,8 @@ noise, kleine piekjes worden afgebeeld op kleinere frequenties + piek op 1 = dom
 
 
 todo: glossary fixen denkek
-	  random forest met 1 job proberen (doet niets)
-	  PA data normaliseren
+	 
 
-IN LATEX NOG ZETTEN:	 
-	koppel toerentalkarakteristiek correct? 
 	
 denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
 	Voor de simulatie: Hoe groter het verschil is tussen het fietsermodel en de voorspelling, hoe hoger de kans op aanpassing 

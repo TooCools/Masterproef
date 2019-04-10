@@ -1,7 +1,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
 \contentsline {figure}{\numberline {1}{\ignorespaces Snelheid-veiligheid trade-off (bron: IntuEdrive)\relax }}{1}% 
 \contentsline {figure}{\numberline {2}{\ignorespaces Grootte van het voertuigenpark 2014-2018 (bron: statbel.fgov.be)\relax }}{2}% 
 \contentsline {figure}{\numberline {3}{\ignorespaces Blokdiagram van het fiets-fietser-controller systeem\relax }}{4}% 
@@ -9,7 +8,18 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Het koppel-toerentalkarakteristiek\relax }}{7}% 
 \contentsline {figure}{\numberline {5}{\ignorespaces Het koppelverloop van een mens (linksboven), de simulatie (rechtsboven) en een gesimuleerd dominant been (onderaan)\relax }}{8}% 
 \contentsline {figure}{\numberline {6}{\ignorespaces Planeetwielmechanisme (bron: wikipedia)\relax }}{8}% 
-\contentsline {figure}{\numberline {7}{\ignorespaces Verwacht cadansverloop in functie van de snelheid. Er wordt verwacht dat de eigenlijke cadans tussen het minimum en maximum ligt.\relax }}{10}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Verwacht cadansverloop in functie van de snelheid.\relax }}{10}% 
 \contentsline {figure}{\numberline {8}{\ignorespaces Voorbeeld helling verloop\relax }}{12}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Evolutie koppel in functie van hoek trapas\relax }}{13}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Figuur links toont dat het begin en einde van een trapcyclus ver uit elkaar liggen. Figuur rechts toont dat beide punten van de linkse figuur dicht bij elkaar liggen.\relax }}{14}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Een Fast Fourier Transformatie van het menselijk koppelverloop.\relax }}{15}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces De effecten van verschillende postprocessing technieken.\relax }}{18}% 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {13}{\ignorespaces De invloed van sequentielengte op de error\relax }}{20}% 
+\contentsline {figure}{\numberline {14}{\ignorespaces De invloed van C op mse van PA\relax }}{21}% 
+\contentsline {figure}{\numberline {15}{\ignorespaces Gemiddeld aantal keer trainen PA\relax }}{22}% 
+\contentsline {figure}{\numberline {16}{\ignorespaces De invloed van diepte en aantal bomen op de gemiddelde mean squared error van DT en RF (10 keer 20 iteraties)\relax }}{23}% 
+\contentsline {figure}{\numberline {17}{\ignorespaces De invloed van diepte en aantal bomen op het gemiddeld aantal keer trainen van DT en RF (10 keer 20 iteraties)\relax }}{24}% 
+\contentsline {figure}{\numberline {18}{\ignorespaces De invloed van diepte en aantal bomen op de uitvoeringstijd van DT en RF (10 keer 20 iteraties)\relax }}{25}% 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {19}{\ignorespaces Logo IntuEdrive\relax }}{27}% 
