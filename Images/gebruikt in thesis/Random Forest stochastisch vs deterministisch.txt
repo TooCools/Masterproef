@@ -1,0 +1,44 @@
+ALS IK DIT OP DE GRAFIEK ZOU ZETTEN => DEZE GETALLEN LOPEN 300 VOOR, MSE WORDT PAS BIJGEHOUDEN NA DE WARMUP
+
+I trained at timestep: 120
+I trained at timestep: 150
+I trained at timestep: 180
+I trained at timestep: 210
+I trained at timestep: 240
+I trained at timestep: 270
+I trained at timestep: 360
+I trained at timestep: 540
+I trained at timestep: 600
+I trained at timestep: 2190
+I trained at timestep: 2220
+I trained at timestep: 2280
+I trained at timestep: 2370
+I trained at timestep: 2520
+I trained at timestep: 6810
+I trained at timestep: 7110
+=============================
+Times trained: 16
+MSE: 1.677911807161434
+Time: 118.28175950050354
+Stochastic: False
+=============================
+I trained at timestep: 120
+I trained at timestep: 150
+I trained at timestep: 180
+I trained at timestep: 210
+I trained at timestep: 240
+I trained at timestep: 270
+I trained at timestep: 476
+I trained at timestep: 527
+I trained at timestep: 1092
+I trained at timestep: 2168
+I trained at timestep: 2288
+I trained at timestep: 2386
+=============================
+Times trained: 12
+MSE: 3.4450152018137303
+Time: 116.35687732696533
+Stochastic: True
+=============================
+Stochastisch gemiddeld aantal keer trainen: 12,5
+Stochastisch gemiddeld mse: 3.123 

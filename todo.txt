@@ -7,14 +7,38 @@ voorwaardse euler transformatie
 a= dv/dt = v[h]-v[h-1]/Δt
 noise, kleine piekjes worden afgebeeld op kleinere frequenties + piek op 1 = dominant been
 
+data genereren voor stocahstische impl
+	vermoeden: Modellen zullen geen probleem hebben met de stochastische aanpak want ook al kiezen we random en zijn we niet zeker dat er aanpassingen gebeurenn,
+	uiteindelijk zal de error groot genoeg zijn dat het praktisch zeker is dat er een aanpassing zal gebeuren (kans stijgt telkens)
+	
+	Modellen kunnen omgaan met de stochastische impl
+	Bij RF zien we dat de stochastische modellen gemiddeld een hogere mse hebben.
+	De error van de stochastische grafiek daalt op een later moment dan de deterministische. Dit is logisch want er het is niet zeker dat
+	er getrained zal worden. Gemiddeld een hogere error want we laten hogere fouten toe. deterministisch zal op elke 30's iteratie updates doen
+	wanneer de error te groot is (>5), stoschatisch zal elk moment kijken of het verschil groter is dan 5, dan een kans hebben om te updaten. Hierdoor
+	zal de error langer opgenomen worden in de mse berekening => hogere mse.
+	De stochastische grafiek convergeert op een andere manier dan de deterministische. We zien meerdere "knik's" in de grafiek waar er plots een
+	hogere error is (rond tijd 10000 en verder). Hier word NIET bijgeleerd. De update keuze laat dit toe. Deterministisch heeft dit niet,
+	Er zijn updates geweest rond 7000 die deze knik's mogelijk aanpakken.
+	De plaatsen waar er bijgeleerd worden in beide situaties liggen dicht bij elkaar. 
+	
+	Bij PA zien we geen groot verschil tussen deterministisch en stochastisch. Waarschijnlijk zorgt de te grote error ervoor dat het update
+	gedrag gelijkaardig is. Altijd een hoger error zorgt ervoor dat op elke tijdstap een grote kans is om te updaten.
+	
+	
 
-todo: glossary fixen denkek
+Het veranderen van fietsersmodel: fietsermodel van gem koppel => snelheid of helling
+	https://tel.archives-ouvertes.fr/tel-01812044v2/document Dit legt dit goed uit (p27...)
+	
+
+Bij elke test een hypothese opzetten; wat gaan we doen, wat verwachten we
 	 
 
 	
 denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanpassen van cadans via knoppen)
 	Voor de simulatie: Hoe groter het verschil is tussen het fietsermodel en de voorspelling, hoe hoger de kans op aanpassing 
 					   Er is een grens van 5 rpm. verschil = 5? 0.2 kans, verschil > 10 1 kans, ertussen? (lineair? sublin? expon?)
+					   Beperk de snelheid van updates. Mensen gaan namelijk niet direct na elkaar op de knop duwen.
 	
 	Op de fiets: Op basis van tijd tussen het drukken op de knop (HMM)
 				 Lange tijd niet op knop geduwt? hoge kans op veranderen

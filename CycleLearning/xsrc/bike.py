@@ -4,7 +4,7 @@ import noise
 import numpy as np
 
 from xsrc.simulation.data_to_csv import save
-from xsrc.params import timestep, v_fiets_ref, kcr_r, support_level, ns, nr, ks_mg1, total_mass, g, \
+from xsrc.params import timestep, kcr_r, support_level, ns, nr, ks_mg1, total_mass, g, \
     ro_aero, cr, cd, a_aero, K, rw
 
 
@@ -25,7 +25,7 @@ class Bike:
     f_fric_array = [0.0]
     f_aero_array = [0.0]
     fcc_array = [0.0]
-
+    v_fiets_ref=32
     t_dc_max = 60
     t_dc = 0.0
 
@@ -67,12 +67,13 @@ class Bike:
 
     def update_torque(self):
         self.t_dc_max = (-self.crank_speed_rpm[-1]) / 2 + 60
-        self.t_dc = min(self.t_dc_max, max(0, -K * (self.v_fiets_kmh[-1] - v_fiets_ref)))
+        self.t_dc = min(self.t_dc_max, max(0, -K * (self.v_fiets_kmh[-1] - self.v_fiets_ref)))
 
     def update_slope(self, h):
         n = noise.pnoise1(self.slope_offset + (h / 2000), 6, 0.1, 3, 1024)
         slope = np.interp(n, [-1, 1], [0, 0.1])
         self.slope_array.append(slope)
+
 
     def update_cadence(self, fcc):
         temp = self.cycle_model()
@@ -83,6 +84,7 @@ class Bike:
             rpm = v_kmh * 50 / 15
         else:
             rpm = 50 + (v_kmh - 15) * 2
+
         if rpm > fcc:
             rpm = fcc
         self.crank_speed_rpm.append(rpm)

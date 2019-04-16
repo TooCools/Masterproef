@@ -1,4 +1,5 @@
 import random
+import time
 from math import cos, sin
 
 import pandas
@@ -6,6 +7,7 @@ import numpy as np
 from sklearn import preprocessing
 from sklearn.metrics import mean_squared_error
 
+from xsrc.analyze import visualize_data
 from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_slope, timestep
 
 
@@ -13,7 +15,7 @@ class CadenceController:
 
     def __init__(self, model, ptype="none", seqlen=50, verbose=True, normalize=False, stochastic=False):
         self.model = model
-        self.warmup = 300
+        self.warmup = 150
         self.ptype = ptype
         self.verbose = verbose
         self.training_set = []
@@ -26,6 +28,8 @@ class CadenceController:
         self.seqlen = seqlen
         self.stochastic = stochastic
         self.normalize = normalize
+        self.start = time.time()
+        self.last_trained = 0
 
     def predict(self, torque, cr_angle, velocity, slope_rad):
         data = {
@@ -99,9 +103,9 @@ class CadenceController:
         return prediction
 
     def train(self, h, cycle):
+        print("I trained at timestep: " + str(h)+" with "+str(len(self.training_set))+" amount of data")
         torque, cr_angle, velocity, slope_rad = cycle.get_recent_data(h, self.seqlen * 2)
         fcc = cycle.get_recent_fcc(h, self.seqlen)
-
         for i in range(0, self.seqlen):
             data = {
                 df_torque: torque[i:self.seqlen + i],
@@ -120,9 +124,10 @@ class CadenceController:
         self.aantalkeer_getrained += 1
 
     def stochastic_training(self, h, difference, cycle):
-        if difference > 5:
+        if difference > 5 and h - self.last_trained >= 30:
             chance = (difference / 10 - 0.3) * timestep
             if random.random() < chance:
+                self.last_trained = h
                 self.verbose_printing("Trained with chance")
                 self.train(h, cycle)
 
@@ -147,3 +152,12 @@ class CadenceController:
     def verbose_printing(self, string):
         if self.verbose:
             print(string)
+
+    def stats(self, model_name):
+        print("=============================")
+        print("Times trained: " + str(self.aantalkeer_getrained))
+        print("MSE: " + str(self.mse[-1]))
+        print("Time: " + str(time.time() - self.start))
+        print("Stochastic: " + str(self.stochastic))
+        print("=============================")
+        visualize_data([self.mse], [], ["tijd", "mse"], model_name + " (stochastic= " + str(self.stochastic) + ")")

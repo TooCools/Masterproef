@@ -14,7 +14,6 @@ cd = 1.05  # aerodynamic drag coefficient
 ro_aero = 1.2  # air density kg/m³
 a_aero = 0.5  # frontal area of cyclist and bicycle m²
 
-v_fiets_ref = 32
 K = 6
 
 seqlen = 50

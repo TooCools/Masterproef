@@ -2,7 +2,7 @@ import time
 
 import sklearn
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import PassiveAggressiveRegressor
+from sklearn.linear_model import PassiveAggressiveRegressor, SGDRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xsrc.analyze import visualize_data
 from xsrc.bike import Bike
@@ -10,12 +10,13 @@ from xsrc.cadence_controller import CadenceController
 from xsrc.params import seqlen
 
 # file = open("C:\\Users\\Arno\\Desktop\\Masterproef\\CycleLearning\\output.txt", "a")
+from xsrc.simulation.data_to_csv import save
 
-
-timesteps = 200000
-
+timesteps = 20000
 cadence_controller = CadenceController(
-    PassiveAggressiveRegressor(C=2,max_iter=25,tol=0.1,warm_start=True,shuffle=True),normalize=True,ptype="none",seqlen=seqlen,verbose=False)
+    # PassiveAggressiveRegressor(C=1,max_iter=25,tol=0.1,warm_start=True,shuffle=True)
+    RandomForestRegressor(max_depth=4, n_estimators=10)
+    , ptype="none", seqlen=seqlen, verbose=False, stochastic=False)
 cycle = Bike()
 
 for h in range(1, timesteps):
@@ -26,12 +27,9 @@ for h in range(1, timesteps):
         cycle.update(h, predicted_rpm)
     else:
         cycle.update(h)
-
     fcc_rpm = cycle.get_recent_fcc(h, 1)[0]
     cadence_controller.update(h, predicted_rpm, fcc_rpm, cycle)
-visualize_data([cadence_controller.mse], [], ["Tijd", "mse"])
-print(cadence_controller.mse[-1])
-print(cadence_controller.aantalkeer_getrained)
+cadence_controller.stats("Random Forest")
 """PA"""
 # for loss in ["epsilon_insensitive", "squared_epsilon_insensitive"]:
 #     type = "PA-I" if loss == "epsilon_insensitive" else "PA-II"

@@ -1,0 +1,63 @@
+In het algemeen hebben ML algoritmes geen mechanisme om een veranderend concept (conceptual drift) snel op te volgen. Ze convergeren naar
+	het veranderd concept because of diluting the previously learned concept over time. 
+	
+	Een mogelijkheid is Fixed size windowing (hou een set van lengte X bij). Dump oudere data voor nieuwe data
+		+ Simpel mechanisme voor leren en vergeten, geen complex mechanisme nodig zoals bij adaptive SW
+		+ technically start het model met updaten bij het eerste moment dat er conceptual drift is (kan meer responsive zijn dan drift detector)
+		- een correcte window size is moeilijk te vinden 
+		( if the window is too small, the model might react quickly to abrupt drifts but also over-react to noisy observations.)
+		- een te klein window heeft mogelijk te weinig data om het concept te leren
+		+ groot window zorgt er waarschijnlijk voor dat het model meer robust is tegen noise && accuraat model voor stabiel concept
+		- groot window veranderd trager
+		- vulnerable to noisy observations 
+		
+	Adaptive size windowing (size is set according to a change detector)
+		groeit window wanneer er geen verschil gededecteerd wordt, verkleinen wanneer er een verschil is. 
+		=> waardoor observaties relevant blijven in het huidige concept
+		- moeilijk om een change detector te maken dat omgaat met een grote range van scenarios
+			and to take relevant decision once an alarm is triggered (alles of een deel weggooien)
+		
+			
+	Sampling (meer nakijken)
+		Another solution would be to sample the observations which will be used to
+		learn from. Sampling algorithms try to summarize the characteristics of the whole stream
+		by retaining into memory the observations which have been selected according to a given
+		probability distribution. In particular, this probability distribution might be biased in favor
+		of the most recent observations in order to account for the drifts.
+		
+		+this strategy will work well, when there is a constrain on the maximum memory available but where it is desirable to
+		retain as much of the past knowledge as possible.
+		- trainingset zal data bevatten van "a little bit of everything" => vaak conceptual drift werkt niet goed hier
+	
+	Fading factor
+		Aan elke observatie een weight geven. Dit zal verkleinen over tijd (fading factor bepaald hoe snel het verkleint)
+		best voor gradual drift.
+		+ past observations keep having a positive effect
+		- past observations kunnen ook een negatief effect hebben (i.e. als het noisy is)
+		- hoe kiezen we deze fading factor
+		
+		
+		
+	Forgetting
+		verschillende situaties (abrupt, gradual, reocurring,...)
+		In dit geval abrupt 
+		Sliding Windows
+			This strategy is best suited for gradual drifts but might lack reactivity in cases of abrupt drifts
+			of high magnitude for instance. (waarschijnlijk niet het geval dat de verschillen tussen fietsers groot is)
+			Adaptive SW is risky, leaves the algorithm exposed to catastrophic forgetting. Als er foutief geschat wordt dat het concept veranderd
+			(met noisy data bv) dan verliest ge eigelijk een groot deel aan valuable data
+
+One of the major advantage of using a detection mechanism is the additional information
+provided. Once a change has been correctly detected, it is indeed possible to characterize and
+quantify the extent of this change.
+
+The difficulty is that it is very challenging, based on a threshold parameter. Too low and noise will trigger it. Too high and it might not
+detect gradual change
+
+Global update (i.e. delete and reconstruct model) is a dangerous strategy. This works good if you have reocurring abrupt drifts. Keep different
+models in memory, and choose based on detector. => No need to reconstruct model.
+
+"why sliding window isn't suitible"
+	Assumption that time is a criterion to decide wether an observation should be kept or deleted
+	It is necessary to keep contiguous observations
+		
