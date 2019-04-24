@@ -1,11 +1,9 @@
 het is niet deterministisch bij de mens. We willen zien dat de algoritmes er goed mee omkunnen.
 kansaanpassing niet afhangen van frequentie
 
-parallelliseren gaat niet op de fiets
-F is load + t_mg
-voorwaardse euler transformatie
-a= dv/dt = v[h]-v[h-1]/Δt
-noise, kleine piekjes worden afgebeeld op kleinere frequenties + piek op 1 = dominant been
+slope niet in model steken => levert een model op dat even goed werkt
+stochastisch aantal bomen varrieren
+zien of er een DT is die locaal regressie doet => bestaat, maar niet bij scikit. Local regression trees: http://www.dcc.fc.up.pt/~ltorgo/PhD/th5.pdf
 
 data genereren voor stocahstische impl
 	vermoeden: Modellen zullen geen probleem hebben met de stochastische aanpak want ook al kiezen we random en zijn we niet zeker dat er aanpassingen gebeurenn,
@@ -26,11 +24,6 @@ data genereren voor stocahstische impl
 	gedrag gelijkaardig is. Altijd een hoger error zorgt ervoor dat op elke tijdstap een grote kans is om te updaten.
 	
 	
-
-Het veranderen van fietsersmodel: fietsermodel van gem koppel => snelheid of helling
-	https://tel.archives-ouvertes.fr/tel-01812044v2/document Dit legt dit goed uit (p27...)
-	
-
 Bij elke test een hypothese opzetten; wat gaan we doen, wat verwachten we
 	 
 

@@ -1,5 +1,6 @@
 import random
 import time
+from collections import deque
 from math import cos, sin
 
 import pandas
@@ -13,13 +14,14 @@ from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_s
 
 class CadenceController:
 
-    def __init__(self, model, ptype="none", seqlen=50, verbose=True, normalize=False, stochastic=False):
+    def __init__(self, model, ptype="none", seqlen=50, window_size=99999999, verbose=True, normalize=False, stochastic=False):
         self.model = model
-        self.warmup = 150
+        self.warmup = 300
         self.ptype = ptype
         self.verbose = verbose
-        self.training_set = []
+        self.training_set = deque(maxlen=seqlen * window_size)
         self.mse = []
+        self.difference = []
         self.previous_opt_cadence = []
         self.previous_predictions = []
         self.actual_fcc_mse = []
@@ -103,7 +105,7 @@ class CadenceController:
         return prediction
 
     def train(self, h, cycle):
-        print("I trained at timestep: " + str(h)+" with "+str(len(self.training_set))+" amount of data")
+        # print("I trained at timestep: " + str(h) + " with " + str(len(self.training_set)) + " amount of data")
         torque, cr_angle, velocity, slope_rad = cycle.get_recent_data(h, self.seqlen * 2)
         fcc = cycle.get_recent_fcc(h, self.seqlen)
         for i in range(0, self.seqlen):
@@ -142,12 +144,25 @@ class CadenceController:
                 self.train(h, cycle)
             elif self.stochastic and h > self.warmup:
                 self.stochastic_training(h, difference, cycle)
-            if h > self.warmup:
-                self.actual_fcc_mse.append(actual)
-                self.previous_predictions_mse.append(prediction)
-                error = mean_squared_error(self.actual_fcc_mse, self.previous_predictions_mse)
-                self.verbose_printing("mse: " + str(error))
-                self.mse.append(error)
+
+    def update_fcc(self, h, prediction, actual):
+        if h > self.warmup:
+            self.actual_fcc_mse.append(actual)
+            self.previous_predictions_mse.append(prediction)
+            error = mean_squared_error(self.actual_fcc_mse, self.previous_predictions_mse)
+            self.verbose_printing("mse: " + str(error))
+            self.mse.append(error)
+            self.difference.append(abs(prediction - actual))
+
+    def reset(self):
+        self.mse = []
+        self.actual_fcc_mse = []
+        self.previous_predictions_mse = []
+        self.previous_opt_cadence = []
+        self.previous_predictions = []
+        self.difference = []
+        self.aantalkeer_getrained = 0
+        self.start = time.time()
 
     def verbose_printing(self, string):
         if self.verbose:
@@ -161,3 +176,5 @@ class CadenceController:
         print("Stochastic: " + str(self.stochastic))
         print("=============================")
         visualize_data([self.mse], [], ["tijd", "mse"], model_name + " (stochastic= " + str(self.stochastic) + ")")
+        visualize_data([self.difference], [], ["tijd", "difference"],
+                       model_name + " (stochastic= " + str(self.stochastic) + ")")

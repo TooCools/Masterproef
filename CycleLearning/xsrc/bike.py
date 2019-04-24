@@ -25,17 +25,18 @@ class Bike:
     f_fric_array = [0.0]
     f_aero_array = [0.0]
     fcc_array = [0.0]
-    v_fiets_ref=32
+    v_fiets_ref = 32
     t_dc_max = 60
     t_dc = 0.0
 
     # slope_rad = 0.0  # helling waarop de fiets zich bevindt
 
-    def __init__(self, verbose=False):
+    def __init__(self, cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc), verbose=False):
         self.slope_offset = 19
         self.dominant_leg = False
         self.f_load = 0
         self.verbose = verbose
+        self.cycle_model = cycle_model
 
     def get_recent_data(self, h, amount):
         if len(self.t_cy) < amount:
@@ -74,9 +75,8 @@ class Bike:
         slope = np.interp(n, [-1, 1], [0, 0.1])
         self.slope_array.append(slope)
 
-
     def update_cadence(self, fcc):
-        temp = self.cycle_model()
+        temp = self.get_fcc()
         if fcc == -1:
             fcc = temp
         v_kmh = self.v_fiets_kmh[-1]
@@ -86,7 +86,10 @@ class Bike:
             rpm = 50 + (v_kmh - 15) * 2
 
         if rpm > fcc:
+            # print("Going FCC baby")
             rpm = fcc
+        # else:
+            # print("@@@@@@@@@@@@@@@@@@")
         self.crank_speed_rpm.append(rpm)
 
     def update_cycle_torque(self):
@@ -119,7 +122,7 @@ class Bike:
         self.o_mg2.append(omega_mg2)
 
     def cycler_torque(self, angle):
-        gaussian_random = np.random.normal(0, 0.3)*5
+        gaussian_random = np.random.normal(0, 0.3) * 5
         t_dc_noise = self.t_dc + gaussian_random
         if t_dc_noise < 0:
             t_dc_noise = 0
@@ -132,8 +135,8 @@ class Bike:
             torque = t_dc_noise * (1 + sin(2 * angle - (pi / 6)) + sin(angle - (pi / 3)) / 2.5)
         return torque
 
-    def cycle_model(self):
-        fcc = 7.5 * self.t_dc
+    def get_fcc(self):
+        fcc = self.cycle_model(self.t_dc, self.v_fiets_kmh[-1], self.slope_array[-1])
         if fcc < 40:
             fcc = 40
         elif fcc > 120:

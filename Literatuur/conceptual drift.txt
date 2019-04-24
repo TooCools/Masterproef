@@ -1,5 +1,22 @@
+100,5,31,2
+
 In het algemeen hebben ML algoritmes geen mechanisme om een veranderend concept (conceptual drift) snel op te volgen. Ze convergeren naar
 	het veranderd concept because of diluting the previously learned concept over time. 
+
+Het veranderen van fietsersmodel: fietsermodel van gem koppel => snelheid of helling
+	https://tel.archives-ouvertes.fr/tel-01812044v2/document Dit legt dit goed uit (p27...)
+	verwachting: een verandering van fietsersmodel zal leiden tot een ander rijgedrag waardoor er grote fouten ontstaant. Om dit nieuw concept 
+	te leren (wanneer er al een bestaand, verschillend concept is geleerd) zal er veel meer moeten geleerd worden dan het leren vanaf 0. Dit komt
+	omdat modellen by default geen "forget" mechanisme hebben. Training data wordt gedilute totdat het nieuwe concept een groter aandeel heeft in
+	de trainingset als het oude concept.
+	
+	SW (20) verlaagt het aantal trainingen minimaal (45 -> 36). SW (15) doet het net iets beter (45-> 34). SW (10) doet het slechter. Dit is
+	waarschijnlijk te klein zodat vorige trainingen niet meer in de dataset zitten. Hierbij moeten we ook nog weten dat we de trainingset aanvullen
+	met het eigenlijke fietsersmodel, wat in werkelijkheid niet mogelijk is. in werkelijkheid zou de voorspelde cadans + of - d worden gedaan en
+	dit in de set gestoken. Als het verschil te groot is tussen het originele concept en het nieuwe concept, kan het veel langer duren dan in 
+	de simulatie.
+	Do we need to cope with conceptual drift? Ik denk het niet. Een mens trapt altijd hetzelfde, als de fiets van gebruiker wisselt (bij verkoop bv)
+	kunnen we best terug van 0 beginnen? mss reset button of verschillende "saves".
 	
 	Een mogelijkheid is Fixed size windowing (hou een set van lengte X bij). Dump oudere data voor nieuwe data
 		+ Simpel mechanisme voor leren en vergeten, geen complex mechanisme nodig zoals bij adaptive SW
