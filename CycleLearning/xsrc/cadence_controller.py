@@ -14,7 +14,8 @@ from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_s
 
 class CadenceController:
 
-    def __init__(self, model, ptype="none", seqlen=50, window_size=99999999, verbose=True, normalize=False, stochastic=False):
+    def __init__(self, model, ptype="none", seqlen=50, window_size=99999999, verbose=True, normalize=False,
+                 stochastic=False):
         self.model = model
         self.warmup = 300
         self.ptype = ptype
@@ -126,8 +127,13 @@ class CadenceController:
         self.aantalkeer_getrained += 1
 
     def stochastic_training(self, h, difference, cycle):
-        if difference > 5 and h - self.last_trained >= 30:
-            chance = (difference / 10 - 0.3) * timestep
+        if h - self.last_trained >= 30:
+            if difference > 5:
+                chance = (difference / 10 - 0.3) * timestep  # lineair van 0.2-1
+                if chance > 1 * timestep:
+                    chance = 1 * timestep
+            else:
+                chance = difference * 0.04 * timestep# lineair van 0-0.2
             if random.random() < chance:
                 self.last_trained = h
                 self.verbose_printing("Trained with chance")

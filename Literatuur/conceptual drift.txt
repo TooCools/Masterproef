@@ -45,6 +45,12 @@ Het veranderen van fietsersmodel: fietsermodel van gem koppel => snelheid of hel
 		+this strategy will work well, when there is a constrain on the maximum memory available but where it is desirable to
 		retain as much of the past knowledge as possible.
 		- trainingset zal data bevatten van "a little bit of everything" => vaak conceptual drift werkt niet goed hier
+		
+		t:new training item
+		r: reservoir
+		f: % full of reservoir [0,1]
+		add t to r # bij algoritme 3.1 voegen we t toe met kans p => kunnen kleiner reservoir gebruiken
+		with prob f, delete a random point in r (1=100% kans om een random punt te verwijderen)
 	
 	Fading factor
 		Aan elke observatie een weight geven. Dit zal verkleinen over tijd (fading factor bepaald hoe snel het verkleint)

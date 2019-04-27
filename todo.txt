@@ -3,7 +3,14 @@ kansaanpassing niet afhangen van frequentie
 
 slope niet in model steken => levert een model op dat even goed werkt
 stochastisch aantal bomen varrieren
-zien of er een DT is die locaal regressie doet => bestaat, maar niet bij scikit. Local regression trees: http://www.dcc.fc.up.pt/~ltorgo/PhD/th5.pdf
+
+verwachtingswaarde? zien of het onafhankelijk is vna de tijdsstap (stochastisch)
+lineair opgaande kans, niet zoals nu
+
+kans uitrekenen dat ge na n-1 samples 0 hebt gehad en n 1
+(1-p)^(n-1)*p => hier de verwachtingswaarde van nemen
+
+
 
 data genereren voor stocahstische impl
 	vermoeden: Modellen zullen geen probleem hebben met de stochastische aanpak want ook al kiezen we random en zijn we niet zeker dat er aanpassingen gebeurenn,

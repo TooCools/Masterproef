@@ -21,9 +21,6 @@ class Bike:
     t_dc_array = [0.0]
     t_cyclist_no_noise = [0.0]
     slope_array = [0.0]
-    f_grav_array = [0.0]
-    f_fric_array = [0.0]
-    f_aero_array = [0.0]
     fcc_array = [0.0]
     v_fiets_ref = 32
     t_dc_max = 60
@@ -97,7 +94,7 @@ class Bike:
         theta_crank_current_rad = self.crank_angle_rad[-1] + crank_speed_rads * timestep
         torque = self.cycler_torque(theta_crank_current_rad)
         self.t_cy.append(torque)
-        self.t_mg1.append(torque * kcr_r * (ns / nr) * ks_mg1)
+        # self.t_mg1.append(torque * kcr_r * (ns / nr) * ks_mg1)
         self.t_mg2.append(min(35, support_level * torque))
         self.t_rw.append(torque * kcr_r * ((nr + ns) / nr))
         self.crank_angle_rad.append(theta_crank_current_rad % (2 * pi))
@@ -118,8 +115,8 @@ class Bike:
         omega_mg2 = v_fiets_current_ms / rw
         omega_crank_current_rads = self.crank_speed_rpm[-1] * 0.10467
         omega_mg1 = (1 / ks_mg1) * ((1 + (nr / ns)) * omega_mg2 - ((nr / ns) * (omega_crank_current_rads / kcr_r)))
-        self.o_mg1.append(omega_mg1)
-        self.o_mg2.append(omega_mg2)
+        # self.o_mg1.append(omega_mg1)
+        # self.o_mg2.append(omega_mg2)
 
     def cycler_torque(self, angle):
         gaussian_random = np.random.normal(0, 0.3) * 5

@@ -17,12 +17,12 @@ timesteps = 20000
 # cadence_controller = CadenceController(
 #     # PassiveAggressiveRegressor(C=1,max_iter=25,tol=0.1,warm_start=True,shuffle=True)
 #     RandomForestRegressor(max_depth=4, n_estimators=10), window_size=10
-#     , ptype="none", seqlen=seqlen, verbose=False, stochastic=False)
-# cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
+#     , ptype="none", seqlen=seqlen, verbose=False, stochastic=True)
+# # cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
 # cycle2 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 300 * cm_slope + 60))
 
 
-def fiets(b, cc, title, update=True):
+def fiets(b, cc, title="", update=True):
     for h in range(1, timesteps):
         t_cy, crank_angle, v_cy, slope = b.get_recent_data(h, seqlen)
         predicted_rpm = -1
@@ -106,7 +106,7 @@ for depth in [3, 4, 5]:
 #         aantalkeer_getraind = []
 #         tijd = []
 #         mses = []
-#         for i in range(0, 10):
+#         for i in range(0, 5):
 #             cadence_controller = CadenceController(
 #                 RandomForestRegressor(max_depth=depth, n_estimators=estimators),
 #                 ptype="none", seqlen=seqlen, stochastic=True, normalize=False, verbose=False)
