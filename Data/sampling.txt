@@ -1,0 +1,525 @@
+Windowed size: 10
+=============================
+Times trained: 14
+MSE: 1.5629663887674066
+Time: 126.39166522026062
+Stochastic: False
+=============================
+=============================
+Times trained: 53
+MSE: 4.455761178915599
+Time: 725.4674575328827
+Stochastic: False
+=============================
+Trained on new cyclers model: 39
+=============================
+Times trained: 14
+MSE: 1.0927913971110044
+Time: 131.82314610481262
+Stochastic: False
+=============================
+=============================
+Times trained: 54
+MSE: 4.704395068529129
+Time: 749.2637293338776
+Stochastic: False
+=============================
+Trained on new cyclers model: 40
+=============================
+Times trained: 10
+MSE: 2.4456317690807947
+Time: 133.41457319259644
+Stochastic: False
+=============================
+=============================
+Times trained: 42
+MSE: 4.6347579162921555
+Time: 753.2449204921722
+Stochastic: False
+=============================
+Trained on new cyclers model: 32
+=============================
+Times trained: 12
+MSE: 2.3458851828465765
+Time: 131.7089765071869
+Stochastic: False
+=============================
+=============================
+Times trained: 51
+MSE: 3.788536688285596
+Time: 769.6124753952026
+Stochastic: False
+=============================
+Trained on new cyclers model: 39
+=============================
+Times trained: 11
+MSE: 2.008713523762659
+Time: 131.73418021202087
+Stochastic: False
+=============================
+=============================
+Times trained: 42
+MSE: 3.6596794652999773
+Time: 734.86141705513
+Stochastic: False
+=============================
+Trained on new cyclers model: 31
+=============================
+Times trained: 10
+MSE: 2.7793799178835195
+Time: 118.1183009147644
+Stochastic: False
+=============================
+=============================
+Times trained: 48
+MSE: 4.932354450964682
+Time: 705.999174118042
+Stochastic: False
+=============================
+Trained on new cyclers model: 38
+=============================
+Times trained: 13
+MSE: 1.8501956904896553
+Time: 126.9643964767456
+Stochastic: False
+=============================
+=============================
+Times trained: 55
+MSE: 4.973959641379912
+Time: 686.654009103775
+Stochastic: False
+=============================
+Trained on new cyclers model: 42
+=============================
+Times trained: 14
+MSE: 2.021560663382492
+Time: 106.84787344932556
+Stochastic: False
+=============================
+=============================
+Times trained: 53
+MSE: 5.239679787936669
+Time: 666.0697751045227
+Stochastic: False
+=============================
+Trained on new cyclers model: 39
+=============================
+Times trained: 13
+MSE: 1.599453131090579
+Time: 104.56128859519958
+Stochastic: False
+=============================
+=============================
+Times trained: 47
+MSE: 5.298894394992109
+Time: 647.7711000442505
+Stochastic: False
+=============================
+Trained on new cyclers model: 34
+=============================
+Times trained: 11
+MSE: 1.6178354721167658
+Time: 105.38477730751038
+Stochastic: False
+=============================
+=============================
+Times trained: 41
+MSE: 3.3851753422190964
+Time: 662.8306701183319
+Stochastic: False
+=============================
+Trained on new cyclers model: 30
+Windowed size: 15
+=============================
+Times trained: 14
+MSE: 1.9105892715937791
+Time: 122.71602201461792
+Stochastic: False
+=============================
+=============================
+Times trained: 61
+MSE: 5.123513102636126
+Time: 714.3906257152557
+Stochastic: False
+=============================
+Trained on new cyclers model: 47
+=============================
+Times trained: 11
+MSE: 4.718363561842058
+Time: 120.64541935920715
+Stochastic: False
+=============================
+=============================
+Times trained: 49
+MSE: 5.046897480725949
+Time: 745.5318915843964
+Stochastic: False
+=============================
+Trained on new cyclers model: 38
+=============================
+Times trained: 15
+MSE: 1.1615025612369105
+Time: 123.30014896392822
+Stochastic: False
+=============================
+=============================
+Times trained: 61
+MSE: 5.6102642352127186
+Time: 725.5566716194153
+Stochastic: False
+=============================
+Trained on new cyclers model: 46
+=============================
+Times trained: 14
+MSE: 1.1527992535634364
+Time: 121.45765161514282
+Stochastic: False
+=============================
+=============================
+Times trained: 60
+MSE: 5.623458048216255
+Time: 716.2607350349426
+Stochastic: False
+=============================
+Trained on new cyclers model: 46
+=============================
+Times trained: 10
+MSE: 4.469325948377327
+Time: 119.89058017730713
+Stochastic: False
+=============================
+=============================
+Times trained: 49
+MSE: 4.909555485772475
+Time: 724.5636739730835
+Stochastic: False
+=============================
+Trained on new cyclers model: 39
+=============================
+Times trained: 14
+MSE: 1.1746702065979309
+Time: 116.23806262016296
+Stochastic: False
+=============================
+=============================
+Times trained: 65
+MSE: 4.984743538389566
+Time: 735.2171666622162
+Stochastic: False
+=============================
+Trained on new cyclers model: 51
+=============================
+Times trained: 14
+MSE: 3.272342090090343
+Time: 125.10497665405273
+Stochastic: False
+=============================
+=============================
+Times trained: 65
+MSE: 6.38937380698799
+Time: 745.5210750102997
+Stochastic: False
+=============================
+Trained on new cyclers model: 51
+=============================
+Times trained: 13
+MSE: 2.1720713733785453
+Time: 123.57523012161255
+Stochastic: False
+=============================
+=============================
+Times trained: 59
+MSE: 4.548367398361782
+Time: 757.4599606990814
+Stochastic: False
+=============================
+Trained on new cyclers model: 46
+=============================
+Times trained: 13
+MSE: 2.38518269448435
+Time: 125.31991481781006
+Stochastic: False
+=============================
+=============================
+Times trained: 54
+MSE: 4.153572071627847
+Time: 752.896696805954
+Stochastic: False
+=============================
+Trained on new cyclers model: 41
+=============================
+Times trained: 11
+MSE: 2.963687558227724
+Time: 123.23436260223389
+Stochastic: False
+=============================
+=============================
+Times trained: 51
+MSE: 4.266182310151974
+Time: 745.1627109050751
+Stochastic: False
+=============================
+Trained on new cyclers model: 40
+Windowed size: 20
+=============================
+Times trained: 13
+MSE: 1.7040288853013417
+Time: 123.11843776702881
+Stochastic: False
+=============================
+=============================
+Times trained: 61
+MSE: 5.471816390418385
+Time: 848.7798886299133
+Stochastic: False
+=============================
+Trained on new cyclers model: 48
+=============================
+Times trained: 12
+MSE: 2.4223870726561993
+Time: 195.13197779655457
+Stochastic: False
+=============================
+=============================
+Times trained: 59
+MSE: 4.760614155185393
+Time: 1127.1604595184326
+Stochastic: False
+=============================
+Trained on new cyclers model: 47
+=============================
+Times trained: 15
+MSE: 1.4277742353691822
+Time: 188.5919075012207
+Stochastic: False
+=============================
+=============================
+Times trained: 52
+MSE: 6.046381408047813
+Time: 1044.7650637626648
+Stochastic: False
+=============================
+Trained on new cyclers model: 37
+=============================
+Times trained: 10
+MSE: 2.6058196761410195
+Time: 188.9479649066925
+Stochastic: False
+=============================
+=============================
+Times trained: 46
+MSE: 4.826415164555813
+Time: 1162.0581617355347
+Stochastic: False
+=============================
+Trained on new cyclers model: 36
+=============================
+Times trained: 11
+MSE: 2.412502278067579
+Time: 212.14947891235352
+Stochastic: False
+=============================
+=============================
+Times trained: 52
+MSE: 5.149696091241245
+Time: 1080.5004103183746
+Stochastic: False
+=============================
+Trained on new cyclers model: 41
+=============================
+Times trained: 12
+MSE: 2.3741607946244567
+Time: 176.94070672988892
+Stochastic: False
+=============================
+=============================
+Times trained: 67
+MSE: 4.808126064360585
+Time: 1068.084949016571
+Stochastic: False
+=============================
+Trained on new cyclers model: 55
+=============================
+Times trained: 14
+MSE: 1.4660638987208467
+Time: 187.67079949378967
+Stochastic: False
+=============================
+=============================
+Times trained: 60
+MSE: 6.2023879339370485
+Time: 1054.7879915237427
+Stochastic: False
+=============================
+Trained on new cyclers model: 46
+=============================
+Times trained: 13
+MSE: 3.5814717176509103
+Time: 188.51936411857605
+Stochastic: False
+=============================
+=============================
+Times trained: 50
+MSE: 5.9199286018341715
+Time: 1065.2016441822052
+Stochastic: False
+=============================
+Trained on new cyclers model: 37
+=============================
+Times trained: 13
+MSE: 1.6815210882032754
+Time: 191.83803582191467
+Stochastic: False
+=============================
+=============================
+Times trained: 61
+MSE: 5.628045030049591
+Time: 1049.7917175292969
+Stochastic: False
+=============================
+Trained on new cyclers model: 48
+=============================
+Times trained: 12
+MSE: 2.729828437999464
+Time: 199.41586184501648
+Stochastic: False
+=============================
+=============================
+Times trained: 54
+MSE: 4.302947478498787
+Time: 1116.7212541103363
+Stochastic: False
+=============================
+Trained on new cyclers model: 42
+Windowed size: 25
+=============================
+Times trained: 10
+MSE: 1.9731311455930556
+Time: 105.40614938735962
+Stochastic: False
+=============================
+=============================
+Times trained: 57
+MSE: 4.6127964513041935
+Time: 652.7102339267731
+Stochastic: False
+=============================
+Trained on new cyclers model: 47
+=============================
+Times trained: 12
+MSE: 1.63851249564102
+Time: 109.59703779220581
+Stochastic: False
+=============================
+=============================
+Times trained: 57
+MSE: 5.2620696778801825
+Time: 663.8663341999054
+Stochastic: False
+=============================
+Trained on new cyclers model: 45
+=============================
+Times trained: 15
+MSE: 1.0398983091921985
+Time: 111.15707230567932
+Stochastic: False
+=============================
+=============================
+Times trained: 60
+MSE: 5.823080859336654
+Time: 695.8128261566162
+Stochastic: False
+=============================
+Trained on new cyclers model: 45
+=============================
+Times trained: 13
+MSE: 1.978986201332083
+Time: 108.02834010124207
+Stochastic: False
+=============================
+=============================
+Times trained: 61
+MSE: 6.567423171745003
+Time: 693.9203865528107
+Stochastic: False
+=============================
+Trained on new cyclers model: 48
+=============================
+Times trained: 11
+MSE: 3.155056917762164
+Time: 110.43623447418213
+Stochastic: False
+=============================
+=============================
+Times trained: 63
+MSE: 5.184982619344054
+Time: 694.7323560714722
+Stochastic: False
+=============================
+Trained on new cyclers model: 52
+=============================
+Times trained: 10
+MSE: 3.21170593368686
+Time: 102.87148952484131
+Stochastic: False
+=============================
+=============================
+Times trained: 56
+MSE: 5.516267914684186
+Time: 822.0994966030121
+Stochastic: False
+=============================
+Trained on new cyclers model: 46
+=============================
+Times trained: 11
+MSE: 1.9113896791874607
+Time: 156.07710671424866
+Stochastic: False
+=============================
+=============================
+Times trained: 52
+MSE: 4.996220529051338
+Time: 920.2284667491913
+Stochastic: False
+=============================
+Trained on new cyclers model: 41
+=============================
+Times trained: 12
+MSE: 1.7674408328848763
+Time: 158.32271099090576
+Stochastic: False
+=============================
+=============================
+Times trained: 60
+MSE: 5.803886164090839
+Time: 933.2381885051727
+Stochastic: False
+=============================
+Trained on new cyclers model: 48
+=============================
+Times trained: 12
+MSE: 1.7607235847792464
+Time: 157.96710062026978
+Stochastic: False
+=============================
+=============================
+Times trained: 55
+MSE: 5.3487077355460695
+Time: 944.7044224739075
+Stochastic: False
+=============================
+Trained on new cyclers model: 43
+=============================
+Times trained: 12
+MSE: 1.4888406104164575
+Time: 164.3517963886261
+Stochastic: False
+=============================
+=============================
+Times trained: 52
+MSE: 5.743897590883799
+Time: 897.9810090065002
+Stochastic: False
+=============================
+Trained on new cyclers model: 40
+

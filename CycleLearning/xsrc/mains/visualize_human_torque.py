@@ -20,13 +20,13 @@ import matplotlib.pyplot as plt
 
 
 
-df = pd.read_excel("..\\..\\..\\Data\\BikeControl.xlsx")
-torque = df[" Crank_torque_Nm_filt"]
-print(torque.tail())
-torque_norm = normalize(0, 120, torque)
-print(torque_norm.tail())
-torque = normalize(0, 120, torque)
-print(torque.tail())
+# df = pd.read_excel("..\\..\\..\\Data\\BikeControl.xlsx")
+# torque = df[" Crank_torque_Nm_filt"]
+# print(torque.tail())
+# torque_norm = normalize(0, 120, torque)
+# print(torque_norm.tail())
+# torque = normalize(0, 120, torque)
+# print(torque.tail())
 
 #
 # index = 7898
@@ -62,11 +62,13 @@ print(torque.tail())
 #     else:
 #         y_min.append(i*2)
 #
-# plt.plot(x,y_min)
+x=[0,5,10,12]
+y=[0,0.2,1,1]
+plt.plot(x,y)
 # plt.plot(x,y_max)
-# plt.xlabel("Snelheid (km/h)")
-# plt.ylabel("Cadans (rpm)")
+# plt.xlabel("FCC-ωcr")
+# plt.ylabel("P(")
 # plt.legend(["Minimum cadans","Maximum cadans"])
 # plt.xlim([0,50])
 # plt.ylim([0,130])
-# plt.show()
+plt.show()

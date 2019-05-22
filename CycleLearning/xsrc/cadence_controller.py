@@ -9,18 +9,21 @@ from sklearn import preprocessing
 from sklearn.metrics import mean_squared_error
 
 from xsrc.analyze import visualize_data
+# from xsrc.datastructures.data_structure import DataStructure
+from xsrc.datastructures import data_structure
 from xsrc.params import df_fcc, df_torque, df_crank_angle_rad, df_velocity, df_slope, timestep
 
 
 class CadenceController:
 
-    def __init__(self, model, ptype="none", seqlen=50, window_size=99999999, verbose=True, normalize=False,
+    def __init__(self, model, training, ptype="none", seqlen=50,
+                 verbose=True,
+                 normalize=False,
                  stochastic=False):
         self.model = model
         self.warmup = 300
         self.ptype = ptype
         self.verbose = verbose
-        self.training_set = deque(maxlen=seqlen * window_size)
         self.mse = []
         self.difference = []
         self.previous_opt_cadence = []
@@ -33,6 +36,7 @@ class CadenceController:
         self.normalize = normalize
         self.start = time.time()
         self.last_trained = 0
+        self.data_structure = training
 
     def predict(self, torque, cr_angle, velocity, slope_rad):
         data = {
@@ -116,11 +120,10 @@ class CadenceController:
                 df_velocity: velocity[i:self.seqlen + i],
                 df_slope: slope_rad[i:self.seqlen + i]
             }
-            self.training_set.append([self.preprocess(data, normalize=self.normalize), fcc[i]])
-        random.shuffle(self.training_set)
+            self.data_structure.add_element([self.preprocess(data, normalize=self.normalize), fcc[i]])
         training_X = []
         training_y = []
-        for X, y in self.training_set:
+        for X, y in self.data_structure.get_elements():
             training_X.append(X)
             training_y.append(y)
         self.model.fit(training_X, training_y)
@@ -133,7 +136,7 @@ class CadenceController:
                 if chance > 1 * timestep:
                     chance = 1 * timestep
             else:
-                chance = difference * 0.04 * timestep# lineair van 0-0.2
+                chance = difference * 0.04 * timestep  # lineair van 0-0.2
             if random.random() < chance:
                 self.last_trained = h
                 self.verbose_printing("Trained with chance")
@@ -161,7 +164,7 @@ class CadenceController:
             self.difference.append(abs(prediction - actual))
 
     def reset(self):
-        self.mse = []
+        # self.mse = []
         self.actual_fcc_mse = []
         self.previous_predictions_mse = []
         self.previous_opt_cadence = []
@@ -182,5 +185,5 @@ class CadenceController:
         print("Stochastic: " + str(self.stochastic))
         print("=============================")
         visualize_data([self.mse], [], ["tijd", "mse"], model_name + " (stochastic= " + str(self.stochastic) + ")")
-        visualize_data([self.difference], [], ["tijd", "difference"],
-                       model_name + " (stochastic= " + str(self.stochastic) + ")")
+        visualize_data([self.difference], [], ["tijd", "absoluut verschil voorspelling en fcc"],
+                       model_name)

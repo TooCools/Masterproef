@@ -1,30 +1,50 @@
-\contentsline {chapter}{Voorwoord}{}% 
-\contentsline {chapter}{Abstract}{i}% 
-\contentsline {chapter}{Lijst van figuren}{iv}% 
-\contentsline {chapter}{Afkortingen}{v}% 
-\contentsline {chapter}{Symbolen}{vi}% 
+\contentsline {chapter}{Voorwoord}{i}% 
+\contentsline {chapter}{Abstract}{ii}% 
+\contentsline {chapter}{Lijst van figuren}{v}% 
+\contentsline {chapter}{Lijst van tabellen}{vi}% 
+\contentsline {chapter}{Lijst van afkortingen}{vii}% 
+\contentsline {chapter}{Lijst van symbolen}{viii}% 
 \contentsline {chapter}{\numberline {1}Probleemstelling}{1}% 
 \contentsline {section}{\numberline {1.1}Mobiliteitsvraagstuk}{1}% 
-\contentsline {section}{\numberline {1.2}Online machine learning voor ge\IeC {\"\i }ndividualiseerde cadanscontrole}{2}% 
+\contentsline {section}{\numberline {1.2}Machinaal leren voor ge\IeC {\"\i }ndividualiseerde cadanscontrole}{2}% 
 \contentsline {section}{\numberline {1.3}Huidige systeem}{3}% 
-\contentsline {chapter}{\numberline {2}Methode}{5}% 
-\contentsline {section}{\numberline {2.1}De fietssimulatie}{5}% 
-\contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{5}% 
-\contentsline {section}{\numberline {2.3}Het fietsersmodel}{9}% 
-\contentsline {section}{\numberline {2.4}Het lastmodel}{11}% 
-\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{12}% 
-\contentsline {section}{\numberline {2.6}On-line voorspellen van de cadans}{13}% 
-\contentsline {section}{\numberline {2.7}Preprocessing}{14}% 
-\contentsline {section}{\numberline {2.8}Algoritmes}{15}% 
-\contentsline {subsection}{\numberline {2.8.1}Passive Aggressive Algorithm}{15}% 
-\contentsline {subsection}{\numberline {2.8.2}Decision Tree en Random Forest}{16}% 
-\contentsline {section}{\numberline {2.9}Postprocessing}{17}% 
-\contentsline {chapter}{\numberline {3}Resultaten}{19}% 
-\contentsline {section}{\numberline {3.1}Sequentie preprocessing}{19}% 
-\contentsline {section}{\numberline {3.2}Algoritmes}{20}% 
-\contentsline {subsection}{\numberline {3.2.1}Passive Aggressive Algorithm}{20}% 
-\contentsline {subsection}{\numberline {3.2.2}Decision Tree en Random Forest}{22}% 
-\contentsline {chapter}{\numberline {4}Discussie}{26}% 
-\contentsline {chapter}{Appendix}{27}% 
-\contentsline {section}{IntuEdrive}{27}% 
-\contentsline {section}{Bibliografie}{28}% 
+\contentsline {section}{\numberline {1.4}Gerelateerd werk}{5}% 
+\contentsline {subsection}{\numberline {1.4.1}Hardware Implementation and Control Strategy of a High Dynamic CVT Transmission for an E-Bike: Jorrit Heidbuchel (2016-2017)}{5}% 
+\contentsline {subsection}{\numberline {1.4.2}Factors affecting cadence choice during submaximal cycling and cadence influence on performance: Ernst A. Hansen en Gerald Smith (2009)}{5}% 
+\contentsline {subsection}{\numberline {1.4.3}Adaptive machine learning algorithms for data streams subject to concept drifts: Pierre-Xavier Loeffel (2018)}{5}% 
+\contentsline {chapter}{\numberline {2}Methode}{7}% 
+\contentsline {section}{\numberline {2.1}De fietssimulatie}{7}% 
+\contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{7}% 
+\contentsline {section}{\numberline {2.3}Het fietsersmodel}{11}% 
+\contentsline {section}{\numberline {2.4}Het lastmodel}{13}% 
+\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{14}% 
+\contentsline {section}{\numberline {2.6}Voorspellen van de cadans}{15}% 
+\contentsline {section}{\numberline {2.7}Preprocessing}{16}% 
+\contentsline {section}{\numberline {2.8}Algoritmes}{17}% 
+\contentsline {subsection}{\numberline {2.8.1}Passive Aggressive algorithm}{17}% 
+\contentsline {subsection}{\numberline {2.8.2}Decision Tree en Random Forest}{18}% 
+\contentsline {section}{\numberline {2.9}Post-processing}{19}% 
+\contentsline {section}{\numberline {2.10}Stochastisch bijleren}{20}% 
+\contentsline {subsection}{\numberline {2.10.1}Verwachtingen}{22}% 
+\contentsline {section}{\numberline {2.11}Conceptuele drift}{22}% 
+\contentsline {subsection}{\numberline {2.11.1}Fixed sliding window}{23}% 
+\contentsline {subsection}{\numberline {2.11.2}Variabele sliding window}{23}% 
+\contentsline {subsection}{\numberline {2.11.3}Sampling}{24}% 
+\contentsline {subsubsection}{Reservoir sampling}{24}% 
+\contentsline {subsubsection}{Biased reservoir sampling}{25}% 
+\contentsline {subsection}{\numberline {2.11.4}Verwachtingen}{26}% 
+\contentsline {chapter}{\numberline {3}Resultaten}{27}% 
+\contentsline {section}{\numberline {3.1}Sequentie preprocessing}{27}% 
+\contentsline {section}{\numberline {3.2}Algoritmes}{28}% 
+\contentsline {subsection}{\numberline {3.2.1}Passive Aggressive Algorithm}{28}% 
+\contentsline {subsection}{\numberline {3.2.2}Decision Tree en Random Forest}{30}% 
+\contentsline {section}{\numberline {3.3}Stochatisch bijleren}{34}% 
+\contentsline {section}{\numberline {3.4}Conceptuele drift}{36}% 
+\contentsline {chapter}{\numberline {4}Discussie}{38}% 
+\contentsline {section}{\numberline {4.1}Algoritmes}{38}% 
+\contentsline {section}{\numberline {4.2}Waarheid}{39}% 
+\contentsline {section}{\numberline {4.3}Conceptuele drift}{39}% 
+\contentsline {chapter}{\numberline {5}Conclusie}{40}% 
+\contentsline {chapter}{Appendix}{42}% 
+\contentsline {section}{IntuEdrive}{42}% 
+\contentsline {section}{Bibliografie}{43}% 

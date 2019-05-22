@@ -1,16 +1,24 @@
-het is niet deterministisch bij de mens. We willen zien dat de algoritmes er goed mee omkunnen.
-kansaanpassing niet afhangen van frequentie
+Indienen VOOR 7 juni 2019 om 14u
+Fysiek indienen: #{promotoren, lezers, begeleiders} exemplaren indienen en laten aftekenen op het secretariaat van het Departement Computerwetenschappen.
+Digitaal indienen via KU Loket
 
-slope niet in model steken => levert een model op dat even goed werkt
-stochastisch aantal bomen varrieren
+Op het einde van het tweede semester wordt ook er een lijst online gezet, met daarop de namen van de assessoren – deze moeten op de masterproef vermeld worden. 
+Er zal nog een bericht uitgestuurd worden wanneer deze lijst online staat.
+begin juni een mail krijgen met het exacte tijdstip van jouw verdediging én de namen van jouw assessoren
 
-verwachtingswaarde? zien of het onafhankelijk is vna de tijdsstap (stochastisch)
-lineair opgaande kans, niet zoals nu
+Abstract is wat raar.
+p21. Een geometrische distributie vertelt iets over wat de kans is dat na k pogingen, zodat de laatste poging een succes is met de kans op succes p constant. 
+p20-21. Of het vermenigvuldigen van de frequentie met de probabiliteit van updaten correct is, is evident aan te tonen met behulp van de verwachtingswaarde over 
+een binomiale verdeling (met ∆c = 5) [13]:
+		van updaten correct is, (anders verwoorden)
 
-kans uitrekenen dat ge na n-1 samples 0 hebt gehad en n 1
-(1-p)^(n-1)*p => hier de verwachtingswaarde van nemen
 
 
+
+
+
+
+Dc: die component van het signaal dat niet veranderen in de tijd. dit is het component dat neer komt op 0 Hz. frequentieanalyze.
 
 data genereren voor stocahstische impl
 	vermoeden: Modellen zullen geen probleem hebben met de stochastische aanpak want ook al kiezen we random en zijn we niet zeker dat er aanpassingen gebeurenn,
@@ -44,3 +52,16 @@ denk over stochastisch beslissingsmodel van de fietser (kansberekening over aanp
 				 Lange tijd niet op knop geduwt? hoge kans op veranderen
 				 een tweede keer kort erna duwen? lage kans (misschien is het algoritme nog aan het bijleren / moet de cadans nog convergeren naar  de voorspellingen / double click)
 				 stijgende kans als fietser blijft drukken? Blijven drukken op de knop kan wijzen op slechte schattingen.
+				 
+ONTHOUDEN:
+	waarom rpm laag bij lage snelheden?
+		dit komt voor bij veel motoren. Om te bewegen moet er vermogen geleverd worden. Bij lage snelheid (bij het starten) fietsen we aan lage rpm. Om dan een hoog vermogen te levern
+		moet er een hoog koppel geleverd worden.
+	Waarom die verschuiving bij het fietserskoppel (sinus)?
+		Dit is gedaan zodat het hoogste punt in die sinusfunctie overeenkomt met de eigenlijke hoek die de trapas maakt waar het hoogste koppel wordt geleverd. 
+		Dit is ongeveer op 60 graden
+	Waarom geen neerwaards helling?
+		Als de fietser bergaf gaat, dan zal hij freewheelen en dus niet trappen. Dit is geen relevante data voor het algoritme.
+	Big O van DT = mnlogn
+	Wat is een laagdoorlaatfilter?
+		Een laagdoorlaatfilter laat enkel het "lage" deel van het spectrum door. Dus enkel lage frequenties.

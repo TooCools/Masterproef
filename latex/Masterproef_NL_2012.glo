@@ -2,7 +2,7 @@
 \glossaryentry{\ensuremath {r}?\glossentry{r}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{\ensuremath {u_{cy}}?\glossentry{u_cy}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{\ensuremath {T_{cy}}?\glossentry{t_cy}|setentrycounter[]{page}\glsnumberformat}{3}
-\glossaryentry{\ensuremath {u_c}?\glossentry{u_c}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{\ensuremath {u_c}?\glossentry{u_c}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\ensuremath {T_{cy,m}}?\glossentry{t_cy,m}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\ensuremath {\theta _{cr}}?\glossentry{theta_cr}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\ensuremath {v_{bike}}?\glossentry{v_bike}|setentrycounter[]{page}\glsnumberformat}{4}
@@ -10,30 +10,32 @@
 \glossaryentry{\ensuremath {y}?\glossentry{y}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\ensuremath {u_{contr}}?\glossentry{u_contr}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\ensuremath {FCC_{est}}?\glossentry{fcc_est}|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{\ensuremath {T_{dc}}?\glossentry{t_dc}|setentrycounter[]{page}\glsnumberformat}{5}
-\glossaryentry{\ensuremath {\omega _{cr}}?\glossentry{omega_cr}|setentrycounter[]{page}\glsnumberformat}{6}
-\glossaryentry{\ensuremath {K}?\glossentry{k}|setentrycounter[]{page}\glsnumberformat}{6}
-\glossaryentry{\ensuremath {T_{dc,max}}?\glossentry{t_dc_max}|setentrycounter[]{page}\glsnumberformat}{6}
-\glossaryentry{\ensuremath {ns}?\glossentry{ns}|setentrycounter[]{page}\glsnumberformat}{8}
-\glossaryentry{\ensuremath {nr}?\glossentry{nr}|setentrycounter[]{page}\glsnumberformat}{8}
-\glossaryentry{\ensuremath {k_{cr,r}}?\glossentry{k_cr,r}|setentrycounter[]{page}\glsnumberformat}{8}
-\glossaryentry{\ensuremath {T_{rw}}?\glossentry{t_rw}|setentrycounter[]{page}\glsnumberformat}{8}
-\glossaryentry{\ensuremath {T_{MG2}}?\glossentry{t_mg2}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{\ensuremath {S}?\glossentry{s}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{\ensuremath {f_k}?\glossentry{f_k}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{\ensuremath {f_h}?\glossentry{f_h}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{\ensuremath {f_v}?\glossentry{f_v}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{\ensuremath {F_{grav}}?\glossentry{f_grav}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {m}?\glossentry{m}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {g}?\glossentry{g}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {F_{friction}}?\glossentry{f_friction}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {c_r}?\glossentry{c_r}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {F_{aero}}?\glossentry{f_aero}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {c_d}?\glossentry{c_d}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {\rho _{aero}}?\glossentry{rho_aero}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {A_{aero}}?\glossentry{a_aero}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {F_{load}}?\glossentry{f_load}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {P}?\glossentry{p}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{\ensuremath {r_w}?\glossentry{r_w}|setentrycounter[]{page}\glsnumberformat}{13}
-\glossaryentry{\ensuremath {FCC_{pred}}?\glossentry{fcc_pred}|setentrycounter[]{page}\glsnumberformat}{17}
-\glossaryentry{\ensuremath {sf}?\glossentry{sf}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{\ensuremath {T_{dc}}?\glossentry{t_dc}|setentrycounter[]{page}\glsnumberformat}{7}
+\glossaryentry{\ensuremath {\omega _{cr}}?\glossentry{omega_cr}|setentrycounter[]{page}\glsnumberformat}{8}
+\glossaryentry{\ensuremath {K}?\glossentry{k}|setentrycounter[]{page}\glsnumberformat}{8}
+\glossaryentry{\ensuremath {T_{dc,max}}?\glossentry{t_dc_max}|setentrycounter[]{page}\glsnumberformat}{8}
+\glossaryentry{\ensuremath {ns}?\glossentry{ns}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{\ensuremath {nr}?\glossentry{nr}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{\ensuremath {k_{cr,r}}?\glossentry{k_cr,r}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{\ensuremath {T_{rw}}?\glossentry{t_rw}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{\ensuremath {T_{MG2}}?\glossentry{t_mg2}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\ensuremath {S}?\glossentry{s}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\ensuremath {f_k}?\glossentry{f_k}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\ensuremath {f_h}?\glossentry{f_h}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\ensuremath {f_v}?\glossentry{f_v}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\ensuremath {F_{grav}}?\glossentry{f_grav}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {m}?\glossentry{m}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {g}?\glossentry{g}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {F_{friction}}?\glossentry{f_friction}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {c_r}?\glossentry{c_r}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {F_{aero}}?\glossentry{f_aero}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {c_d}?\glossentry{c_d}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {\rho _{aero}}?\glossentry{rho_aero}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {A_{aero}}?\glossentry{a_aero}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {F_{load}}?\glossentry{f_load}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {P}?\glossentry{p}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\ensuremath {r_w}?\glossentry{r_w}|setentrycounter[]{page}\glsnumberformat}{15}
+\glossaryentry{\ensuremath {FCC_{pred}}?\glossentry{fcc_pred}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{\ensuremath {sf}?\glossentry{sf}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{\ensuremath {\Delta _c}?\glossentry{delta_c}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{\ensuremath {\lambda }?\glossentry{lambda}|setentrycounter[]{page}\glsnumberformat}{25}

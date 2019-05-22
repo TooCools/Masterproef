@@ -1,0 +1,13 @@
+\chapter{Conclusie}
+Eerst werd er een realistische geparametriseerde simulatie opgezet. Die houdt rekening met verschillende lasten, maar niet allemaal. De simulatie zorgt ervoor dat er gemakkelijk en snel data kan gegenereerd worden voor verschillende tests. Ten tweede werden enkele algoritmes besproken en geëvalueerd. De resultaten tonen dat PA niet geschikt is voor dit probleem, aangezien de fout te groot is en dat PA te vaak moet bijleren. DT en RF presteerden hier goed. Ten derde werd nagegaan of de algoritmes kunnen omgaan met een stochastische update-strategie. Wederom presteert PA slecht. Binaire beslissingsbomen, zowel bij DT als RF, met diepte drie presteren hier ook slecht omdat het verschil tussen fietsersmodel en voorspelling vrij groot blijft gedurende de test. Uit deze twee tests werd er besloten dat enkel DT en RF, met diepte vier of dieper, geschikt zijn voor dit probleem. Uiteindelijk werd de keuze gemaakt om enkel verder te werken met een RF. Er werd wel nog een probleem aangehaald met een RF: het kan niet goed om met ongeziene omstandigheden, zoals wanneer de fiets nog niet is ingesteld door de gebruiker. Er wordt hiervoor volgende oplossingen voorgesteld: 
+
+\begin{itemize}
+\item een standaard model voorzien
+\item hetgeen wat het RF voorspelt veranderen van de eigenlijke cadans naar een verschil ten opzichte van een ingestelde basis cadans.
+\end{itemize}
+
+\noindent Vervolgens werden twee technieken getest die kunnen omgaan met conceptuele drift, het veranderen van concept over tijd. De drift die hier getest werd was abrupt in deze context. De resultaten tonen aan dat kleinere structuren beter presteren dan grotere. Sampling presteert in het algemeen beter dan een sliding window. Of omgaan met conceptuele drift noodzakelijk is, hangt af van hoe men de fiets gebruikt. Er werd ten slotte nog een probleem aangehaald met de tests en trainingsdata. In de simulatie werd een “waarheid” (\textit{ground truth}) berekend met behulp van het fietsersmodel. In realiteit bestaat dit niet en zullen updates incrementeel moeten doorgevoerd worden. Dit moet zeker nog uitgewerkt worden. Uiteindelijk moet er ook nog een implementatie voorzien worden die samenwerkt met de fietscontroller van Ellio.
+\\\\
+Of een RF het meest geschikte algoritme is, is moeilijk te zeggen. Er zijn zoveel verschillende algoritmes van machinaal leren dat het praktisch onmogelijk is om ze allemaal te bekijken. Een type algoritme dat hier niet aangehaald is, maar mogelijk wel nog goed kan presteren in clustering.
+\\\\
+De cadanscontroller moet natuurlijk ook nog uitgewerkt worden, zodat het samenwerkt met de fietscontroller.

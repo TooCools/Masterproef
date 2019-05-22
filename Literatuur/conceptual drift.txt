@@ -1,4 +1,6 @@
-100,5,31,2
+	100,5,31,2
+Since the FCC has a	neurological basis,	it changes very	slowly for a single person.	It falls back about 3rpm per decade
+the cadence was steady in a 12-week longitudinal perspective at the same time as it was highly individualistic. Hansen EA, Ohnstad AE. Evidence for freely chosen pedalling rate during submaximal cycling to be a robust innate voluntary motor rhythm.
 
 In het algemeen hebben ML algoritmes geen mechanisme om een veranderend concept (conceptual drift) snel op te volgen. Ze convergeren naar
 	het veranderd concept because of diluting the previously learned concept over time. 
@@ -84,3 +86,19 @@ models in memory, and choose based on detector. => No need to reconstruct model.
 	Assumption that time is a criterion to decide wether an observation should be kept or deleted
 	It is necessary to keep contiguous observations
 		
+		
+DEA heeft weet van de algoritmes in de ensemble (F = {f^1,...,f^n}) en houdt een map met druppels (droplets) (Map = {D^1,...,D^p} in het geheugen. Elke druppel D^t is geassocieerd 
+met een observatie x_t (het centrum van de druppel), een radius en houdt bij welk algoritme f^i de kleinste fout heeft in de regio rond de druppel D^t. 
+
+Bij een nieuwe observatie x_k worden de overlappende druppels OD_k berekend. Als OD_k leeg is, wordt de dichtstbijzijnde druppel gekozen om een voorspelling te maken. Als OD_k niet 
+leeg is, wordt een meerderheidsstemming genomen.
+
+Bij het trainen van nieuwe observaties x_k worden er nieuwe druppels D^k toegevoegd aan de map. Alle onderliggende algoritmes trainen om (x_k, y_k), maken dan een voorspelling en 
+ondervinden een bepaalde error. Als er hier een uniek algoritme de minimale error heeft, dan wordt deze toegewezen aan de druppel D^k. Zijn er meerdere algoritmes, dan worden de som 
+van de errors die deze algoritmes maken bij de N dichtste druppels bekeken. Als hier een unieke winnaar uitkomt, wordt deze toegewezen aan de druppel D^k. Zijn er meerdere, dan wordt
+ de zoekruimte vergroot naar N+1, N+2,... De nieuwe druppel D^k krijgt een standaard radius toegewezen. Als druppel D^k overlapt met andere druppels, dan wordt de radius van alle 
+ druppels die een foutieve voorspelling hebben gemaakt bij de nieuwe observatie x_k verkleint.
+
+DEA kan omgaan met conceptuele drift omdat het de invloed van druppels verlaagt wanneer er foute voorspellingen zijn gemaakt. Zolang dat het algoritme geassocieerd met een druppel 
+juiste voorspellingen maakt, blijft het gebruikt worden ongeacht de leeftijd van de druppel. Als het concept veranderd en de voorspellingen van een algoritme geassocieerd met die 
+druppel fout zijn, dan wordt deze druppel uiteindelijk zo klein dat het verwijderd zal worden (aangezien het aantal druppel gelimiteerd is).

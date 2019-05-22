@@ -22,9 +22,28 @@
 \usepackage{graphicx,caption}
 \usepackage{subcaption}
 \usepackage[utf8]{inputenc}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{afterpage}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+    
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[ruled]{algorithm2e}
+\makeatletter
+\renewcommand{\algorithmcfname}{Algoritme}
+\newcommand{\RemoveAlgoNumber}{\renewcommand{\fnum@algocf}{\AlCapSty{\AlCapFnt\algorithmcfname}}}
+\newcommand{\RevertAlgoNumber}{\algocf@resetfnum}
+\makeatother
 
 \usepackage[acronym]{glossaries}
 \include{glossary}
@@ -62,9 +81,11 @@
 
 \renewcommand{\contentsname}{Inhoudstafel}
 \renewcommand{\listfigurename}{Lijst van figuren}
-\renewcommand{\listoftables}{Lijst van tabellen}
+\renewcommand{\listtablename}{Lijst van tabellen}
 \DeclareMathOperator*{\argmin}{argmin}
 \renewcommand{\chaptername}{Hoofdstuk}
+\renewcommand{\figurename}{Figuur}
+\renewcommand{\tablename}{Tabel}
 
 \begin{document}
 
@@ -95,7 +116,7 @@
 \textblockcolour{}
 \vspace{-\parskip}
 \flushleft
-\fontsize{40}{42}\selectfont \textcolor{bluetitle}{Real-Time Cadansaanpassing in een Automatische fietstransmissie }\\[1.5mm]
+\fontsize{40}{42}\selectfont \textcolor{bluetitle}{Real-time cadansaanpassing in een automatische fietstransmissie }\\[1.5mm]
 \end{textblock}
 %
 
@@ -110,10 +131,10 @@
 \textblockcolour{}
 \vspace{-\parskip}
 \flushleft
-Promotor:\\Prof. M. Moens\\[-2pt]
+Promotor:\\Prof. M.-F. Moens\\[-2pt]
 \vspace{5mm}
-Begeleider:\\
-\textsl{Ir. Tomas Keppens\\Ir. Jorrit Heidbuchel\\Ir. Rugen Heidbuchel}\\[-2pt]
+Begeleiders:\\
+Ir. T. Keppens\\Ir. J. Heidbuchel\\Ir. R. Heidbuchel\\[-2pt]
 \end{textblock}
 %
 \begin{textblock}{160}(8,191)
@@ -146,33 +167,37 @@ Academiejaar 2018-2019
 % -----------------------------------------------------------------
 \rmfamily
 \frontmatter
+\afterpage{\blankpage}
 \pagenumbering{roman}
-\setcounter{page}{0}
+\setcounter{page}{1}
 \chapter{Voorwoord}
-
-A preface
+Ik zou graag iedereen bedanken die mij heeft geholpen met deze thesis. De personen waar ik het meeste aan te danken heb, zijn Jorrit en Rugen Heidbuchel. Beiden gaven zeer nuttige feedback en waren altijd beschikbaar. Dank aan Tomas Keppens om enkele jaren geleden het IntuEdrive project op te starten en samen te werken met de KU Leuven. Bedankt Sien Moens om de thesis te proeflezen. En natuurlijk ook een dank u aan iedereen die deze thesis gelezen heeft.
 
 \chapter{Abstract}
+Deze thesis gaat over het real time aanpassen van de fietscadans, toegepast op de E-bike van IntuEdrive. Deze tekst is de laatste van een reeks thesissen rond het E-bike concept van Tomas Keppens: een snelle en betrouwbare E-bike die makkelijk in gebruik is. Deze thesis werkt verder op het huidige prototype. Het doel is om de trapsnelheid van de fietser te kunnen voorspellen om zo de versnelling van de fiets automatisch te schakelen. De trapsnelheid is per gebruiker verschillend. Als eerste stap wordt een geparametriseerde simulatie gemaakt, zodat makkelijk veel consistente data gegenereerd kan worden. Vervolgens worden verschillende algoritmes van machinaal leren bekeken en geëvalueerd. Er moet rekening gehouden worden met het aantal keer trainen, uitvoeringstijd en accuraatheid. Vervolgens wordt er nagegaan of de algoritmes om kunnen gaan met een stochastische update-strategie. De mens is immers een onvoorspelbaar wezen. Ten slotte wordt het probleem van conceptuele drift aangehaald om na te gaan of de algoritmes om kunnen gaan met een veranderend concept.
 
-An abstract.
 \tableofcontents
 \newpage
 \listoffigures
 \addcontentsline{toc}{chapter}{Lijst van figuren}
+\listoftables
+\addcontentsline{toc}{chapter}{Lijst van tabellen}
 \newpage
-\printglossary[type=\acronymtype ,title=Afkortingen ,style=mystyle]
-\addcontentsline{toc}{chapter}{Afkortingen}
+\printglossary[type=\acronymtype ,title=Lijst van afkortingen ,style=mystyle]
+\addcontentsline{toc}{chapter}{Lijst van afkortingen}
 \newpage
-\addcontentsline{toc}{chapter}{Symbolen}
-\printglossary[title=Symbolen,style=mystyle]
+\addcontentsline{toc}{chapter}{Lijst van symbolen}
+\printglossary[title=Lijst van symbolen,style=mystyle]
 
 \mainmatter
 \pagenumbering{arabic}
+\RemoveAlgoNumber
 
 \include{hoofdstuk1}
 \include{hoofdstuk2}
 \include{hoofdstuk3}
 \include{hoofdstuk4}
+\include{hoofdstuk5}
 \include{appendix}
 
 

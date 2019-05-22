@@ -11,9 +11,9 @@ Avg MSE: 7.334195146716391
 Avg time: 505.7537984609604
 Avg trainings: 145.4
 @@@@@@@@@@@RF with depth: 3 and estimators: 20 @@@@@@@@@@
-Avg MSE: ?
-Avg time: ?
-Avg trainings: 144.7
+Avg MSE: 7.378541935765734
+Avg time: 537.4942688465119
+Avg trainings: 143.2
 @@@@@@@@@@@RF with depth: 4 and estimators: 5 @@@@@@@@@@
 Avg MSE: 1.4750116625971248
 Avg time: 172.57730302810668
