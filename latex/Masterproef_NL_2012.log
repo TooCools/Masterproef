@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  4 JUN 2019 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  4 JUN 2019 16:02
 entering extended mode
 **./Masterproef_NL_2012.tex
 (Masterproef_NL_2012.tex
@@ -1429,45 +1429,46 @@ File: images/trapcyclus.png Graphic file (type png)
 <use images/trapcyclus.png>
 Package pdftex.def Info: images/trapcyclus.png  used on input line 156.
 (pdftex.def)             Requested size: 182.09485pt x 128.43985pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
+
+ []
+
 [15 <./images/trapcyclus.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
-
- []
-
 <images/preprocessing-hoek.png, id=119, 1038.88126pt x 361.35pt>
 File: images/preprocessing-hoek.png Graphic file (type png)
 <use images/preprocessing-hoek.png>
-Package pdftex.def Info: images/preprocessing-hoek.png  used on input line 180.
+Package pdftex.def Info: images/preprocessing-hoek.png  used on input line 179.
 
 (pdftex.def)             Requested size: 455.24408pt x 158.34387pt.
-[16 <./images/preprocessing-hoek.png>]
+ [16 <./images/preprocessing-hoek.png>]
 <images/fft_fietser.png, id=123, 642.4pt x 481.8pt>
 File: images/fft_fietser.png Graphic file (type png)
 <use images/fft_fietser.png>
-Package pdftex.def Info: images/fft_fietser.png  used on input line 189.
+Package pdftex.def Info: images/fft_fietser.png  used on input line 188.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
 
  []
 
 [17 <./images/fft_fietser.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 234--239
+Underfull \hbox (badness 10000) in paragraph at lines 233--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--239
+Underfull \hbox (badness 10000) in paragraph at lines 233--238
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
 
  []
 
@@ -1475,22 +1476,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--243
 File: images/actual-prediction+noice,nopp.png Graphic file (type png)
 <use images/actual-prediction+noice,nopp.png>
 Package pdftex.def Info: images/actual-prediction+noice,nopp.png  used on input
- line 252.
+ line 251.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 <images/actual-prediction+noice,es.png, id=132, 642.4pt x 481.8pt>
 File: images/actual-prediction+noice,es.png Graphic file (type png)
 <use images/actual-prediction+noice,es.png>
 Package pdftex.def Info: images/actual-prediction+noice,es.png  used on input l
-ine 258.
+ine 257.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 <images/actual-prediction+noice,ma.png, id=133, 642.4pt x 481.8pt>
 File: images/actual-prediction+noice,ma.png Graphic file (type png)
 <use images/actual-prediction+noice,ma.png>
 Package pdftex.def Info: images/actual-prediction+noice,ma.png  used on input l
-ine 264.
+ine 263.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 273--276
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
@@ -1502,30 +1503,30 @@ copy)>]
 File: images/stochastische_kans_cadansupdate.png Graphic file (type png)
 <use images/stochastische_kans_cadansupdate.png>
 Package pdftex.def Info: images/stochastische_kans_cadansupdate.png  used on in
-put line 285.
+put line 284.
 (pdftex.def)             Requested size: 455.24408pt x 344.56505pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--295
+Underfull \hbox (badness 10000) in paragraph at lines 291--294
 
  []
 
 [21 <./images/stochastische_kans_cadansupdate.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 300--304
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+Underfull \hbox (badness 10000) in paragraph at lines 307--310
 
  []
 
 [22]
-Overfull \hbox (1.99037pt too wide) in paragraph at lines 315--321
+Overfull \hbox (1.99037pt too wide) in paragraph at lines 314--320
 [][] 
  []
 
 
-Overfull \hbox (25.6554pt too wide) in paragraph at lines 328--334
+Overfull \hbox (25.6554pt too wide) in paragraph at lines 327--333
 [][] 
  []
 
@@ -1534,15 +1535,15 @@ Overfull \hbox (25.6554pt too wide) in paragraph at lines 328--334
 File: images/reservoir_sampling_voorbeeld.png Graphic file (type png)
 <use images/reservoir_sampling_voorbeeld.png>
 Package pdftex.def Info: images/reservoir_sampling_voorbeeld.png  used on input
- line 363.
+ line 362.
 (pdftex.def)             Requested size: 455.24408pt x 94.51819pt.
 
-Overfull \hbox (27.28316pt too wide) in paragraph at lines 402--408
+Overfull \hbox (27.28316pt too wide) in paragraph at lines 401--407
 [][] 
  []
 
 [25 <./images/reservoir_sampling_voorbeeld.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 413--201
+Underfull \hbox (badness 10000) in paragraph at lines 412--201
 
  []
 
@@ -1554,52 +1555,26 @@ Hoofdstuk 3.
 <images/evaluatie/seqlen10.png, id=164, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen10.png Graphic file (type png)
 <use images/evaluatie/seqlen10.png>
-Package pdftex.def Info: images/evaluatie/seqlen10.png  used on input line 13.
+Package pdftex.def Info: images/evaluatie/seqlen10.png  used on input line 14.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
 <images/evaluatie/seqlen20.png, id=165, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen20.png Graphic file (type png)
 <use images/evaluatie/seqlen20.png>
-Package pdftex.def Info: images/evaluatie/seqlen20.png  used on input line 17.
+Package pdftex.def Info: images/evaluatie/seqlen20.png  used on input line 18.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
 <images/evaluatie/seqlen50.png, id=166, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen50.png Graphic file (type png)
 <use images/evaluatie/seqlen50.png>
-Package pdftex.def Info: images/evaluatie/seqlen50.png  used on input line 21.
+Package pdftex.def Info: images/evaluatie/seqlen50.png  used on input line 22.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
 <images/evaluatie/seqlen100.png, id=167, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen100.png Graphic file (type png)
 <use images/evaluatie/seqlen100.png>
-Package pdftex.def Info: images/evaluatie/seqlen100.png  used on input line 25.
+Package pdftex.def Info: images/evaluatie/seqlen100.png  used on input line 26.
 
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--30
-
- []
-
-<images/evaluatie/gemiddeldmsepa.png, id=168, 454.69875pt x 255.95625pt>
-File: images/evaluatie/gemiddeldmsepa.png Graphic file (type png)
-<use images/evaluatie/gemiddeldmsepa.png>
-Package pdftex.def Info: images/evaluatie/gemiddeldmsepa.png  used on input lin
-e 41.
-(pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--45
+Underfull \hbox (badness 10000) in paragraph at lines 7--31
 
  []
 
@@ -1607,27 +1582,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--45
 
 
 
-] [28 <./images/evaluatie/seqlen10.png> <./images/evaluatie/seqlen20.png> <./im
-ages/evaluatie/seqlen50.png> <./images/evaluatie/seqlen100.png>] [29 <./images/
-evaluatie/gemiddeldmsepa.png>]
+]
+<images/evaluatie/gemiddeldmsepa.png, id=171, 454.69875pt x 255.95625pt>
+File: images/evaluatie/gemiddeldmsepa.png Graphic file (type png)
+<use images/evaluatie/gemiddeldmsepa.png>
+Package pdftex.def Info: images/evaluatie/gemiddeldmsepa.png  used on input lin
+e 42.
+(pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--46
+
+ []
+
+[28 <./images/evaluatie/seqlen10.png> <./images/evaluatie/seqlen20.png> <./imag
+es/evaluatie/seqlen50.png> <./images/evaluatie/seqlen100.png>] [29 <./images/ev
+aluatie/gemiddeldmsepa.png>]
 <images/evaluatie/aantalkeertrainenpa.png, id=179, 469.00218pt x 261.22594pt>
 File: images/evaluatie/aantalkeertrainenpa.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainenpa.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainenpa.png  used on inpu
-t line 47.
+t line 48.
 (pdftex.def)             Requested size: 455.24408pt x 253.56023pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
+Underfull \hbox (badness 10000) in paragraph at lines 53--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
+Underfull \hbox (badness 10000) in paragraph at lines 53--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
+Underfull \hbox (badness 10000) in paragraph at lines 53--60
 
  []
 
@@ -1635,59 +1637,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--59
 File: images/evaluatie/gemiddeldmsedt.png Graphic file (type png)
 <use images/evaluatie/gemiddeldmsedt.png>
 Package pdftex.def Info: images/evaluatie/gemiddeldmsedt.png  used on input lin
-e 65.
+e 66.
 (pdftex.def)             Requested size: 455.24408pt x 255.84625pt.
 <images/evaluatie/gemiddeldmserf.png, id=181, 454.69875pt x 255.95625pt>
 File: images/evaluatie/gemiddeldmserf.png Graphic file (type png)
 <use images/evaluatie/gemiddeldmserf.png>
 Package pdftex.def Info: images/evaluatie/gemiddeldmserf.png  used on input lin
-e 69.
+e 70.
 (pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
 <images/evaluatie/aantalkeertrainendt.png, id=182, 454.69875pt x 255.95625pt>
 File: images/evaluatie/aantalkeertrainendt.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainendt.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainendt.png  used on inpu
-t line 79.
+t line 80.
 (pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
 <images/evaluatie/aantalkeertrainenrf.png, id=183, 673.76718pt x 385.44pt>
 File: images/evaluatie/aantalkeertrainenrf.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainenrf.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainenrf.png  used on inpu
-t line 83.
+t line 84.
 (pdftex.def)             Requested size: 455.24408pt x 260.4313pt.
 <images/evaluatie/uitvoeringstijddt.png, id=184, 454.69875pt x 255.95625pt>
 File: images/evaluatie/uitvoeringstijddt.png Graphic file (type png)
 <use images/evaluatie/uitvoeringstijddt.png>
 Package pdftex.def Info: images/evaluatie/uitvoeringstijddt.png  used on input 
-line 92.
+line 93.
 (pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
 <images/evaluatie/uitvoeringstijdrf.png, id=185, 454.69875pt x 255.95625pt>
 File: images/evaluatie/uitvoeringstijdrf.png Graphic file (type png)
 <use images/evaluatie/uitvoeringstijdrf.png>
 Package pdftex.def Info: images/evaluatie/uitvoeringstijdrf.png  used on input 
-line 96.
+line 97.
 (pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
 [30 <./images/evaluatie/aantalkeertrainenpa.png>] [31 <./images/evaluatie/gemid
 deldmsedt.png> <./images/evaluatie/gemiddeldmserf.png>] [32 <./images/evaluatie
 /aantalkeertrainendt.png> <./images/evaluatie/aantalkeertrainenrf.png>]
 [33 <./images/evaluatie/uitvoeringstijddt.png> <./images/evaluatie/uitvoeringst
 ijdrf.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 103--108
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--108
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 
  []
 
 
-Overfull \hbox (40.68341pt too wide) in paragraph at lines 112--121
+Overfull \hbox (40.68341pt too wide) in paragraph at lines 113--122
  [][] 
  []
 
 
-Overfull \hbox (58.61671pt too wide) in paragraph at lines 139--150
+Overfull \hbox (58.61671pt too wide) in paragraph at lines 140--151
  [][] 
  []
 
@@ -1695,10 +1697,10 @@ Overfull \hbox (58.61671pt too wide) in paragraph at lines 139--150
 File: images/evaluatie/stochastic_diff_rf.png Graphic file (type png)
 <use images/evaluatie/stochastic_diff_rf.png>
 Package pdftex.def Info: images/evaluatie/stochastic_diff_rf.png  used on input
- line 158.
+ line 159.
 (pdftex.def)             Requested size: 455.24408pt x 341.44447pt.
 [34] [35 <./images/evaluatie/stochastic_diff_rf.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 164--167
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 
  []
 
@@ -1708,7 +1710,7 @@ File: images/evaluatie/conceptuele_drift_vergelijking.png Graphic file (type pn
 g)
 <use images/evaluatie/conceptuele_drift_vergelijking.png>
 Package pdftex.def Info: images/evaluatie/conceptuele_drift_vergelijking.png  u
-sed on input line 169.
+sed on input line 170.
 (pdftex.def)             Requested size: 455.24408pt x 255.83495pt.
 ) [36] [37 <./images/evaluatie/conceptuele_drift_vergelijking.png>]
 \openout2 = `hoofdstuk4.aux'.
@@ -1741,12 +1743,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+)
+Underfull \hbox (badness 10000) in paragraph at lines 26--203
 
  []
 
-) [39]
+[39]
 \openout2 = `hoofdstuk5.aux'.
 
  (hoofdstuk5.tex
@@ -1839,7 +1841,7 @@ b><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/helvetic/uhvb8a.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/urw/helvetic/uhvr8a.pfb>
-Output written on Masterproef_NL_2012.pdf (54 pages, 3915400 bytes).
+Output written on Masterproef_NL_2012.pdf (54 pages, 3915778 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
