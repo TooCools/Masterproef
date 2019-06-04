@@ -2,16 +2,6 @@ Indienen VOOR 7 juni 2019 om 14u
 Fysiek indienen: #{promotoren, lezers, begeleiders} exemplaren indienen en laten aftekenen op het secretariaat van het Departement Computerwetenschappen.
 Digitaal indienen via KU Loket
 
-Op het einde van het tweede semester wordt ook er een lijst online gezet, met daarop de namen van de assessoren – deze moeten op de masterproef vermeld worden. 
-Er zal nog een bericht uitgestuurd worden wanneer deze lijst online staat.
-begin juni een mail krijgen met het exacte tijdstip van jouw verdediging én de namen van jouw assessoren
-
-Abstract is wat raar.
-p21. Een geometrische distributie vertelt iets over wat de kans is dat na k pogingen, zodat de laatste poging een succes is met de kans op succes p constant. 
-p20-21. Of het vermenigvuldigen van de frequentie met de probabiliteit van updaten correct is, is evident aan te tonen met behulp van de verwachtingswaarde over 
-een binomiale verdeling (met ∆c = 5) [13]:
-		van updaten correct is, (anders verwoorden)
-
 
 
 
@@ -65,3 +55,10 @@ ONTHOUDEN:
 	Big O van DT = mnlogn
 	Wat is een laagdoorlaatfilter?
 		Een laagdoorlaatfilter laat enkel het "lage" deel van het spectrum door. Dus enkel lage frequenties.
+	Waarom geen vershil te zien tussen PA-I en PA-II?
+		Mijn hypothese is dat beide versies na k iteraties (k<max_iter) de constraint van error<tolerantie berijkt is.
+	Validatieset?
+		Ja, ik heb dat gedaan. In elk geval blijft de mse hetzelfde. Normaal gezien verwachten we hier dat de error groter wordt. <=> Waarschijnlijk omdat 
+		een simulatie steeds perfecte data genereert.
+	ZIE opmerkingen Rugen p27.
+	

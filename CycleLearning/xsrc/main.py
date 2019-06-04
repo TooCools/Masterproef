@@ -14,15 +14,17 @@ from xsrc.simulation.data_to_csv import save
 
 
 # timesteps = 20000
-# cadence_controller = CadenceController(
-#     # PassiveAggressiveRegressor(C=1,max_iter=25,tol=0.1,warm_start=True,shuffle=True)
-#     RandomForestRegressor(max_depth=4, n_estimators=10),
-#     # training=biased_reservoir_sampling.BiasedReservoirSampling(seqlen*10)
-#     training=sliding_window.SlidingWindow(seqlen * 20)
-#     # training=data_structure.DataStructure()
-#     , ptype="none", seqlen=seqlen, verbose=False,
-#     stochastic=False)
-# cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
+cadence_controller = CadenceController(
+    # PassiveAggressiveRegressor(C=1,max_iter=25,tol=0.1,warm_start=True,shuffle=True)
+    RandomForestRegressor(max_depth=4, n_estimators=10),
+    # training=biased_reservoir_sampling.BiasedReservoirSampling(seqlen*10)
+    training=sliding_window.SlidingWindow(seqlen * 20)
+    # training=data_structure.DataStructure()
+    , ptype="none", seqlen=seqlen, verbose=False,
+    stochastic=False)
+cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
+cycle2 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
+cycle2.slope_offset=9999
 # cycle2 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 300 * cm_slope + 60))
 
 
@@ -42,25 +44,27 @@ def fiets(bicycle, cc, timesteps, title="", update=True):
     cc.stats(title)
     return cc.mse[-1], (time.time() - cc.start), cc.aantalkeer_getrained
 
+fiets(cycle1,cadence_controller,10000)
+fiets(cycle2,cadence_controller,10000,update=False)
 
-for i in [25]:
-    print("Windowed size: " + str(i))
-    op2demodel=[]
-    for j in range(10):
-        cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
-        cycle2 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 300 * cm_slope + 60))
-        cadence_controller = CadenceController(
-            RandomForestRegressor(max_depth=4, n_estimators=20),
-            # training=biased_reservoir_sampling.BiasedReservoirSampling(seqlen * i)
-            # training=data_structure.DataStructure()
-            training=sliding_window.SlidingWindow(seqlen * i)
-            , ptype="none", seqlen=seqlen, verbose=False,
-            stochastic=False)
-        mse1, time1, trained1 = fiets(cycle1, cadence_controller, 20000)
-        mse2, time2, trained2 = fiets(cycle2, cadence_controller, 40000)
-        print("Trained on new cyclers model: " + str(trained2 - trained1))
-        op2demodel.append(trained2-trained1)
-    print("Voor size: "+str(i)+" moest ik gemiddeld "+str(sum(op2demodel)/len(op2demodel))+" keer bijleren")
+# for i in [25]:
+#     print("Windowed size: " + str(i))
+#     op2demodel=[]
+#     for j in range(10):
+#         cycle1 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 7.5 * cm_tdc))
+#         cycle2 = Bike(cycle_model=(lambda cm_tdc, cm_speed, cm_slope: 300 * cm_slope + 60))
+#         cadence_controller = CadenceController(
+#             RandomForestRegressor(max_depth=4, n_estimators=20),
+#             # training=biased_reservoir_sampling.BiasedReservoirSampling(seqlen * i)
+#             # training=data_structure.DataStructure()
+#             training=sliding_window.SlidingWindow(seqlen * i)
+#             , ptype="none", seqlen=seqlen, verbose=False,
+#             stochastic=False)
+#         mse1, time1, trained1 = fiets(cycle1, cadence_controller, 20000)
+#         mse2, time2, trained2 = fiets(cycle2, cadence_controller, 40000)
+#         print("Trained on new cyclers model: " + str(trained2 - trained1))
+#         op2demodel.append(trained2-trained1)
+#     print("Voor size: "+str(i)+" moest ik gemiddeld "+str(sum(op2demodel)/len(op2demodel))+" keer bijleren")
 
 # fiets(cycle1, cadence_controller)
 # cadence_controller.reset()

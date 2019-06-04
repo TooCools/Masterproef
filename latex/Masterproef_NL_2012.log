@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  22 MAY 2019 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  4 JUN 2019 15:26
 entering extended mode
 **./Masterproef_NL_2012.tex
 (Masterproef_NL_2012.tex
@@ -744,10 +744,44 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 \enit@count@id=\count127
 \enitdp@description=\count128
 )
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks44
+\verbatim@line=\toks45
+\verbatim@in@stream=\read2
+) ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty
+"
+Package: babel 2018/11/13 3.27 The Babel package
+ ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def
+"
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-dutch\dutch.l
+df"
+Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
+
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count129
+\U@D=\dimen183
+
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.de
+f")
+\bbl@dirlevel=\count130
+)
+Package babel Info: Making " an active character on input line 132.
+))
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithm2e\algorit
 hm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count129
+\c@AlgoLine=\count131
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -757,7 +791,7 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpage
 .sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count130
+\c@checkoddpage=\count132
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -774,12 +808,12 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip72
 \algomargin=\skip73
 \skipalgocfslide=\skip74
-\algowidth=\dimen183
-\inoutsize=\dimen184
-\inoutindent=\dimen185
-\interspacetitleruled=\dimen186
-\interspacealgoruled=\dimen187
-\interspacetitleboxruled=\dimen188
+\algowidth=\dimen184
+\inoutsize=\dimen185
+\inoutindent=\dimen186
+\interspacetitleruled=\dimen187
+\interspacealgoruled=\dimen188
+\interspacetitleboxruled=\dimen189
 \algocf@ruledwidth=\skip75
 \algocf@inoutbox=\box67
 \algocf@inputbox=\box68
@@ -796,9 +830,9 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip82
 \algotitleheightruledefault=\skip83
 \algotitleheightrule=\skip84
-\c@algocfline=\count131
-\c@algocfproc=\count132
-\c@algocf=\count133
+\c@algocfline=\count133
+\c@algocfproc=\count134
+\c@algocf=\count135
 \algocf@algoframe=\box73
 \algocf@algobox=\box74
 )
@@ -814,10 +848,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 ex"
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.
 tex"
-\XKV@toks=\toks44
-\XKV@tempa@toks=\toks45
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count134
+\XKV@depth=\count136
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mfirstuc\mfirstuc.s
@@ -827,10 +861,10 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
 ty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count135
+\etb@tempcnta=\count137
 )
-\@glsmfirst=\toks46
-\@glsmrest=\toks47
+\@glsmfirst=\toks48
+\@glsmrest=\toks49
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/textcase\textcase.s
 ty"
@@ -844,7 +878,7 @@ Package: datatool-base 2018/12/07 v2.31 (NLCT)
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count136
+\c@su@anzahl=\count138
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/datatool\datatool-f
 p.sty"
@@ -855,18 +889,18 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\defpattern.sty"
 Package: defpattern 1994/10/12
-\actioncount=\count137
+\actioncount=\count139
 ) ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
-\FP@xs=\count138
-\FP@xia=\count139
-\FP@xib=\count140
-\FP@xfa=\count141
-\FP@xfb=\count142
-\FP@rega=\count143
-\FP@regb=\count144
-\FP@regs=\count145
-\FP@times=\count146
+\FP@xs=\count140
+\FP@xia=\count141
+\FP@xib=\count142
+\FP@xfa=\count143
+\FP@xfb=\count144
+\FP@rega=\count145
+\FP@regb=\count146
+\FP@regs=\count147
+\FP@times=\count148
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
@@ -885,7 +919,7 @@ Package: fp-pas 1994/08/29
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-random.sty"
 Package: fp-random 1995/02/23
-\FPseed=\count147
+\FPseed=\count149
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
@@ -896,27 +930,41 @@ Package: fp-upn 1996/10/21
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks48
-\@dtl@tmpcount=\count148
+\@dtl@toks=\toks50
+\@dtl@tmpcount=\count150
 \dtl@tmplength=\skip85
-\dtl@sortresult=\count149
-\@dtl@numgrpsepcount=\count150
-\@dtl@datatype=\count151
-\dtl@codeA=\count152
-\dtl@codeB=\count153
-\@dtl@foreach@level=\count154
+\dtl@sortresult=\count151
+\@dtl@numgrpsepcount=\count152
+\@dtl@datatype=\count153
+\dtl@codeA=\count154
+\dtl@codeB=\count155
+\@dtl@foreach@level=\count156
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/base\glo
 ssaries-compatible-307.sty"
 Package: glossaries-compatible-307 2019/01/06 v4.42 (NLCT)
 )
-\gls@level=\count155
-\@gls@tmpb=\toks49
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tracklang\tracklang
+.sty"
+Package: tracklang 2018/05/13 v1.3.6 (NLCT) Track Languages
+
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tracklang\trackla
+ng.tex"))
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translat
+or.sty"
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
+)
+("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries-dutch\gl
+ossaries-dutch.ldf"
+File: glossaries-dutch.ldf 2014/11/28 v1.1
+)
+\gls@level=\count157
+\@gls@tmpb=\toks51
 \gls@tmplen=\skip86
-\glskeylisttok=\toks50
-\glslabeltok=\toks51
-\glsshorttok=\toks52
-\glslongtok=\toks53
+\glskeylisttok=\toks52
+\glslabeltok=\toks53
+\glsshorttok=\toks54
+\glslongtok=\toks55
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/styles\g
 lossary-hypernav.sty"
@@ -938,17 +986,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTright=\skip89
 \LTpre=\skip90
 \LTpost=\skip91
-\LTchunksize=\count156
-\LTcapwidth=\dimen189
+\LTchunksize=\count158
+\LTcapwidth=\dimen190
 \LT@head=\box75
 \LT@firsthead=\box76
 \LT@foot=\box77
 \LT@lastfoot=\box78
-\LT@cols=\count157
-\LT@rows=\count158
-\c@LT@tables=\count159
-\c@LT@chunks=\count160
-\LT@p@ftn=\toks54
+\LT@cols=\count159
+\LT@rows=\count160
+\c@LT@tables=\count161
+\c@LT@chunks=\count162
+\LT@p@ftn=\toks56
 )
 \glsdescwidth=\skip92
 \glspagelistwidth=\skip93
@@ -960,21 +1008,21 @@ Package: glossary-super 2019/01/06 v4.42 (NLCT)
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/supertabular\supert
 abular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count161
-\ST@wd=\dimen190
+\c@tracingst=\count163
+\ST@wd=\dimen191
 \ST@rightskip=\skip94
 \ST@leftskip=\skip95
 \ST@parfillskip=\skip96
-\ST@pageleft=\dimen191
-\ST@headht=\dimen192
-\ST@tailht=\dimen193
-\ST@pagesofar=\dimen194
-\ST@pboxht=\dimen195
-\ST@lineht=\dimen196
-\ST@stretchht=\dimen197
-\ST@prevht=\dimen198
-\ST@toadd=\dimen199
-\ST@dimen=\dimen256
+\ST@pageleft=\dimen192
+\ST@headht=\dimen193
+\ST@tailht=\dimen194
+\ST@pagesofar=\dimen195
+\ST@pboxht=\dimen196
+\ST@lineht=\dimen197
+\ST@stretchht=\dimen198
+\ST@prevht=\dimen199
+\ST@toadd=\dimen256
+\ST@dimen=\dimen257
 \ST@pbox=\box79
 ))
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/styles\g
@@ -991,45 +1039,45 @@ Package: glossary-tree 2019/01/06 v4.42 (NLCT)
 \openout5 = `Masterproef_NL_2012.glo'.
 
 Package glossaries Info: Writing glossary file Masterproef_NL_2012.glo on input
- line 57.
+ line 59.
 \glo@acronym@file=\write6
 \openout6 = `Masterproef_NL_2012.acn'.
 
 Package glossaries Info: Writing glossary file Masterproef_NL_2012.acn on input
- line 57.
+ line 59.
  (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)
 (hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux))
 \openout1 = `Masterproef_NL_2012.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count162
-\scratchdimen=\dimen257
+\scratchcounter=\count164
+\scratchdimen=\dimen258
 \scratchbox=\box80
-\nofMPsegments=\count163
-\nofMParguments=\count164
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count165
-\MPscratchDim=\dimen258
-\MPnumerator=\count166
-\makeMPintoPDFobject=\count167
-\everyMPtoPDFconversion=\toks56
+\nofMPsegments=\count165
+\nofMParguments=\count166
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count167
+\MPscratchDim=\dimen259
+\MPnumerator=\count168
+\makeMPintoPDFobject=\count169
+\everyMPtoPDFconversion=\toks58
 )
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-b
 ase.sty"
@@ -1099,36 +1147,36 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 90.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 104.
+LaTeX Info: Redefining \selectfont on input line 92.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 106.
 
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
+LaTeX Font Info:    Try loading font information for U+msa on input line 109.
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+LaTeX Font Info:    Try loading font information for U+msb on input line 109.
 
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (89.5596pt too wide) in paragraph at lines 107--108
+Overfull \hbox (89.5596pt too wide) in paragraph at lines 109--110
 [][][][][][][] 
  []
 
 <LogoKULeuven.png, id=4, 401.5pt x 143.53625pt>
 File: LogoKULeuven.png Graphic file (type png)
 <use LogoKULeuven.png>
-Package pdftex.def Info: LogoKULeuven.png  used on input line 112.
+Package pdftex.def Info: LogoKULeuven.png  used on input line 114.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 127.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 129.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 157--158
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 161--162
 [][][] 
  []
 
@@ -1167,7 +1215,7 @@ en.png>] [0
 
 Package glossaries Warning: Deprecated command \glossarystyle.
  I recommend you switch to \setglossarystyle unless you want to maintain backwa
-rd compatibility on input line 186.
+rd compatibility on input line 190.
 
 (Masterproef_NL_2012.acr) [7
 
@@ -1175,7 +1223,7 @@ rd compatibility on input line 186.
 
 Package glossaries Warning: Deprecated command \glossarystyle.
  I recommend you switch to \setglossarystyle unless you want to maintain backwa
-rd compatibility on input line 190.
+rd compatibility on input line 194.
 
 (Masterproef_NL_2012.gls
 Overfull \hbox (1.40103pt too wide) in paragraph at lines 8--9
@@ -1194,7 +1242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-<images/snelheid-veiligheid-tradeoff.png, id=52, 377.91188pt x 304.13625pt>
+<images/snelheid-veiligheid-tradeoff.png, id=53, 377.91188pt x 304.13625pt>
 File: images/snelheid-veiligheid-tradeoff.png Graphic file (type png)
 <use images/snelheid-veiligheid-tradeoff.png>
 Package pdftex.def Info: images/snelheid-veiligheid-tradeoff.png  used on input
@@ -1205,7 +1253,7 @@ Overfull \hbox (18.21059pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-<images/wagenpark_belgie.png, id=53, 811.53188pt x 248.42813pt>
+<images/wagenpark_belgie.png, id=54, 811.53188pt x 248.42813pt>
 File: images/wagenpark_belgie.png Graphic file (type png)
 <use images/wagenpark_belgie.png>
 Package pdftex.def Info: images/wagenpark_belgie.png  used on input line 19.
@@ -1225,11 +1273,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--23
 
 
  <./images/snelheid-veiligheid-tradeoff.png>]
-Overfull \hbox (27.09163pt too wide) in paragraph at lines 25--25
-[]\OT1/cmr/bx/n/17.28 Machinaal leren voor gendividualiseerde cadanscon-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 26--34
 
  []
@@ -1265,7 +1308,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--101
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 103--196
+Underfull \hbox (badness 10000) in paragraph at lines 103--200
 
  []
 
@@ -1275,17 +1318,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--196
  (hoofdstuk2.tex
 Hoofdstuk 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
 
@@ -1294,230 +1337,213 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
 
 ]
-<images/koppel-toerentalkarakteristiek.png, id=80, 642.4pt x 481.8pt>
+<images/koppel-toerentalkarakteristiek.png, id=81, 642.4pt x 481.8pt>
 File: images/koppel-toerentalkarakteristiek.png Graphic file (type png)
 <use images/koppel-toerentalkarakteristiek.png>
 Package pdftex.def Info: images/koppel-toerentalkarakteristiek.png  used on inp
-ut line 30.
+ut line 31.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
-<images/menselijkkoppel.png, id=81, 642.4pt x 481.8pt>
+<images/menselijkkoppel.png, id=82, 642.4pt x 481.8pt>
 File: images/menselijkkoppel.png Graphic file (type png)
 <use images/menselijkkoppel.png>
-Package pdftex.def Info: images/menselijkkoppel.png  used on input line 41.
+Package pdftex.def Info: images/menselijkkoppel.png  used on input line 42.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
-<images/gesimuleerdekoppel.png, id=82, 642.4pt x 481.8pt>
+<images/gesimuleerdekoppel.png, id=83, 642.4pt x 481.8pt>
 File: images/gesimuleerdekoppel.png Graphic file (type png)
 <use images/gesimuleerdekoppel.png>
-Package pdftex.def Info: images/gesimuleerdekoppel.png  used on input line 47.
+Package pdftex.def Info: images/gesimuleerdekoppel.png  used on input line 48.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
-<images/gesimuleerdekoppeldominantbeen.png, id=83, 642.4pt x 481.8pt>
+<images/gesimuleerdekoppeldominantbeen.png, id=84, 642.4pt x 481.8pt>
 File: images/gesimuleerdekoppeldominantbeen.png Graphic file (type png)
 <use images/gesimuleerdekoppeldominantbeen.png>
 Package pdftex.def Info: images/gesimuleerdekoppeldominantbeen.png  used on inp
-ut line 53.
+ut line 54.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--60
+Underfull \hbox (badness 10000) in paragraph at lines 28--61
 
  []
 
 [8] [9 <./images/koppel-toerentalkarakteristiek.png (PNG copy)>]
-<images/planeetwielmechanisme.png, id=91, 237.88875pt x 179.92218pt>
+<images/planeetwielmechanisme.png, id=92, 237.88875pt x 179.92218pt>
 File: images/planeetwielmechanisme.png Graphic file (type png)
 <use images/planeetwielmechanisme.png>
 Package pdftex.def Info: images/planeetwielmechanisme.png  used on input line 6
-3.
+4.
 (pdftex.def)             Requested size: 227.62204pt x 172.16602pt.
 
-Underfull \hbox (badness 1496) in paragraph at lines 64--64
-[]\OT1/cmr/m/n/12 Figuur 6: |Pla-neetwielmech-a-nisme (bron:
+Underfull \hbox (badness 1496) in paragraph at lines 65--65
+[]\OT1/cmr/m/n/12 Figuur 6: |Pla-neetwiel-me-cha-nisme (bron:
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 68--69
-[]$\OML/cmm/m/it/12 T[]$ \OT1/cmr/m/n/12 is het kop-pel op de tra-pas. Dit
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 68--69
-\OT1/cmr/m/n/12 moet nog overge-bracht wor-den op het
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
 [10 <./images/menselijkkoppel.png (PNG copy)> <./images/gesimuleerdekoppel.png 
 (PNG copy)> <./images/gesimuleerdekoppeldominantbeen.png (PNG copy)> <./images/
 planeetwielmechanisme.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
-<images/cadansverloop.png, id=96, 642.4pt x 481.8pt>
+<images/cadansverloop.png, id=97, 642.4pt x 481.8pt>
 File: images/cadansverloop.png Graphic file (type png)
 <use images/cadansverloop.png>
-Package pdftex.def Info: images/cadansverloop.png  used on input line 89.
+Package pdftex.def Info: images/cadansverloop.png  used on input line 90.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 [11] [12 <./images/cadansverloop.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--110
 
  []
 
-<images/parcour_slope_example.png, id=103, 642.4pt x 481.8pt>
+<images/parcour_slope_example.png, id=104, 642.4pt x 481.8pt>
 File: images/parcour_slope_example.png Graphic file (type png)
 <use images/parcour_slope_example.png>
 Package pdftex.def Info: images/parcour_slope_example.png  used on input line 1
-12.
+13.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 118--121
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
 
 [14 <./images/parcour_slope_example.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
-<images/trapcyclus.png, id=111, 674.52pt x 475.7775pt>
+<images/trapcyclus.png, id=112, 674.52pt x 475.7775pt>
 File: images/trapcyclus.png Graphic file (type png)
 <use images/trapcyclus.png>
-Package pdftex.def Info: images/trapcyclus.png  used on input line 155.
+Package pdftex.def Info: images/trapcyclus.png  used on input line 156.
 (pdftex.def)             Requested size: 182.09485pt x 128.43985pt.
 [15 <./images/trapcyclus.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 162--166
+Underfull \hbox (badness 10000) in paragraph at lines 163--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--166
+Underfull \hbox (badness 10000) in paragraph at lines 163--167
 
  []
 
-<images/preprocessing-hoek.png, id=118, 1038.88126pt x 361.35pt>
+<images/preprocessing-hoek.png, id=119, 1038.88126pt x 361.35pt>
 File: images/preprocessing-hoek.png Graphic file (type png)
 <use images/preprocessing-hoek.png>
-Package pdftex.def Info: images/preprocessing-hoek.png  used on input line 179.
+Package pdftex.def Info: images/preprocessing-hoek.png  used on input line 180.
 
 (pdftex.def)             Requested size: 455.24408pt x 158.34387pt.
 [16 <./images/preprocessing-hoek.png>]
-<images/fft_fietser.png, id=122, 642.4pt x 481.8pt>
+<images/fft_fietser.png, id=123, 642.4pt x 481.8pt>
 File: images/fft_fietser.png Graphic file (type png)
 <use images/fft_fietser.png>
-Package pdftex.def Info: images/fft_fietser.png  used on input line 188.
+Package pdftex.def Info: images/fft_fietser.png  used on input line 189.
 (pdftex.def)             Requested size: 455.24408pt x 341.4408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 196--199
 
  []
 
 [17 <./images/fft_fietser.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 233--238
+Underfull \hbox (badness 10000) in paragraph at lines 234--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--238
+Underfull \hbox (badness 10000) in paragraph at lines 234--239
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
+Underfull \hbox (badness 10000) in paragraph at lines 240--243
 
  []
 
-<images/actual-prediction+noice,nopp.png, id=130, 642.4pt x 481.8pt>
+<images/actual-prediction+noice,nopp.png, id=131, 642.4pt x 481.8pt>
 File: images/actual-prediction+noice,nopp.png Graphic file (type png)
 <use images/actual-prediction+noice,nopp.png>
 Package pdftex.def Info: images/actual-prediction+noice,nopp.png  used on input
- line 251.
+ line 252.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
-<images/actual-prediction+noice,es.png, id=131, 642.4pt x 481.8pt>
+<images/actual-prediction+noice,es.png, id=132, 642.4pt x 481.8pt>
 File: images/actual-prediction+noice,es.png Graphic file (type png)
 <use images/actual-prediction+noice,es.png>
 Package pdftex.def Info: images/actual-prediction+noice,es.png  used on input l
-ine 257.
+ine 258.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
-<images/actual-prediction+noice,ma.png, id=132, 642.4pt x 481.8pt>
+<images/actual-prediction+noice,ma.png, id=133, 642.4pt x 481.8pt>
 File: images/actual-prediction+noice,ma.png Graphic file (type png)
 <use images/actual-prediction+noice,ma.png>
 Package pdftex.def Info: images/actual-prediction+noice,ma.png  used on input l
-ine 263.
+ine 264.
 (pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 272--275
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
 
- []
-
-
-Overfull \hbox (4.1067pt too wide) in paragraph at lines 272--275
-\OT1/cmr/m/n/12 Net zoals vol-gens de de-ter-min-is-tis-che update-strategie, z
-al het fi-et-sersmodel als de waarheid
  []
 
 [20 <./images/actual-prediction+noice,nopp.png (PNG copy)> <./images/actual-pre
 diction+noice,es.png (PNG copy)> <./images/actual-prediction+noice,ma.png (PNG 
 copy)>]
-<images/stochastische_kans_cadansupdate.png, id=140, 520.19344pt x 393.72093pt>
+<images/stochastische_kans_cadansupdate.png, id=141, 520.19344pt x 393.72093pt>
 
 File: images/stochastische_kans_cadansupdate.png Graphic file (type png)
 <use images/stochastische_kans_cadansupdate.png>
 Package pdftex.def Info: images/stochastische_kans_cadansupdate.png  used on in
-put line 284.
+put line 285.
 (pdftex.def)             Requested size: 455.24408pt x 344.56505pt.
- [21 <./images/stochastische_kans_cadansupdate.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 299--303
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
+
+ []
+
+[21 <./images/stochastische_kans_cadansupdate.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 300--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
- []
-
-
-Overfull \hbox (27.38316pt too wide) in paragraph at lines 314--320
-[][] 
  []
 
 [22]
-Overfull \hbox (26.71512pt too wide) in paragraph at lines 327--333
+Overfull \hbox (1.99037pt too wide) in paragraph at lines 315--321
+[][] 
+ []
+
+
+Overfull \hbox (25.6554pt too wide) in paragraph at lines 328--334
 [][] 
  []
 
 [23] [24]
-<images/reservoir_sampling_voorbeeld.png, id=153, 1105.88156pt x 229.60782pt>
+<images/reservoir_sampling_voorbeeld.png, id=155, 1105.88156pt x 229.60782pt>
 File: images/reservoir_sampling_voorbeeld.png Graphic file (type png)
 <use images/reservoir_sampling_voorbeeld.png>
 Package pdftex.def Info: images/reservoir_sampling_voorbeeld.png  used on input
- line 362.
+ line 363.
 (pdftex.def)             Requested size: 455.24408pt x 94.51819pt.
 
-Overfull \hbox (27.28316pt too wide) in paragraph at lines 401--407
+Overfull \hbox (27.28316pt too wide) in paragraph at lines 402--408
 [][] 
  []
 
 [25 <./images/reservoir_sampling_voorbeeld.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 412--197
+Underfull \hbox (badness 10000) in paragraph at lines 413--201
 
- []
-
-
-Overfull \hbox (1.16924pt too wide) in paragraph at lines 412--197
-\OT1/cmr/m/n/12 In het al-ge-meen denk ik dat sam-pling beter zal presteren dan
- een slid-ing win-dow, aangezien
  []
 
 [26]
@@ -1525,22 +1551,22 @@ Overfull \hbox (1.16924pt too wide) in paragraph at lines 412--197
 
  (hoofdstuk3.tex
 Hoofdstuk 3.
-<images/evaluatie/seqlen10.png, id=162, 481.8pt x 361.35pt>
+<images/evaluatie/seqlen10.png, id=164, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen10.png Graphic file (type png)
 <use images/evaluatie/seqlen10.png>
 Package pdftex.def Info: images/evaluatie/seqlen10.png  used on input line 13.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
-<images/evaluatie/seqlen20.png, id=163, 481.8pt x 361.35pt>
+<images/evaluatie/seqlen20.png, id=165, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen20.png Graphic file (type png)
 <use images/evaluatie/seqlen20.png>
 Package pdftex.def Info: images/evaluatie/seqlen20.png  used on input line 17.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
-<images/evaluatie/seqlen50.png, id=164, 481.8pt x 361.35pt>
+<images/evaluatie/seqlen50.png, id=166, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen50.png Graphic file (type png)
 <use images/evaluatie/seqlen50.png>
 Package pdftex.def Info: images/evaluatie/seqlen50.png  used on input line 21.
 (pdftex.def)             Requested size: 223.0721pt x 167.30371pt.
-<images/evaluatie/seqlen100.png, id=165, 481.8pt x 361.35pt>
+<images/evaluatie/seqlen100.png, id=167, 481.8pt x 361.35pt>
 File: images/evaluatie/seqlen100.png Graphic file (type png)
 <use images/evaluatie/seqlen100.png>
 Package pdftex.def Info: images/evaluatie/seqlen100.png  used on input line 25.
@@ -1551,7 +1577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--30
 
  []
 
-<images/evaluatie/gemiddeldmsepa.png, id=166, 454.69875pt x 255.95625pt>
+<images/evaluatie/gemiddeldmsepa.png, id=168, 454.69875pt x 255.95625pt>
 File: images/evaluatie/gemiddeldmsepa.png Graphic file (type png)
 <use images/evaluatie/gemiddeldmsepa.png>
 Package pdftex.def Info: images/evaluatie/gemiddeldmsepa.png  used on input lin
@@ -1584,12 +1610,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--45
 ] [28 <./images/evaluatie/seqlen10.png> <./images/evaluatie/seqlen20.png> <./im
 ages/evaluatie/seqlen50.png> <./images/evaluatie/seqlen100.png>] [29 <./images/
 evaluatie/gemiddeldmsepa.png>]
-<images/evaluatie/aantalkeertrainenpa.png, id=177, 446.41782pt x 257.46187pt>
+<images/evaluatie/aantalkeertrainenpa.png, id=179, 469.00218pt x 261.22594pt>
 File: images/evaluatie/aantalkeertrainenpa.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainenpa.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainenpa.png  used on inpu
 t line 47.
-(pdftex.def)             Requested size: 455.24408pt x 262.55655pt.
+(pdftex.def)             Requested size: 455.24408pt x 253.56023pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
@@ -1605,42 +1631,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
 
-<images/evaluatie/gemiddeldmsedt.png, id=178, 455.45157pt x 255.95625pt>
+<images/evaluatie/gemiddeldmsedt.png, id=180, 455.45157pt x 255.95625pt>
 File: images/evaluatie/gemiddeldmsedt.png Graphic file (type png)
 <use images/evaluatie/gemiddeldmsedt.png>
 Package pdftex.def Info: images/evaluatie/gemiddeldmsedt.png  used on input lin
 e 65.
 (pdftex.def)             Requested size: 455.24408pt x 255.84625pt.
-<images/evaluatie/gemiddeldmserf.png, id=179, 454.69875pt x 255.95625pt>
+<images/evaluatie/gemiddeldmserf.png, id=181, 454.69875pt x 255.95625pt>
 File: images/evaluatie/gemiddeldmserf.png Graphic file (type png)
 <use images/evaluatie/gemiddeldmserf.png>
 Package pdftex.def Info: images/evaluatie/gemiddeldmserf.png  used on input lin
 e 69.
 (pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
-<images/evaluatie/aantalkeertrainendt.png, id=180, 688.82344pt x 392.21532pt>
+<images/evaluatie/aantalkeertrainendt.png, id=182, 454.69875pt x 255.95625pt>
 File: images/evaluatie/aantalkeertrainendt.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainendt.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainendt.png  used on inpu
 t line 79.
-(pdftex.def)             Requested size: 455.24408pt x 259.216pt.
-<images/evaluatie/aantalkeertrainenrf.png, id=181, 673.76718pt x 385.44pt>
+(pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
+<images/evaluatie/aantalkeertrainenrf.png, id=183, 673.76718pt x 385.44pt>
 File: images/evaluatie/aantalkeertrainenrf.png Graphic file (type png)
 <use images/evaluatie/aantalkeertrainenrf.png>
 Package pdftex.def Info: images/evaluatie/aantalkeertrainenrf.png  used on inpu
 t line 83.
 (pdftex.def)             Requested size: 455.24408pt x 260.4313pt.
-<images/evaluatie/uitvoeringstijddt.png, id=182, 777.65532pt x 432.86719pt>
+<images/evaluatie/uitvoeringstijddt.png, id=184, 454.69875pt x 255.95625pt>
 File: images/evaluatie/uitvoeringstijddt.png Graphic file (type png)
 <use images/evaluatie/uitvoeringstijddt.png>
 Package pdftex.def Info: images/evaluatie/uitvoeringstijddt.png  used on input 
 line 92.
-(pdftex.def)             Requested size: 455.24408pt x 253.40791pt.
-<images/evaluatie/uitvoeringstijdrf.png, id=183, 694.84593pt x 380.92313pt>
+(pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
+<images/evaluatie/uitvoeringstijdrf.png, id=185, 454.69875pt x 255.95625pt>
 File: images/evaluatie/uitvoeringstijdrf.png Graphic file (type png)
 <use images/evaluatie/uitvoeringstijdrf.png>
 Package pdftex.def Info: images/evaluatie/uitvoeringstijdrf.png  used on input 
 line 96.
-(pdftex.def)             Requested size: 455.24408pt x 249.56749pt.
+(pdftex.def)             Requested size: 455.24408pt x 256.26805pt.
 [30 <./images/evaluatie/aantalkeertrainenpa.png>] [31 <./images/evaluatie/gemid
 deldmsedt.png> <./images/evaluatie/gemiddeldmserf.png>] [32 <./images/evaluatie
 /aantalkeertrainendt.png> <./images/evaluatie/aantalkeertrainenrf.png>]
@@ -1665,7 +1691,7 @@ Overfull \hbox (58.61671pt too wide) in paragraph at lines 139--150
  [][] 
  []
 
-<images/evaluatie/stochastic_diff_rf.png, id=204, 481.8pt x 361.35pt>
+<images/evaluatie/stochastic_diff_rf.png, id=206, 481.8pt x 361.35pt>
 File: images/evaluatie/stochastic_diff_rf.png Graphic file (type png)
 <use images/evaluatie/stochastic_diff_rf.png>
 Package pdftex.def Info: images/evaluatie/stochastic_diff_rf.png  used on input
@@ -1676,7 +1702,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--167
 
  []
 
-<images/evaluatie/conceptuele_drift_vergelijking.png, id=211, 510.40688pt x 286
+<images/evaluatie/conceptuele_drift_vergelijking.png, id=213, 510.40688pt x 286
 .82156pt>
 File: images/evaluatie/conceptuele_drift_vergelijking.png Graphic file (type pn
 g)
@@ -1696,7 +1722,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--12
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
 
  []
 
@@ -1704,112 +1730,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
 
 
-]) [39]
-\openout2 = `hoofdstuk5.aux'.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
 
- (hoofdstuk5.tex
-Hoofdstuk 5.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 ("C:\Users\Arno\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 9--200
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
 
  []
 
+) [39]
+\openout2 = `hoofdstuk5.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--200
-
- []
-
-[40
+ (hoofdstuk5.tex
+Hoofdstuk 5.
+) [40
 
 
 
-] [41]
+]
 \openout2 = `appendix.aux'.
 
  (appendix.tex
-<images/logo_intuedrive.png, id=232, 222.07968pt x 146.04562pt>
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
+
+ []
+
+<images/logo_intuedrive.png, id=231, 222.07968pt x 146.04562pt>
 File: images/logo_intuedrive.png Graphic file (type png)
 <use images/logo_intuedrive.png>
-Package pdftex.def Info: images/logo_intuedrive.png  used on input line 12.
-(pdftex.def)             Requested size: 227.62204pt x 149.69102pt.
+Package pdftex.def Info: images/logo_intuedrive.png  used on input line 16.
+(pdftex.def)             Requested size: 204.85844pt x 134.72014pt.
+<images/ellio_fiets.png, id=232, 308.352pt x 232.7094pt>
+File: images/ellio_fiets.png Graphic file (type png)
+<use images/ellio_fiets.png>
+Package pdftex.def Info: images/ellio_fiets.png  used on input line 20.
+(pdftex.def)             Requested size: 204.85844pt x 154.60776pt.
+[41
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--16
-
- []
-
-[42
 
 
-
- <./images/logo_intuedrive.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
+ <./images/logo_intuedrive.png> <./images/ellio_fiets.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 []\OT1/cmr/m/n/12 Sarle, W. \OT1/cmr/m/it/12 comp.ai.neural-nets FAQ\OT1/cmr/m/
-n/12 . Ger-aad-pleegd op 8 mei, 2019 via
+n/12 . Ge-raad-pleegd op 8 mei, 2019 via
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 75--78
-[]\OT1/cmr/m/n/12 Bijdragers van Wikipedia. \OT1/cmr/m/it/12 Ran-dom for-est\OT
-1/cmr/m/n/12 . Ger-aad-pleegd op 8 mei, 2019 via
+Underfull \hbox (badness 1028) in paragraph at lines 84--87
+[]\OT1/cmr/m/n/12 Bijdragers van Wiki-pe-dia. \OT1/cmr/m/it/12 Random fo-rest\O
+T1/cmr/m/n/12 . Ge-raad-pleegd op 8 mei, 2019 via
  []
 
-) [43
+) [42
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 229.
-<sedes.png, id=239, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 233.
+<sedes.png, id=240, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 239.
+Package pdftex.def Info: sedes.png  used on input line 243.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 243--244
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 247--248
 [][][] 
  []
 
-[44
+[43
 
  <./sedes.png>] (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)
 (hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 24307 strings out of 492946
- 481347 string characters out of 3126710
- 589550 words of memory out of 3000000
- 27611 multiletter control sequences out of 15000+200000
- 21574 words of font info for 56 fonts, out of 3000000 for 9000
+ 26989 strings out of 492946
+ 541823 string characters out of 3126710
+ 643327 words of memory out of 3000000
+ 30251 multiletter control sequences out of 15000+200000
+ 22461 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,79p,2056b,785s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,79p,2093b,787s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/A
 rno/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Arn
 o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Arno/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Arno/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ar
-no/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
-:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsl12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Arno/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Arno/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Use
-rs/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
-C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
-.pfb>
-Output written on Masterproef_NL_2012.pdf (55 pages, 1815909 bytes).
+cmbxti10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Arno/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Arno/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
+/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Arno/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Arno/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/
+Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvb8a.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Masterproef_NL_2012.pdf (54 pages, 3915400 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
+ 305 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

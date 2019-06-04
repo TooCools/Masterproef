@@ -1,3 +1,4 @@
+\babel@toc {dutch}{}
 \contentsline {chapter}{Voorwoord}{i}% 
 \contentsline {chapter}{Abstract}{ii}% 
 \contentsline {chapter}{Lijst van figuren}{v}% 
@@ -14,25 +15,16 @@
 \contentsline {subsection}{\numberline {1.4.3}Adaptive machine learning algorithms for data streams subject to concept drifts: Pierre-Xavier Loeffel (2018)}{5}% 
 \contentsline {chapter}{\numberline {2}Methode}{7}% 
 \contentsline {section}{\numberline {2.1}De fietssimulatie}{7}% 
-\contentsline {section}{\numberline {2.2}Modelleren van het fietserkoppel}{7}% 
-\contentsline {section}{\numberline {2.3}Het fietsersmodel}{11}% 
-\contentsline {section}{\numberline {2.4}Het lastmodel}{13}% 
-\contentsline {section}{\numberline {2.5}Snelheidsvergelijking}{14}% 
-\contentsline {section}{\numberline {2.6}Voorspellen van de cadans}{15}% 
-\contentsline {section}{\numberline {2.7}Preprocessing}{16}% 
-\contentsline {section}{\numberline {2.8}Algoritmes}{17}% 
-\contentsline {subsection}{\numberline {2.8.1}Passive Aggressive algorithm}{17}% 
-\contentsline {subsection}{\numberline {2.8.2}Decision Tree en Random Forest}{18}% 
-\contentsline {section}{\numberline {2.9}Post-processing}{19}% 
-\contentsline {section}{\numberline {2.10}Stochastisch bijleren}{20}% 
-\contentsline {subsection}{\numberline {2.10.1}Verwachtingen}{22}% 
-\contentsline {section}{\numberline {2.11}Conceptuele drift}{22}% 
-\contentsline {subsection}{\numberline {2.11.1}Fixed sliding window}{23}% 
-\contentsline {subsection}{\numberline {2.11.2}Variabele sliding window}{23}% 
-\contentsline {subsection}{\numberline {2.11.3}Sampling}{24}% 
+\contentsline {section}{\numberline {2.2}Voorspellen van de cadans}{15}% 
+\contentsline {section}{\numberline {2.3}Stochastisch bijleren}{20}% 
+\contentsline {subsection}{\numberline {2.3.1}Verwachtingen}{22}% 
+\contentsline {section}{\numberline {2.4}Conceptuele drift}{22}% 
+\contentsline {subsection}{\numberline {2.4.1}Statisch schuivend venster (\textit {static sliding window})}{23}% 
+\contentsline {subsection}{\numberline {2.4.2}Variabel schuivend venster (\textit {variable sliding window})}{23}% 
+\contentsline {subsection}{\numberline {2.4.3}Sampling}{24}% 
 \contentsline {subsubsection}{Reservoir sampling}{24}% 
-\contentsline {subsubsection}{Biased reservoir sampling}{25}% 
-\contentsline {subsection}{\numberline {2.11.4}Verwachtingen}{26}% 
+\contentsline {subsubsection}{Bevoordeelde reservoir sampling (\textit {biased reservoir sampling})}{25}% 
+\contentsline {subsection}{\numberline {2.4.4}Verwachtingen}{26}% 
 \contentsline {chapter}{\numberline {3}Resultaten}{27}% 
 \contentsline {section}{\numberline {3.1}Sequentie preprocessing}{27}% 
 \contentsline {section}{\numberline {3.2}Algoritmes}{28}% 
@@ -42,9 +34,10 @@
 \contentsline {section}{\numberline {3.4}Conceptuele drift}{36}% 
 \contentsline {chapter}{\numberline {4}Discussie}{38}% 
 \contentsline {section}{\numberline {4.1}Algoritmes}{38}% 
-\contentsline {section}{\numberline {4.2}Waarheid}{39}% 
+\contentsline {section}{\numberline {4.2}Waarheid}{38}% 
 \contentsline {section}{\numberline {4.3}Conceptuele drift}{39}% 
+\contentsline {section}{\numberline {4.4}Verder werk}{39}% 
 \contentsline {chapter}{\numberline {5}Conclusie}{40}% 
-\contentsline {chapter}{Appendix}{42}% 
-\contentsline {section}{IntuEdrive}{42}% 
-\contentsline {section}{Bibliografie}{43}% 
+\contentsline {chapter}{Appendix}{41}% 
+\contentsline {section}{IntuEdrive}{41}% 
+\contentsline {section}{Bibliografie}{42}% 

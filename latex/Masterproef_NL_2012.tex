@@ -28,6 +28,8 @@
 \usepackage{array}
 \usepackage{ragged2e}
 \usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage [dutch]{babel}
 
 \newcommand\blankpage{%
     \null
@@ -127,14 +129,16 @@
 \fontsize{14}{16}\selectfont \textbf{Arno Cools}
 \end{textblock}
 %
-\begin{textblock}{70}(-6,191)
+\begin{textblock}{70}(-6,180)
 \textblockcolour{}
-\vspace{-\parskip}
 \flushleft
-Promotor:\\Prof. M.-F. Moens\\[-2pt]
+Promotor:\\Prof. dr. M.-F. Moens\\[-2pt]
 \vspace{5mm}
 Begeleiders:\\
 Ir. T. Keppens\\Ir. J. Heidbuchel\\Ir. R. Heidbuchel\\[-2pt]
+\vspace{5mm}
+Assessoren:\\
+E. Moons\\Prof. dr. D. Weyns\\[-2pt]
 \end{textblock}
 %
 \begin{textblock}{160}(8,191)
@@ -171,10 +175,10 @@ Academiejaar 2018-2019
 \pagenumbering{roman}
 \setcounter{page}{1}
 \chapter{Voorwoord}
-Ik zou graag iedereen bedanken die mij heeft geholpen met deze thesis. De personen waar ik het meeste aan te danken heb, zijn Jorrit en Rugen Heidbuchel. Beiden gaven zeer nuttige feedback en waren altijd beschikbaar. Dank aan Tomas Keppens om enkele jaren geleden het IntuEdrive project op te starten en samen te werken met de KU Leuven. Bedankt Sien Moens om de thesis te proeflezen. En natuurlijk ook een dank u aan iedereen die deze thesis gelezen heeft.
+Ik zou graag iedereen bedanken die mij heeft geholpen met deze tekst. De personen waar ik het meeste aan te danken heb, zijn Jorrit en Rugen Heidbuchel. Beiden gaven zeer nuttige feedback en waren altijd beschikbaar. Dank aan Tomas Keppens om enkele jaren geleden het IntuEdrive project op te starten en samen te werken met de KU Leuven. Bedankt Sien Moens om de tekst te proeflezen. En natuurlijk ook een dank u aan iedereen die deze tekst gelezen heeft.
 
 \chapter{Abstract}
-Deze thesis gaat over het real time aanpassen van de fietscadans, toegepast op de E-bike van IntuEdrive. Deze tekst is de laatste van een reeks thesissen rond het E-bike concept van Tomas Keppens: een snelle en betrouwbare E-bike die makkelijk in gebruik is. Deze thesis werkt verder op het huidige prototype. Het doel is om de trapsnelheid van de fietser te kunnen voorspellen om zo de versnelling van de fiets automatisch te schakelen. De trapsnelheid is per gebruiker verschillend. Als eerste stap wordt een geparametriseerde simulatie gemaakt, zodat makkelijk veel consistente data gegenereerd kan worden. Vervolgens worden verschillende algoritmes van machinaal leren bekeken en geëvalueerd. Er moet rekening gehouden worden met het aantal keer trainen, uitvoeringstijd en accuraatheid. Vervolgens wordt er nagegaan of de algoritmes om kunnen gaan met een stochastische update-strategie. De mens is immers een onvoorspelbaar wezen. Ten slotte wordt het probleem van conceptuele drift aangehaald om na te gaan of de algoritmes om kunnen gaan met een veranderend concept.
+Deze masterproeftekst gaat over het real-time aanpassen van de fietscadans, toegepast op de E-bike van IntuEdrive. Deze tekst is de laatste van een reeks werken rond het E-bike concept van Tomas Keppens: een snelle en betrouwbare E-bike die makkelijk in gebruik is. Deze masterproef werkt verder op het huidige prototype. Het doel is om de trapsnelheid van de fietser te kunnen voorspellen om zo de versnelling van de fiets automatisch te schakelen. De trapsnelheid is per gebruiker verschillend. Als eerste stap wordt een geparametriseerde simulatie gemaakt, zodat makkelijk veel consistente data gegenereerd kan worden. Vervolgens worden verschillende algoritmes van machinaal leren bekeken en geëvalueerd. Er moet rekening gehouden worden met het aantal keer trainen, uitvoeringstijd en accuraatheid. Vervolgens wordt er nagegaan of de algoritmes om kunnen gaan met een stochastische update-strategie. De mens is immers een onvoorspelbaar wezen. Ten slotte wordt het probleem van conceptuele drift aangehaald. Een fiets kan door meerdere personen gebruikt worden of door. De resultaten tonen aan dat een random forest het best presteert in de verschillende experimenten.
 
 \tableofcontents
 \newpage

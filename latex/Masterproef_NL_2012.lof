@@ -1,3 +1,4 @@
+\babel@toc {dutch}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -5,7 +6,7 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Grootte van het voertuigenpark 2014-2018 (bron: statbel.fgov.be)\relax }}{2}% 
 \contentsline {figure}{\numberline {3}{\ignorespaces Blokdiagram van het fiets-fietser-controller systeem\relax }}{4}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4}{\ignorespaces Het koppel-toerentalkarakteristiek\relax }}{9}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces De koppel-toerentalkarakteristiek\relax }}{9}% 
 \contentsline {figure}{\numberline {5}{\ignorespaces Het koppelverloop van een mens (linksboven), de simulatie (rechtsboven) en een gesimuleerd dominant been (onderaan)\relax }}{10}% 
 \contentsline {figure}{\numberline {6}{\ignorespaces Planeetwielmechanisme (bron: Wikipedia)\relax }}{10}% 
 \contentsline {figure}{\numberline {7}{\ignorespaces Verwacht cadansverloop in functie van de snelheid.\relax }}{12}% 
@@ -18,7 +19,7 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Reservoir sampling voorstelling\relax }}{25}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {15}{\ignorespaces De invloed van sequentielengte op de error\relax }}{28}% 
-\contentsline {figure}{\numberline {16}{\ignorespaces De invloed van C op MSE van PA\relax }}{29}% 
+\contentsline {figure}{\numberline {16}{\ignorespaces De invloed van C op het gemiddeld MSE van PA\relax }}{29}% 
 \contentsline {figure}{\numberline {17}{\ignorespaces Gemiddeld aantal keer trainen PA\relax }}{30}% 
 \contentsline {figure}{\numberline {18}{\ignorespaces De invloed van diepte en aantal bomen op de gemiddelde MSE van DT en RF\relax }}{31}% 
 \contentsline {figure}{\numberline {19}{\ignorespaces De invloed van diepte en aantal bomen op het gemiddeld aantal keer trainen van DT en RF\relax }}{32}% 
@@ -27,4 +28,4 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Resultaten van beide technieken om met conceptuele drift om te gaan.\relax }}{37}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {23}{\ignorespaces Logo IntuEdrive\relax }}{42}% 
+\contentsline {figure}{\numberline {23}{\ignorespaces Logo IntuEdrive links en Ellio, de elektrische fiets, rechts.\relax }}{41}% 
