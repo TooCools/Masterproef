@@ -62,9 +62,12 @@ import matplotlib.pyplot as plt
 #     else:
 #         y_min.append(i*2)
 #
-x=[0,5,10,12]
-y=[0,0.2,1,1]
+x=[0,1]
+# x=[0,1]
+y=[0.4,0.7]
 plt.plot(x,y)
+plt.xlim(0,1)
+plt.ylim(0,1)
 # plt.plot(x,y_max)
 # plt.xlabel("FCC-ωcr")
 # plt.ylabel("P(")

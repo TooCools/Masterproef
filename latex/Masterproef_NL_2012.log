@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  4 JUN 2019 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.22)  25 JUN 2019 20:29
 entering extended mode
 **./Masterproef_NL_2012.tex
 (Masterproef_NL_2012.tex
@@ -1046,7 +1046,27 @@ Package glossaries Info: Writing glossary file Masterproef_NL_2012.glo on input
 Package glossaries Info: Writing glossary file Masterproef_NL_2012.acn on input
  line 59.
  (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)
-(hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux))
+(hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux)
+
+LaTeX Warning: Label `fig:menselijkkoppelverloop' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:menselijkkoppelverloop' multiply defined.
+
+
+LaTeX Warning: Label `fig:gesimuleerde koppel dominant been' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:gesimuleerde koppel dominant been' multiply defin
+ed.
+
+
+LaTeX Warning: Label `fig:koppelverloop mens-simulatie' multiply defined.
+
+
+LaTeX Warning: Label `fig:planeetwielmechanisme' multiply defined.
+
+)
 \openout1 = `Masterproef_NL_2012.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
@@ -1795,53 +1815,56 @@ T1/cmr/m/n/12 . Ge-raad-pleegd op 8 mei, 2019 via
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 233.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 232.
 <sedes.png, id=240, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 243.
+Package pdftex.def Info: sedes.png  used on input line 242.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 247--248
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 246--247
 [][][] 
  []
 
 [43
 
  <./sedes.png>] (Masterproef_NL_2012.aux (hoofdstuk1.aux) (hoofdstuk2.aux)
-(hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux)) ) 
+(hoofdstuk3.aux) (hoofdstuk4.aux) (hoofdstuk5.aux) (appendix.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  26989 strings out of 492946
  541823 string characters out of 3126710
- 643327 words of memory out of 3000000
+ 643370 words of memory out of 3000000
  30251 multiletter control sequences out of 15000+200000
  22461 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,79p,2093b,787s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/A
-rno/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Arn
-o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmbxti10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Arno/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Arno/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
-/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr6.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Arno/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Arno/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/
-Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pf
-b><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/helvetic/uhvb8a.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Masterproef_NL_2012.pdf (54 pages, 3915778 bytes).
+{C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
+<C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbxti10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Arno/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Arno/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Arno/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Use
+rs/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Arno/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Arno/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
+/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
+fb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmtt12.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb><C:/Users/Arno/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Arno/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Masterproef_NL_2012.pdf (54 pages, 3915844 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,6 +1,34 @@
-Indienen VOOR 7 juni 2019 om 14u
-Fysiek indienen: #{promotoren, lezers, begeleiders} exemplaren indienen en laten aftekenen op het secretariaat van het Departement Computerwetenschappen.
-Digitaal indienen via KU Loket
+nIET FIETSERMODEL ZEGGEN MAAR FIETSER
+
+ook nog belangrijk is om aan te halen is dat we eigenlijk geen dataset kunnen opstellen, omdat het algoritme de dataset beïnvloedt.
+
+met behulp van de bewegingsverglijking voorwaardse euler methode gebruikt om te integreren.
+
+experminenten meer high level
+	fietser koopt fiets, rijdt er voor de eerste keer op
+	wanneer fietser op knop duwt => leert bij
+	
+postprocessing iets beter uitleggen
+	simulatie probleem
+	
+deterministisch vs stochastisch
+	we gingen ervan uit dat de fietser de cadans aanpast wanneer het te groot is
+	dit is niet zo
+	eerst realiteit dan technisch
+	
+conceptuele drift
+	eerst aanhalen dat de fiets kan veranderen van eigenaar, etc.
+	
+	ook nuttig voor op de fiets, het houdt minder data bij => trainingstijd daalt + geheugengebruikt daalt ook
+	
+
+Besluit: simulatie is representatief voor de realiteit
+	bij claim over model
+	
+	
+GEDAAN		
+	Verder werk
+	dominant been simuleren eerop zetten B weg
 
 Voorwaardse euler methode???
 wat als fietser moe is => zelfde cadans?

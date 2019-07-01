@@ -83,10 +83,7 @@ class Bike:
             rpm = 50 + (v_kmh - 15) * 2
 
         if rpm > fcc:
-            # print("Going FCC baby")
             rpm = fcc
-        # else:
-            # print("@@@@@@@@@@@@@@@@@@")
         self.crank_speed_rpm.append(rpm)
 
     def update_cycle_torque(self):
